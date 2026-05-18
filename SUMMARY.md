@@ -1,37 +1,37 @@
-# Summary
+# Table of contents
 
 ## Basics
-* [Introduction](basics/introduction.md)
-* [Yield Allocation](basics/yield-allocation.md)
-* [Performance Tracking](basics/performance-tracking.md)
-* [fyTokens](basics/fytokens.md)
-* [Features](basics/features.md)
-* [Risks](basics/risks.md)
 
-## Hallmark
-* [Overview](hallmark/overview.md)
-* [Methodology](hallmark/methodology.md)
-* [Transparency & Public Scores](hallmark/transparency.md)
+* [🖖 Introduction](README.md)
+* [🔑 Yield Allocation](basics/yield-allocation.md)
+* [📊 Performance Tracking](basics/performance-tracking.md)
+* [🍯 fyTokens](basics/fytokens.md)
+* [📚 Features](basics/features.md)
+* [⚠️ Risks](basics/risks.md)
 
 ## How it works
-* [Step by Steps](how-it-works/step-by-steps.md)
-* [Overall](how-it-works/overall.md)
+
+* [🔄 Step by Steps](how-it-works/step-by-steps.md)
+* [🌐 Overall](how-it-works/overall.md)
 
 ## Integration
-* [Power your users' yield experience](integration/overview.md)
+
+* [Power your users’ yield experience](integration/power-your-users-yield-experience.md)
 * [Deposit](integration/deposit.md)
 * [Redeem](integration/redeem.md)
-* API
+* [API](integration/api/README.md)
   * [Strategies Info](integration/api/strategies-info.md)
-  * [Pending Redeems](integration/api/pending-redeems.md)
+  * [Pending redeems](integration/api/pending-redeems.md)
 
 ## User guide
-* [Connect to Forge](user-guide/connect.md)
+
+* [Connect to Forge](user-guide/connect-to-forge.md)
 * [Deposit](user-guide/deposit.md)
 * [Redeem](user-guide/redeem.md)
 
-## Other
+## OTHER
+
 * [Audits](other/audits.md)
 * [Brand Kit](other/brand-kit.md)
-* [Terms of use](other/terms.md)
-* [Privacy policy](other/privacy.md)
+* [Terms of use](other/terms-of-use.md)
+* [Privacy policy](other/privacy-policy.md)

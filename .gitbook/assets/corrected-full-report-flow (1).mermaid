@@ -1,0 +1,35 @@
+sequenceDiagram
+    participant Offchain
+    participant RC as RateProvider
+    participant WR as WarpRoutes
+    participant TG as TokenGateway
+    participant Relayer
+    participant PA as PositionAggregator
+
+    Offchain->>+RC: Initiate report
+    RC->>RC: Calculate new rate
+    
+    RC->>+WR: Send rate update message
+    WR->>+TG: Deliver message to each L2
+    TG->>TG: Store timestamp and share price
+    WR-->>-RC: Confirm delivery
+
+    Note over Relayer: When ready
+    Relayer->>+TG: report()
+    TG->>TG: Validate timestamp
+    TG->>TG: Apply losses to withdrawal pools
+    TG->>TG: Add penalty yields from manager stake if delayed
+    
+    alt Process Redemptions
+        TG->>TG: Process eligible epochs
+        TG->>TG: Calculate liquidity delta
+    end
+
+    TG->>+WR: Send delta message to RateProvider
+    WR->>+RC: Deliver liquidity status
+    
+    RC->>+WR: Send action message to L1
+    WR->>+PA: Update position/liquidity status
+    PA->>PA: Update values due or available withdrawals
+    
+    Note over PA: Ready for manager action
