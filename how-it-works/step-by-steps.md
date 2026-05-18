@@ -20,23 +20,27 @@ Deposits and withdrawals are **batched and netted** at the rollup level. Then, a
 
 #### 3. Ethereum Vault Settlement
 
-Only the final net result is processed through Ethereum's canonical bridge. Assets are either deosited into or withdrawn from the main vault, ensuring all yield activity remains Ethereum-secured.
+Only the final net result is processed through Ethereum's canonical bridge. Assets are either deposited into or withdrawn from the main vault, ensuring all yield activity remains Ethereum-secured.
 
 <figure><img src="../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
-#### 4. Strategy Execution
+#### 4. Strategy Eligibility (Hallmark)
 
-ForgeYields allocation engine manages funds across different chains and protocols. All actions are strictly validated via a whitelist of allowed calls, and strategies are designed to maximize yield across top-tier DeFi projects.
+Before any strategy can receive capital, it must clear [Hallmark](../hallmark/overview.md) — ForgeYields' published underwriting framework. Hallmark scores every protocol, asset, chain, and (for wrapper vaults) curator on a 1–10 scale. The composite **Global Risk Score (GRS)** must be ≤ 7.5 for the strategy to enter the allocator's eligible set. Scores are versioned, publicly verifiable, and rescored on material events.
+
+#### 5. Strategy Execution
+
+The allocation engine deploys across the eligible set. All actions are strictly validated against a Merkle-tree whitelist of allowed calls — the relayer cannot deviate from the pre-approved set. If a strategy's GRS later drifts above 7.5, the allocator unwinds the position on the next rebalance.
 
 <figure><img src="../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
 
-#### 5. Earn Yield Passively
+#### 6. Earn Yield Passively
 
 Your **fyToken** grows in value automatically based on the performance of the underlying strategy. Meanwhile, you can freely use the token in DeFi, move it across chains, or explore new ecosystems all without touching the underlying assets or relying on third-party bridges.
 
 <figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
-#### 6. Redeem Anytime, from Anywhere
+#### 7. Redeem Anytime, from Anywhere
 
 When you're ready, redeem your fyToken on any supported chain. The underlying assets are released once the vault settles liquidity, typically after the next strategy rebalancing.
 

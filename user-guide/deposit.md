@@ -1,8 +1,8 @@
 ---
-description: Generate interest on your crypto in one click
+description: How to deposit into a ForgeYields vault.
 ---
 
-# Deposit
+# 💰 Deposit
 
 1.  Select a yield opportunity and enter the amount you want to deposit.<br>
 

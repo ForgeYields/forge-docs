@@ -1,27 +1,24 @@
 ---
-description: currently deployed on Starknet
+description: Connect your wallet and start depositing.
 ---
 
-# Connect to Forge
+# 🔌 Connect to Forge
 
-### Getting Started on Starknet[​](https://docs.nimbora.io/docs/concepts/guide/first_steps#getting-started-on-starknet)
+ForgeYields is currently live on **Starknet** (with EVM support rolling out). Connect with any Starknet-compatible wallet.
 
-1. The first step is installing a Starknet wallet ([Braavos](https://braavos.app/) or [ArgentX](https://argent.xyz/)).
-2. Deposit funds  to your account.
-3. To interact with Starknet dApps, you will need to deploy your account.
+### Getting started on Starknet
 
-The process can be done with the following steps:
+1. Install a Starknet wallet: [Braavos](https://braavos.app/) or [Argent X](https://argent.xyz/).
+2. Fund your account (bridge ETH from Ethereum, or buy directly via an on-ramp).
+3. Deploy your account by sending any transaction — most wallets handle this automatically on first use.
 
-1. Bridge ETH to your Starknet wallet address.
-2. Send ETH to your own or external address.
-3. Your wallet will be ready to use as soon as the transaction is processed.
+For a full Starknet onboarding walkthrough, see the [official Starknet getting-started guide](https://www.starknet.io/en/content/getting-started-using-starknet-setting-up-a-starknet-wallet).
 
-The entire setup process, including bridging of the funds is explained in detail [here](https://www.starknet.io/en/content/getting-started-using-starknet-setting-up-a-starknet-wallet).
-
-
-
-### Getting started with Forge <a href="#getting-started-with-nimbora" id="getting-started-with-nimbora"></a>
+### Getting started with Forge <a href="#getting-started-with-forge" id="getting-started-with-forge"></a>
 
 * Open the [Forge App](https://app.forgeyields.com/) and follow the tour guide.
-* Connect your wallet (e.g., Argent X, Braavos) by clicking **Connect Wallet** at the top right.
+* Connect your wallet (Argent X, Braavos, etc.) by clicking **Connect Wallet** at the top right.
+* Pick a vault: [fyUSDC](../basics/fytokens.md), [fyETH](../basics/fytokens.md), or [fyWBTC](../basics/fytokens.md).
+
+Every strategy you deposit into is pre-cleared by [Hallmark](../hallmark/overview.md) — the published underwriting framework with a hard cutoff at GRS ≤ 7.5.
 

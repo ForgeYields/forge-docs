@@ -1,35 +1,39 @@
 ---
-description: Real performance, full transparency.
+description: How capital flows from deposit to deployed strategy.
 ---
 
 # 🔑 Yield Allocation
 
-#### **Principles of Allocation**
+ForgeYields runs a continuous allocator across chains and protocols. The allocator is fully automated, but every step is gated by [Hallmark](../hallmark/overview.md) — strategies are only eligible if their published GRS is ≤ 7.5.
 
-* **Diversified spread** → Allocate across multiple low-risk, high-APR venues, often incentive-driven or capacity-limited, to maximize risk-adjusted returns.
-* **Non-custodial control** → Relayers execute, but every call is verified on-chain against an allow-listed set of protocols, powered by merkle tree based verification system, developed by Veda Labs.&#x20;
-* **Automated →** ForgeYields Allocation engine optimizes continuously based on each strategy’s risk-reward profile and operational costs, dynamically managing liquidity distribution and deposit flow without manual intervention
+#### **Principles of allocation**
 
-#### **Real-time transparency on every allocation step.**
+* **Hallmark-gated.** The allocator's strategy universe is the set of strategies that pass Hallmark eligibility. No GRS, no allocation. A GRS that drifts above 7.5 triggers immediate unwind, not optimization.
+* **Diversified across the eligible set.** Spread capital across multiple eligible venues to maximize risk-adjusted return — not maximize APR, not minimize risk in isolation.
+* **Non-custodial execution.** Relayers execute, but every call is verified on-chain against a Merkle-validated allow-list (powered by [Veda Labs](https://docs.veda.tech) BoringVault). Off-allow-list calls revert.
+* **Continuous.** The allocator re-optimizes based on each strategy's risk-reward profile, incentive flow, and operational costs. No manual intervention.
 
-ForgeYields executes cross-chain allocations automatically and every action becomes instantly visible. Atomic Reports show the allocator’s _true live state_ immediately after each execution.
+#### **Real-time transparency on every allocation step**
 
-* **AUM breakdown** by chain and by protocol.
-* **Exact executed transactions** with links to explorers.
-* **Flow deltas and PnL:** swaps, bridge costs, incentive capture impact.
-* **Cash vs positions:** updated balances after every step.
-* **Dust tracking:** leftover tokens, residual balances, rounding effects.
-* **Recent Transactions feed:** a live stream of the latest actions taken by the allocation engine.
-* Exportable **JSON** for integrations, dashboards, or internal monitoring.
+ForgeYields publishes Atomic Reports immediately after each execution. Each report shows the allocator's true live state:
 
-#### Risk Management in Operations
+* **AUM breakdown** by chain and by protocol
+* **Executed transactions** with explorer links
+* **Flow deltas and PnL:** swaps, bridge costs, incentive capture
+* **Cash vs positions:** updated balances after every step
+* **Dust tracking:** leftover tokens, residual balances, rounding effects
+* **Recent transactions feed:** live stream of allocator actions
+* Exportable **JSON** for integrators, dashboards, monitoring
 
-Operational risk comes from **loss-potential actions** such as swaps, bridges, or deposits into strategies with entry fees. ForgeYields reduces this risk through strict routing rules, slippage limits, retries, and controlled bridge selection.
+#### **Risk management in operations**
+
+Operational risk comes from loss-potential actions — swaps, bridges, deposits into strategies with entry fees. ForgeYields mitigates these through strict routing rules.
 
 **Swap execution risk**\
 All swaps (e.g., WETH → wstETH) use KyberSwap with on-chain slippage limits. If pricing exceeds bounds, execution stops and retries later — avoiding bad fills.
 
 **Bridge execution risk**\
-Allocations default to canonical bridges.\
-In rare cases, when a high-value opportunity requires faster settlement, a reputable non-canonical bridge may be used.
+Allocations default to canonical bridges. In rare cases — when a high-value opportunity requires faster settlement — a reputable non-canonical bridge may be used. Bridge risk is captured under Hallmark's [Protocol Risk C5](../hallmark/methodology.md#layer-1--protocol-risk) and [Asset Risk A4](../hallmark/methodology.md#layer-2--asset-risk).
 
+**Allocation drift**\
+If a deployed strategy's Hallmark score is updated and crosses the eligibility cutoff, the allocator initiates exit on the next rebalance. See [Hallmark cadence](../hallmark/overview.md) for how rescores propagate.

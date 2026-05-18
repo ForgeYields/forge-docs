@@ -37,34 +37,45 @@ The Controller is intentionally isolated and minimalist, improving auditability 
 
 ***
 
-#### **3. Strategy Execution Layer (Manager + Vault on Ethereum)**
+#### **3. Underwriting Layer ([Hallmark](../hallmark/overview.md))**
 
-This layer is where capital is allocated and yield is generated.
+Before a strategy can enter the Strategist's allow-list, it must clear Hallmark — the published methodology that scores protocol, asset, chain, and (for wrapper vaults) curator/atomist trust on a 1–10 scale. The composite GRS must be ≤ 7.5.
 
-**Vault (Ethereum):**
+* Every score is published and versioned ([forge-hallmark](https://github.com/ForgeYields/forge-hallmark))
+* Scores cascade: an L1 protocol rescore triggers re-evaluation of every L3 strategy in its dependency tree
+* The allocator refuses any strategy without a current score or with GRS > 7.5
+* No "manual override" path exists — the validators are enforced in the allocator pipeline
+
+This is the gate between "we could deploy here" and "we will deploy here."
+
+***
+
+#### **4. Strategy Execution Layer (Manager + Vault on Ethereum)**
+
+This layer is where eligible capital is allocated and yield is generated.
+
+**Vault (Ethereum, via [Veda Labs BoringVault](https://docs.veda.tech)):**
 
 * Receives assets bridged from Token Gateways
-* Deposits into underlying Ethereum DeFi protocols (Curve, LST/LRT issuers, lending markets)
+* Deposits into Hallmark-eligible strategies across Aave, Morpho, Curve, Pendle, Ipor Fusion, MetaMorpho, Convex, Yearn V3, and others
 * Executes trades and rebalances liquidity
 * Sends Vault Reports back to the Controller
 
 **Manager (Ethereum):**
 
-* Enforces the **Merkle-based allowed calls** (set off-chain by the Strategist)
+* Enforces the **Merkle-based allowed calls** (set off-chain by the Strategist, gated by Hallmark eligibility)
 * Ensures only vetted integrations and methods can be executed
-* Acts as the “instruction layer” for strategy changes
+* Acts as the "instruction layer" for strategy changes
 
 **Strategist (Off-chain engine):**
 
-* Computes the optimal allocation
-* Allowed actions via Merkle roots predefined&#x20;
+* Computes the optimal allocation across the Hallmark-eligible set
+* Allowed actions defined via Merkle roots
 * Sends instructions through the Manager to perform swaps, deposits, and reallocations
-
-This layer captures incentives, rotates positions, and runs the automated yield optimization logic of ForgeYields.
 
 ***
 
-#### **4. Mailboxes (Hyperlane) Across Chains**
+#### **5. Mailboxes (Hyperlane) Across Chains**
 
 At the top of each layer, Mailboxes (Starknet, Ethereum, Scroll) handle:
 
@@ -78,10 +89,11 @@ This enables a **fully distributed yet unified global state** across all chains.
 
 ### Summary
 
-This architecture separates ForgeYields into three clean layers:
+This architecture separates ForgeYields into four clean layers:
 
 * **User Interface Layer** → local deposit/redeem, chain abstraction
 * **Coordination Layer** → global AUM, epochs, cross-chain state
-* **Strategy Execution Layer** → yield farming, incentive chasing, allowed calls
+* **Underwriting Layer (Hallmark)** → strategy eligibility, scoring, cascade integrity
+* **Strategy Execution Layer** → deployment to eligible strategies, allowed calls
 
 Each component has a minimal, clearly defined responsibility, ensuring security, scalability, and fast strategy upgrades.

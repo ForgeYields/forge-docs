@@ -1,6 +1,6 @@
-# Redeem
+# 💸 Redeem
 
-**Steps to Redeem:**
+Redemptions are asynchronous — your capital keeps earning until the next clearing cycle, and the delay limits liquidity-extraction risk. Steps:
 
 1.  Click on switch to redeem (only appear if you have previously deposited)<br>
 

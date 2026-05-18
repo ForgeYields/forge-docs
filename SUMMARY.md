@@ -22,22 +22,22 @@
 
 ## Integration
 
-* [Power your users’ yield experience](integration/power-your-users-yield-experience.md)
-* [Deposit](integration/deposit.md)
-* [Redeem](integration/redeem.md)
-* [API](integration/api/README.md)
+* [🔗 Integrate ForgeYields](integration/power-your-users-yield-experience.md)
+* [💰 Deposit](integration/deposit.md)
+* [💸 Redeem](integration/redeem.md)
+* [⚡ API](integration/api/README.md)
   * [Strategies Info](integration/api/strategies-info.md)
   * [Pending redeems](integration/api/pending-redeems.md)
 
 ## User guide
 
-* [Connect to Forge](user-guide/connect-to-forge.md)
-* [Deposit](user-guide/deposit.md)
-* [Redeem](user-guide/redeem.md)
+* [🔌 Connect to Forge](user-guide/connect-to-forge.md)
+* [💰 Deposit](user-guide/deposit.md)
+* [💸 Redeem](user-guide/redeem.md)
 
-## OTHER
+## Other
 
-* [Audits](other/audits.md)
-* [Brand Kit](other/brand-kit.md)
-* [Terms of use](other/terms-of-use.md)
-* [Privacy policy](other/privacy-policy.md)
+* [🔒 Audits](other/audits.md)
+* [🎨 Brand Kit](other/brand-kit.md)
+* [📜 Terms of use](other/terms-of-use.md)
+* [🛡️ Privacy policy](other/privacy-policy.md)

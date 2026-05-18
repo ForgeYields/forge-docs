@@ -1,49 +1,50 @@
 # 📚 Features
 
-#### **Automated Incentive Chasing**
+#### **Underwritten by Hallmark**
 
-ForgeYields continuously hunts the best incentivized yields across chains and reallocates your liquidity automatically.\
-You get:
+Every strategy ForgeYields touches is scored against a [published methodology](../hallmark/overview.md) before any capital flows. Protocol, asset, chain, and (for wrapper vaults) curator/atomist trust — all measured on a 1–10 scale, with a hard cutoff at GRS ≤ 7.5. Strategies that don't clear the bar never reach a vault.
 
-* Higher net returns through incentive rotation
-* Zero monitoring or manual rebalancing
-* Automatic capture of short-lived opportunities
+This is the defining feature. Everything else builds on it.
 
-You deposit once, the engine farms incentives everywhere for you.
+#### **Frontier yields, cross-chain**
 
-#### **Cross-Rollup Liquidity Efficiency**
+ForgeYields targets the yields most aggregators avoid — strategies that sit outside the blue-chip safe-list because they require active underwriting to safely deploy. Capital rotates across chains as opportunities open and close, with every venue pre-cleared by Hallmark.
 
-ForgeYields batches deposits and withdrawals on each rollup and only settles the net difference on Ethereum.\
-For users, this unlocks a **true one-click, chain-agnostic experience**:
+* Higher net returns than blue-chip-only aggregators
+* Cross-chain coverage: Ethereum, Starknet, Base, Arbitrum, Monad, HyperEVM
+* No manual chasing — the allocator deploys, monitors, and unwinds positions
+
+#### **Cross-rollup liquidity efficiency**
+
+Deposits and withdrawals batch on each rollup and only the net difference settles on Ethereum. For users, this means a chain-agnostic experience:
 
 * No manual bridging
 * No gas surprises
 * No waiting for cross-chain sync
-* The system moves liquidity for you, automatically
+* Liquidity moves in the background, automatically
 
-You interact once, **ForgeYields handles every chain in the background**
+#### **DeFi-ready fyTokens**
 
-#### **DeFi-Ready fyTokens**
+fyTokens follow the ERC-4626 standard, making them fully composable across DeFi:
 
-fyTokens follow the ERC-4626 standard, making them fully composable across DeFi.
+* Use as collateral in lending markets
+* Integrate into other protocols
+* Bridge instantly across L2s
 
-You can:
+Your yield-bearing position is an asset you can use, not a locked deposit.
 
-* Use them as collateral
-* Integrate them into protocols
-* Bridge them instantly across L2s
+#### **Asynchronous redemptions, by design**
 
-Your yield becomes an asset you can use everywhere.
+Deposits mint instantly. Withdrawals take slightly longer because your capital is actively earning across multiple chains. This is intentional — the async pattern is how the vault limits liquidity-extraction attacks.
 
-#### **Smart Asynchronous Redemptions**
-
-Deposits mint instantly.\
-Withdrawals take slightly longer because your funds are actively earning across multiple chains and strategies.
-
-Key points:
-
-* A small redemption fee, value depends on the strategy and is visible on the UI.
+* A small redemption fee (visible in the UI, per strategy)
 * Timing depends on liquidity availability
-* Fully visible in Atomic Reports
+* Every redemption tracked in [Atomic Reports](yield-allocation.md)
 
-You always see where your assets are, and when they’re coming back.
+#### **Full transparency**
+
+Every Hallmark score is [public](../hallmark/transparency.md), every methodology amendment is dated and signed, every allocation is logged in the Atomic Transparency Ledger. If a position later goes wrong, the post-mortem can attribute the failure to a specific criterion — not vague "model failure."
+
+#### **Non-custodial control**
+
+You hold fyTokens. ForgeYields never holds your private keys or your funds. Relayers execute, but every call is verified on-chain against a Merkle-validated allow-list (powered by [Veda Labs](https://docs.veda.tech) BoringVault). No relayer can deviate from the pre-approved set.

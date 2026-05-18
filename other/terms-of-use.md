@@ -44,23 +44,20 @@ ForgeYields does not verify user identity and cannot determine whether usage is 
 
 ### **4. Risks**
 
-Using ForgeYields involves significant risks, including but not limited to:
+Using ForgeYields involves significant risks, including but not limited to those listed below. A full description of each risk category, with cross-references to the relevant [Hallmark](../hallmark/overview.md) underwriting layer, is published at [Basics → Risks](../basics/risks.md).
 
-#### **Protocol and Smart-Contract Risk**
+ForgeYields targets higher-yield strategies than blue-chip aggregators. The risks below are real, present, and underwritten — they are not eliminated.
 
-Smart contracts may contain vulnerabilities. Even audited code may have bugs or be exploited.
+- **Smart-contract risk** — even audited contracts may contain bugs.
+- **Protocol risk** — vulnerabilities or governance compromise in underlying protocols (Aave, Morpho, Curve, Pendle, lending markets, LST/LRT issuers, etc.).
+- **Asset risk** — peg failure, backing degradation, or redemption-mechanism breakage in stablecoins, LSTs, LRTs, or wrapped assets.
+- **Strategy risk** — execution-level risk including leverage ratios, LP composition, oracle dependence, unwind liquidity.
+- **Wrapper-vault risk** — when ForgeYields deposits into a third-party permissioned vault (Ipor Fusion, MetaMorpho, Yearn V3), additional trust assumptions apply.
+- **Chain risk** — Layer-1 and Layer-2 networks carry consensus, sequencer, and bridge risks.
+- **Bridge risk** — even with canonical bridges, all cross-chain operations carry technical and operational execution risk.
+- **Liquidity risk** — during high demand, redemptions may take longer until liquidity is freed during the next rebalance.
 
-#### **Protocol risk**
-
-Vulnerabilities in underlying protocols used by the strategies (Curve, Convex, LST/LRT issuers, lending markets, etc.).
-
-#### Liquidity risk
-
-During high demand or volatile periods, redemptions may take longer until liquidity is freed during the next rebalance.
-
-#### Bridge risk
-
-Even though ForgeYields defaults to canonical bridges, all cross-chain operations carry technical and operational execution risk.
+Hallmark scores published on the [public feed](../hallmark/transparency.md) reflect a methodology — not a guarantee. Past scores do not guarantee future outcomes. Methodology updates may change historical scores; the version applicable to a deposit is the version published at the time of allocation.
 
 
 
