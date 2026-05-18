@@ -9,6 +9,12 @@
 * [📚 Features](basics/features.md)
 * [⚠️ Risks](basics/risks.md)
 
+## Hallmark
+
+* [🛡️ Overview](hallmark/overview.md)
+* [📐 Methodology](hallmark/methodology.md)
+* [🔍 Transparency & Public Scores](hallmark/transparency.md)
+
 ## How it works
 
 * [🔄 Step by Steps](how-it-works/step-by-steps.md)
