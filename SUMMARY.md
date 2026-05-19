@@ -13,7 +13,10 @@
 
 * [🛡️ Overview](hallmark/overview.md)
 * [📐 Methodology](hallmark/methodology.md)
-* [🔍 Transparency & Public Scores](hallmark/transparency.md)
+* [🧩 Strategy types](hallmark/strategy-types.md)
+* [🔍 How a score is built](hallmark/example-score.md)
+* [❓ FAQ](hallmark/faq.md)
+* [📂 Transparency & Public Scores](hallmark/transparency.md)
 
 ## How it works
 
