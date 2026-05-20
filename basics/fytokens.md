@@ -2,15 +2,7 @@
 
 **fyTokens are the ERC-4626 yield-bearing tokens you receive when you deposit into a ForgeYields vault.** One fyToken represents a proportional share of a vault's underlying assets — and of every Hallmark-underwritten strategy the vault is currently deployed across.
 
-## The three vaults
-
-| fyToken | Underlying | Description |
-|---|---|---|
-| **fyUSDC** | USDC | Cross-chain USDC yield, Hallmark-gated |
-| **fyETH** | ETH | Cross-chain ETH yield (LST/LRT + looping + LP) |
-| **fyWBTC** | WBTC | Cross-chain BTC yield (LST + LP + lending) |
-
-Each vault's composition — strategies, weights, current GRS per position — is published in real time. Every strategy in the mix must have a Hallmark score and clear the eligibility cutoff (GRS ≤ 7.5) before the allocator can deploy to it.
+ForgeYields currently offers three vault tokens, each directional in its underlying: **fyUSDC** (USDC), **fyETH** (ETH), **fyWBTC** (WBTC). Each vault's composition — strategies, weights, current GRS per position — is published in real time and changes as the allocator rebalances. Every strategy in the mix must have a Hallmark score and clear the eligibility cutoff (GRS ≤ 7.5) before the allocator can deploy to it.
 
 ## What they do
 
@@ -18,7 +10,7 @@ Each vault's composition — strategies, weights, current GRS per position — i
 * **Liquid.** No lockup. Hold, transfer, or trade fyTokens anytime — they're standard ERC-4626 receipts.
 * **Composable.** Use as collateral in lending markets, integrate into other protocols, bridge across L2s. Your yield position is a usable asset, not a frozen deposit.
 * **Cross-chain.** Deposit from any supported chain; the vault settles on Ethereum. You receive fyTokens on the chain you deposited from.
-* **Asynchronous redemption.** Withdraw via a `request_redeem` / `claim` flow. Funds stay earning until the next clearing cycle (typically minutes to hours, depending on liquidity). See [Redeem](../user-guide/redeem.md) for the user flow.
+* **Asynchronous redemption.** Withdraw via a request-then-claim flow. Funds stay earning until the next clearing cycle (typically minutes to hours, depending on liquidity). See [Redeem](../user-guide/redeem.md) for the user flow.
 
 ## What backs them
 
