@@ -3,7 +3,7 @@
 **Higher yields demand higher craft.**\
 ForgeYields is a cross-chain yield aggregator targeting the frontier — strategies most aggregators avoid because they sit outside the blue-chip safe-list — and underwrites every one of them like structured credit.
 
-<figure><img src=".gitbook/assets/header.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/header.png" alt="ForgeYields — Higher yields demand higher craft. Cross-chain yield frontier, underwritten like structured credit."><figcaption></figcaption></figure>
 
 
 
