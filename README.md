@@ -12,6 +12,8 @@ Yield aggregators give you safe-list returns. Anonymous farms ask you to take th
 
 ForgeYields gives you the frontier — with the discipline of structured credit. Tracking dozens of protocols. Rebalancing across chains as incentives shift. Underwriting every position before deposit. That's a full-time job — ForgeYields runs all of it for you, continuously, on-chain.
 
+<figure><img src=".gitbook/assets/positioning-frontier.svg" alt="ForgeYields positioning in the DeFi yield landscape — Y-axis: yield ceiling. X-axis: no wrapper vs wrapper vault. Existing wrappers (Morpho-Steakhouse, Morpho-Gauntlet, Yearn V3) cluster below the wrapper-side yield ceiling. ForgeYields is the only wrapper above the ceiling, methodology-gated by Hallmark."><figcaption>Where ForgeYields sits in the landscape. Same wrapper-level discipline as Yearn / Morpho-curated, but Hallmark's published methodology lets us safely include the frontier strategies the others won't.</figcaption></figure>
+
 ## What you get
 
 * **Diversified frontier yields** — selected and rebalanced across chains.

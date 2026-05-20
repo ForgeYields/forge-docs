@@ -4,8 +4,6 @@
 
 Every strategy deployed in a ForgeYields vault — and every protocol, asset, and chain it touches — is underwritten by Hallmark before capital can flow to it. Allocations are not opinions: they are the output of a published, versioned methodology, applied line by line to source data and committed to a public scoring feed.
 
-<figure><img src="../.gitbook/assets/positioning-frontier.svg" alt="ForgeYields positioning in the DeFi yield landscape — Y-axis: yield ceiling. X-axis: no wrapper vs wrapper vault. Existing wrappers (Morpho-Steakhouse, Morpho-Gauntlet, Yearn V3) cluster below the wrapper-side yield ceiling. ForgeYields is the only wrapper above the ceiling, methodology-gated by Hallmark."><figcaption>Where ForgeYields sits. Same wrapper-level discipline as Yearn / Morpho-curated, but Hallmark's published per-strategy methodology lets us safely include frontier strategies the others won't.</figcaption></figure>
-
 ## Why it exists
 
 ForgeYields targets the yield frontier — strategies most aggregators avoid because they sit outside the blue-chip safe-list. Higher yields demand higher craft, and Hallmark is what that craft looks like in practice: a quantitative bar that every strategy must clear across protocol, asset, and execution risk before a single dollar moves. Underwriting answers four questions before any deposit is made:
