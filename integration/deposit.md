@@ -1,23 +1,27 @@
-# Deposit
+# 💰 Deposit
 
 ### 1. Deposit flow (generic)
 
-The Token Gateway (contract handling deposits and redeems) implements the ERC-4626 standard:
+The Token Gateway (contract handling deposits and redeems) implements the ERC-4626 standard.
+
+> Function names below are shown in **EVM camelCase**. **Cairo equivalents use snake_case** — `depositReferral` ↔ `deposit_referral`, `mintReferral` ↔ `mint_referral`. `deposit` and `mint` keep the same name on both chains.
 
 1. Approve the **underlying token** to the Token Gateway.
-2. Call:
+2. Call one of:
 
-* `deposit(assets, receiver)`: deposit a fixed amount of underlying
-* `deposit_referral(assets, receiver, referral_code)` : deposit variant with referral
-* `mint(shares, receiver)`: mint a fixed amount of fyTokens.
-* `mint_referral(shares, receiver, referral_code)`: mint variant with referral.
+* `deposit(assets, receiver)` — deposit a fixed amount of underlying
+* `depositReferral(assets, receiver, referralCode)` — deposit variant with referral *(Cairo: `deposit_referral`)*
+* `mint(shares, receiver)` — mint a fixed amount of fyTokens
+* `mintReferral(shares, receiver, referralCode)` — mint variant with referral *(Cairo: `mint_referral`)*
 
 #### Generic flow
 
 ```
-underlying.approve(token_gateway, amount)
-token_gateway.deposit_referral(amount, user, referral_code)
-→ User receives fyTokens
+underlying.approve(tokenGateway, amount)
+tokenGateway.depositReferral(amount, user, referralCode)
+→ user receives fyTokens
+
+(Cairo: snake_case names — tokenGateway.deposit_referral(amount, user, referral_code))
 ```
 
 * You can get the `token_gateway` address via our [API](api/strategies-info.md).

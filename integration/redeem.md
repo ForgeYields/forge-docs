@@ -4,20 +4,24 @@
 
 Redemptions in ForgeYields are **asynchronous** and follow a **request → claim** model.
 
-1. The user calls **`requestRedeem(shares, receiver, owner)`** on the Token Gateway. The fyTokens are **burned**, and an ERC-721 redeem request is **minted**, recording the number of shares and the epoch at which the request was created. The function returns a redemption `id`.
+> Function names below are shown in **EVM camelCase**. **Cairo equivalents use snake_case** — `requestRedeem` ↔ `request_redeem`, `claimRedeem` ↔ `claim_redeem`.
+
+1. The user calls **`requestRedeem(shares, receiver, owner)`** on the Token Gateway *(Cairo: `request_redeem`)*. The fyTokens are **burned**, and an ERC-721 redeem request is **minted**, recording the number of shares and the epoch at which the request was created. The function returns a redemption `id`.
 2. During the next clearing cycle, the withdrawal pool is processed and the request becomes **claimable**.
-3. Anyone can then call **`claimRedeem(id)`** (Cairo: `claim_redeem(id)`). This burns the redeem NFT and transfers the underlying assets to the receiver that was set when the request was created.
+3. Anyone can then call **`claimRedeem(id)`** *(Cairo: `claim_redeem`)*. This burns the redeem NFT and transfers the underlying assets to the receiver that was set when the request was created.
 
 #### Generic flow
 
 ```
-TOKEN_GATEWAY.requestRedeem(shares, receiver, owner) → returns id
+tokenGateway.requestRedeem(shares, receiver, owner) → returns id
 → redeem request created (ERC-721)
 
 <withdrawal pool gets processed>
 
-TOKEN_GATEWAY.claimRedeem(id) → returns assets
+tokenGateway.claimRedeem(id) → returns assets
 → receiver gets the underlying
+
+(Cairo: snake_case names — tokenGateway.request_redeem(...) / tokenGateway.claim_redeem(id))
 ```
 
 #### Notes
