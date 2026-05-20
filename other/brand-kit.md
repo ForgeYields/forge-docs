@@ -25,42 +25,9 @@ Higher yields demand higher craft — cross-chain yield frontier, underwritten l
 
 ***
 
-## Brand voice
+## Voice
 
-ForgeYields speaks like a structured-credit desk, not a retail yield app. Sophisticated, sober, evidence-driven. Confident enough to name what we don't do (vanilla blue-chip yields) and what we do (frontier strategies, underwritten with discipline).
-
-### Vocabulary we use
-
-| Word | Why |
-|---|---|
-| **underwritten / underwriting** | Institutional credit vocabulary. Implies professional risk acceptance, not babysitting. |
-| **frontier** | Reframes higher risk as exploration (positive), not danger (defensive). |
-| **engineered** | Construction vocabulary — implies intention + design, vs lazy "managed". |
-| **craft** | Owns the brand name. Implies intentional construction, stress-tested, not auto-compounded. |
-| **tempered** | Forge vocabulary that doubles as a virtue (tempered judgment, tempered steel). |
-| **line by line** | Credit-memo phrasing — implies due diligence depth. |
-| **structured credit** | Direct comparison anchor. Anyone who's seen a credit memo recognizes it. |
-
-### Vocabulary we avoid
-
-| Word | Why |
-|---|---|
-| ~~automated incentive chasing~~ | The previous brand. Too retail, too "set and forget." |
-| ~~one-click~~ / ~~single click~~ | Retail UX vocabulary. Undermines the institutional tone. |
-| ~~safe~~ / ~~secure~~ | Undermines the entire positioning (we go where the higher yield is). |
-| ~~transparent~~ (alone) | Overused. Prefer "verifiable", "auditable", "published", "rated". |
-| ~~AI-powered~~ / ~~smart~~ | Generic startup vocabulary. We're not selling AI, we're selling underwriting. |
-| ~~easy~~ / ~~simple~~ | Implies the work is trivial. The work is non-trivial; the *interface* is simple. |
-| ~~blue-chip~~ (as a positive) | We define ourselves against blue-chip aggregators. Use only as a contrast. |
-| ~~hunt~~ / ~~chase~~ | Predatory vocabulary. We underwrite, we don't hunt. |
-
-### Tone rules
-
-- **Lead with the principle, then the product.** "Higher yields demand higher craft" before "ForgeYields is…"
-- **Name competitors implicitly, not by trash-talking.** "Beyond the blue-chip pack" lands better than "unlike Yearn."
-- **Numbers and methodology references > adjectives.** "GRS ≤ 7.5" is sharper than "rigorous."
-- **Periods over commas in hero copy.** Three short sentences beat one comma-stitched mouthful.
-- **Avoid emoji in body copy.** They show up in GitBook page titles for navigation — never in headlines, never in marketing copy.
+ForgeYields speaks like a structured-credit desk, not a retail yield app. Sophisticated, sober, evidence-driven. Lead with the principle, then the product — *"Higher yields demand higher craft"* before *"ForgeYields is…"*.
 
 ***
 

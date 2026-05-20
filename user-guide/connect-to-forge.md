@@ -33,5 +33,3 @@ If you already use a wallet like MetaMask or Rabby, no setup needed — connect 
 * Connect your wallet (Argent X, Braavos, MetaMask, Rabby, etc.) by clicking **Connect Wallet** at the top right.
 * Pick a vault: [fyUSDC](../basics/fytokens.md), [fyETH](../basics/fytokens.md), or [fyWBTC](../basics/fytokens.md).
 
-Every strategy you deposit into is pre-cleared by [Hallmark](../hallmark/overview.md) — the published underwriting framework with a hard cutoff at GRS ≤ 7.5.
-
