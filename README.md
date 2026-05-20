@@ -29,7 +29,7 @@ DeFi users — retail and institutional — who want real yield without the manu
 
 ## Where to start
 
-* **Understand the system** → [How it works](how-it-works/overall.md)
+* **Understand the system** → [How it works — step by step](how-it-works/step-by-steps.md)
 * **Read the methodology** → [Hallmark — Overview](hallmark/overview.md)
 * **See a worked score** → [How a score is built](hallmark/example-score.md)
 * **Start depositing** → [Connect to Forge](user-guide/connect-to-forge.md)
