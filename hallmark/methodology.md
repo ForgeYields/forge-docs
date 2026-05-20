@@ -2,6 +2,8 @@
 
 Hallmark is the underwriting framework behind every ForgeYields allocation. It scores risk in **three layers** — each a self-contained rubric — that compose into a single Global Risk Score per strategy.
 
+<figure><img src="../.gitbook/assets/hallmark-methodology-diagram.svg" alt="Hallmark methodology — Protocol Risk × 0.35 + Asset Risk × 0.25 + Strategy-Specific Risk × 0.40 = Global Risk Score, with eligibility cutoff at 7.5 and hard-cap overrides on single-criterion thresholds"><figcaption>How the three layers compose into a Global Risk Score. Hard-cap thresholds on any single criterion can exclude a strategy regardless of composite GRS.</figcaption></figure>
+
 ## The three layers
 
 | Layer | Scope | Output |
@@ -79,6 +81,8 @@ Where **SSR (Strategy-Specific Risk)** is computed from rubric-specific criteria
 ### Type W — Wrapper Vault (v4.1)
 
 Type W exists because depositing into a third-party permissioned vault introduces a **two-layer trust model** that Types 1/2/3 don't cleanly capture. When ForgeYields directly executes a strategy, all risk lives at L1 + L2 + strategy mechanics. When ForgeYields deposits into a vault that internally executes a strategy, the **curator/atomist, exit queue, fee structure, and vault maturity** become first-order concerns.
+
+<figure><img src="../.gitbook/assets/type-w-trust-model.svg" alt="Type W trust model — Depositor → ForgeYields fyToken → Wrapper Vault (curator/atomist) → Underlying Strategy. X-criteria measure trust at the wrapper layer, with X2 (Curator/Atomist Trust) carrying 30% weight as the defining differentiator."><figcaption>Type W adds a 4th party (the Wrapper Vault) to the capital flow. The X-criteria measure trust at that wrapper layer — X2 (Curator/Atomist Trust) at 30% weight is the defining differentiator.</figcaption></figure>
 
 | Criterion | Weight | What it measures |
 |---|---|---|

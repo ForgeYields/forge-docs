@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(115,139,255,0.05)" stroke-width="1"></path>
+    </pattern>
+    <radialGradient id="rightWash" cx="78%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="rgba(115,139,255,0.05)"></stop>
+      <stop offset="100%" stop-color="rgba(115,139,255,0)"></stop>
+    </radialGradient>
+    <filter id="grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="3"></feTurbulence>
+      <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1   0 0 0 0.18 0"></feColorMatrix>
+      <feComposite in2="SourceGraphic" operator="in"></feComposite>
+    </filter>
+  </defs>
+  
+  <rect width="1600" height="900" fill="#0B0C0F"></rect>
+  <rect width="1600" height="900" fill="url(#grid)"></rect>
+  <rect width="1600" height="900" filter="url(#grain)" opacity="0.35"></rect>
+  <rect width="1600" height="900" fill="url(#rightWash)"></rect>
+  <rect x="78" y="78" width="4" height="4" fill="#738BFF" opacity="0.55"></rect><rect x="178.5" y="58.5" width="3" height="3" fill="#738BFF" opacity="0.4"></rect><rect x="558" y="48" width="4" height="4" fill="#738BFF" opacity="0.5"></rect><rect x="1278" y="68" width="4" height="4" fill="#738BFF" opacity="0.5"></rect><rect x="1478.5" y="108.5" width="3" height="3" fill="#738BFF" opacity="0.45"></rect><rect x="1517.5" y="57.5" width="5" height="5" fill="#738BFF" opacity="0.55"></rect><rect x="58.5" y="818.5" width="3" height="3" fill="#738BFF" opacity="0.4"></rect><rect x="198" y="848" width="4" height="4" fill="#738BFF" opacity="0.45"></rect><rect x="1478" y="838" width="4" height="4" fill="#738BFF" opacity="0.45"></rect><rect x="1538.5" y="798.5" width="3" height="3" fill="#738BFF" opacity="0.35"></rect>
+  
+  <g transform="translate(40,40)">
+    <g transform="translate(0,0) scale(0.3006778919746337,0.3006778919746337)" fill="#738BFF" opacity="1">
+    <path d="M 16.479 30.228 L 30.904 30.228 L 30.904 73.168 L 16.479 73.168 Z"></path><path d="M 16.479 42.775 L 16.479 27.406 L 59.839 2.614 L 59.839 17.984 Z"></path><path d="M 16.505 27.339 L 16.505 9.434 L 0 0 L 0.001 17.905 Z"></path><path d="M 43.839 61.36 L 43.839 45.99 L 59.864 36.84 L 59.864 52.209 Z"></path>
+  </g>
+    <text x="32" y="16" font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" font-weight="500" fill="#F0F0F0" letter-spacing="-0.02em">ForgeYields</text>
+  </g>
+  <text x="1560" y="56" font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" text-anchor="end">HALLMARK · v4.1</text>
+
+  <g transform="translate(80,100)">
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" letter-spacing="0.14em" fill="rgba(240,240,240,0.62)" y="0">METHODOLOGY · GLOBAL RISK SCORE</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="40" font-weight="500" letter-spacing="-0.025em" fill="#F0F0F0" y="48">Hallmark composes a GRS from three weighted layers.</text>
+  </g>
+
+  
+    <g transform="translate(170,200)">
+      <rect width="380" height="340" rx="2" fill="#101218" stroke="rgba(240,240,240,0.10)" stroke-width="1"></rect>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="28" y="40">LAYER 1</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="36" font-weight="500" letter-spacing="-0.025em" fill="#F0F0F0" x="28" y="92">Protocol Risk</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" letter-spacing="0.06em" fill="rgba(240,240,240,0.42)" x="28" y="120">RUBRIC · PR</text>
+      <line x1="28" y1="148" x2="352" y2="148" stroke="rgba(240,240,240,0.10)" stroke-width="1"></line>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="14" letter-spacing="0.02em" fill="rgba(240,240,240,0.62)" x="28" y="178">C1 — C6</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" fill="rgba(240,240,240,0.42)" x="28" y="200">6 criteria</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" fill="rgba(240,240,240,0.62)" x="28" y="240">
+        <tspan x="28" dy="0">Smart-contract integrity, code maturity,</tspan><tspan x="28" dy="20">team credibility, governance posture,</tspan><tspan x="28" dy="20">oracles, multi-protocol dependencies.</tspan>
+      </text>
+      <g transform="translate(242, 296)">
+        <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="10" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" y="0" text-anchor="end" x="110">WEIGHT</text>
+        <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="26" font-weight="600" letter-spacing="-0.02em" fill="#F0F0F0" y="28" text-anchor="end" x="110">× 0.35</text>
+      </g>
+    </g>
+    <g transform="translate(610,200)">
+      <rect width="380" height="340" rx="2" fill="#101218" stroke="rgba(240,240,240,0.10)" stroke-width="1"></rect>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="28" y="40">LAYER 2</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="36" font-weight="500" letter-spacing="-0.025em" fill="#F0F0F0" x="28" y="92">Asset Risk</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" letter-spacing="0.06em" fill="rgba(240,240,240,0.42)" x="28" y="120">RUBRIC · AR</text>
+      <line x1="28" y1="148" x2="352" y2="148" stroke="rgba(240,240,240,0.10)" stroke-width="1"></line>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="14" letter-spacing="0.02em" fill="rgba(240,240,240,0.62)" x="28" y="178">A1 — A5</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" fill="rgba(240,240,240,0.42)" x="28" y="200">5 criteria</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" fill="rgba(240,240,240,0.62)" x="28" y="240">
+        <tspan x="28" dy="0">Underlying-asset stability, peg quality,</tspan><tspan x="28" dy="20">liquidity depth, issuer concentration,</tspan><tspan x="28" dy="20">redemption mechanics.</tspan>
+      </text>
+      <g transform="translate(242, 296)">
+        <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="10" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" y="0" text-anchor="end" x="110">WEIGHT</text>
+        <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="26" font-weight="600" letter-spacing="-0.02em" fill="#F0F0F0" y="28" text-anchor="end" x="110">× 0.25</text>
+      </g>
+    </g>
+    <g transform="translate(1050,200)">
+      <rect width="380" height="340" rx="2" fill="#101218" stroke="rgba(240,240,240,0.10)" stroke-width="1"></rect>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="28" y="40">LAYER 3</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="36" font-weight="500" letter-spacing="-0.025em" fill="#F0F0F0" x="28" y="92">Strategy-Specific Risk</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" letter-spacing="0.06em" fill="rgba(240,240,240,0.42)" x="28" y="120">RUBRIC · SSR</text>
+      <line x1="28" y1="148" x2="352" y2="148" stroke="rgba(240,240,240,0.10)" stroke-width="1"></line>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="14" letter-spacing="0.02em" fill="rgba(240,240,240,0.62)" x="28" y="178">S1 — S5  ·  X1 — X5</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" fill="rgba(240,240,240,0.42)" x="28" y="200">4–5 criteria per type</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" fill="rgba(240,240,240,0.62)" x="28" y="240">
+        <tspan x="28" dy="0">Type-specific rubric. Looping leverage,</tspan><tspan x="28" dy="20">LP impermanent loss, PT duration risk,</tspan><tspan x="28" dy="20">wrapper trust delegation.</tspan>
+      </text>
+      <g transform="translate(242, 296)">
+        <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="10" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" y="0" text-anchor="end" x="110">WEIGHT</text>
+        <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="26" font-weight="600" letter-spacing="-0.02em" fill="#F0F0F0" y="28" text-anchor="end" x="110">× 0.40</text>
+      </g>
+    </g>
+
+  
+    <path d="M 360 540 L 360 682 L 800 682 L 800 720" fill="none" stroke="rgba(240,240,240,0.30)" stroke-width="1.25"></path>
+    
+    <path d="M 800 540 L 800 682 L 800 682 L 800 720" fill="none" stroke="rgba(240,240,240,0.30)" stroke-width="1.25"></path>
+    
+    <path d="M 1240 540 L 1240 682 L 800 682 L 800 720" fill="none" stroke="rgba(240,240,240,0.30)" stroke-width="1.25"></path>
+    
+  <path d="M 795 712 L 800 720 L 805 712" fill="none" stroke="#738BFF" stroke-width="1.5"></path>
+
+  
+  <g transform="translate(490,720)">
+    <rect width="620" height="130" rx="2" fill="#101218" stroke="#738BFF" stroke-width="1.5"></rect>
+    <rect width="620" height="130" rx="2" fill="#738BFF" opacity="0.05"></rect>
+
+    
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="#738BFF" x="32" y="36">GLOBAL RISK SCORE</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="46" font-weight="500" letter-spacing="-0.025em" fill="#F0F0F0" x="32" y="88">GRS</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" fill="rgba(240,240,240,0.62)" x="32" y="112">Range  1.0 — 10.0</text>
+
+    
+    <line x1="280" y1="28" x2="280" y2="102" stroke="rgba(240,240,240,0.10)"></line>
+
+    
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="304" y="36">ELIGIBILITY CUTOFF</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="46" font-weight="500" letter-spacing="-0.025em" fill="#5DBA88" x="304" y="88">≤ 7.5</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" fill="rgba(240,240,240,0.62)" x="304" y="112">strategies above are excluded</text>
+  </g>
+
+  <g transform="translate(80,720)">
+    <rect x="-40" y="-22" width="3" height="72" fill="#738BFF" opacity="0.6"></rect>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" y="-2">LAYER 0 · DEPENDENCY</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="15" fill="rgba(240,240,240,0.62)" y="26">Chain Risk Score (CRS) feeds Protocol Risk via</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="15" fill="rgba(240,240,240,0.62)" y="48">the Multi-Protocol Rule.</text>
+  </g>
+
+  
+  <g transform="translate(1520,720)">
+    <rect x="37" y="-22" width="3" height="72" fill="#738BFF" opacity="0.6"></rect>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" y="-2" text-anchor="end">HARD CAPS · OVERRIDE</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="15" fill="rgba(240,240,240,0.62)" y="26" text-anchor="end">Single L1 / L2 criterion thresholds</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="15" fill="rgba(240,240,240,0.62)" y="48" text-anchor="end">(e.g., PRS &gt; 7, ARS &gt; 6, A2 ≥ 9, C3 ≥ 8) exclude</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="15" fill="rgba(240,240,240,0.62)" y="70" text-anchor="end">the strategy regardless of composite GRS.</text>
+  </g>
+
+</svg>

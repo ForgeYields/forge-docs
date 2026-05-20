@@ -2,6 +2,8 @@
 
 This is a worked example: one live strategy, every number, the evidence behind each criterion, and how it composes into the final GRS. If you read this end-to-end, you'll know how to verify any other Hallmark score yourself.
 
+<figure><img src="../.gitbook/assets/hallmark-score-example-gteusdc.svg" alt="Hallmark score example for gteUSDc Morpho — GRS 3.63, Eligible. Composition: PR 2.20 × 0.35 + AR 4.40 × 0.25 + SSR 4.40 × 0.40 = 3.63. Full breakdowns shown for the Protocol Rubric (morpho-blue C1-C6), Asset Rubric (eusd A1-A5 binding via max rule), and Type W Strategy Rubric (X1-X5)"><figcaption>One strategy, every number, line by line. Every value in the composition is reconstructible from the criteria below — no black boxes.</figcaption></figure>
+
 ***
 
 ## The strategy

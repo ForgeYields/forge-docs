@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(115,139,255,0.05)" stroke-width="1"></path>
+    </pattern>
+    <radialGradient id="rightWash" cx="78%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="rgba(115,139,255,0.05)"></stop>
+      <stop offset="100%" stop-color="rgba(115,139,255,0)"></stop>
+    </radialGradient>
+    <filter id="grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="3"></feTurbulence>
+      <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1   0 0 0 0.18 0"></feColorMatrix>
+      <feComposite in2="SourceGraphic" operator="in"></feComposite>
+    </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="#0B0C0F"></rect>
+  <rect width="1600" height="1000" fill="url(#grid)"></rect>
+  <rect width="1600" height="1000" filter="url(#grain)" opacity="0.35"></rect>
+  <rect width="1600" height="1000" fill="url(#rightWash)"></rect>
+  <rect x="78" y="78" width="4" height="4" fill="#738BFF" opacity="0.5"></rect><rect x="298.5" y="58.5" width="3" height="3" fill="#738BFF" opacity="0.4"></rect><rect x="1378" y="88" width="4" height="4" fill="#738BFF" opacity="0.45"></rect><rect x="1498.5" y="58.5" width="3" height="3" fill="#738BFF" opacity="0.4"></rect><rect x="58.5" y="938.5" width="3" height="3" fill="#738BFF" opacity="0.4"></rect><rect x="1478" y="918" width="4" height="4" fill="#738BFF" opacity="0.45"></rect>
+  <g transform="translate(40,40)">
+    <g transform="translate(0,0) scale(0.3006778919746337,0.3006778919746337)" fill="#738BFF"><path d="M 16.479 30.228 L 30.904 30.228 L 30.904 73.168 L 16.479 73.168 Z"></path><path d="M 16.479 42.775 L 16.479 27.406 L 59.839 2.614 L 59.839 17.984 Z"></path><path d="M 16.505 27.339 L 16.505 9.434 L 0 0 L 0.001 17.905 Z"></path><path d="M 43.839 61.36 L 43.839 45.99 L 59.864 36.84 L 59.864 52.209 Z"></path></g>
+    <text x="32" y="16" font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" font-weight="500" fill="#F0F0F0" letter-spacing="-0.02em">ForgeYields</text>
+  </g>
+  <text x="1560" y="56" font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" text-anchor="end">HALLMARK · LAYER 0 · CRS</text>
+
+  <g transform="translate(80, 110)">
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" y="0">LAYER 0 · CHAIN RISK</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="34" font-weight="500" letter-spacing="-0.025em" fill="#F0F0F0" y="46">Chains are scored before any protocol on them is allowed.</text>
+  </g>
+
+  
+  <g transform="translate(1090, 170)">
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="10" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="0" y="0">CRS BANDS</text>
+    
+      <g transform="translate(0, 18)">
+        <rect width="14" height="14" fill="#5DBA88" opacity="0.8"></rect>
+        <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="12" fill="#F0F0F0" x="22" y="12">0.0 — 5.5</text>
+        <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="10" letter-spacing="0.08em" fill="rgba(240,240,240,0.42)" x="22" y="28">LOW RISK</text>
+      </g>
+    
+      <g transform="translate(160, 18)">
+        <rect width="14" height="14" fill="#D9A55D" opacity="0.8"></rect>
+        <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="12" fill="#F0F0F0" x="22" y="12">5.5 — 7.5</text>
+        <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="10" letter-spacing="0.08em" fill="rgba(240,240,240,0.42)" x="22" y="28">ELEVATED RISK</text>
+      </g>
+    
+      <g transform="translate(320, 18)">
+        <rect width="14" height="14" fill="#D97070" opacity="0.8"></rect>
+        <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="12" fill="#F0F0F0" x="22" y="12">7.5 — 10</text>
+        <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="10" letter-spacing="0.08em" fill="rgba(240,240,240,0.42)" x="22" y="28">EXCLUDED</text>
+      </g>
+    
+  </g>
+
+  
+    <g transform="translate(80, 230)">
+      <rect width="464" height="323" rx="2" fill="#101218" stroke="rgba(240,240,240,0.10)"></rect>
+      <rect width="464" height="3" fill="#5DBA88"></rect>
+
+      <g transform="translate(28, 50)">
+        <rect width="56" height="56" rx="2" fill="#13151C" stroke="rgba(240,240,240,0.10)"></rect>
+        <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="14" font-weight="600" letter-spacing="0.06em" fill="#F0F0F0" x="28" y="35" text-anchor="middle">ETH</text>
+      </g>
+
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="100" y="64">ETHEREUM</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" fill="rgba(240,240,240,0.62)" x="100" y="86">L1 chain</text>
+
+      <line x1="28" y1="148" x2="436" y2="148" stroke="rgba(240,240,240,0.10)"></line>
+
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="28" y="178">CHAIN RISK SCORE</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="64" font-weight="500" letter-spacing="-0.04em" fill="#F0F0F0" x="28" y="240">1.45</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.14em" fill="#5DBA88" x="28" y="293">● ELIGIBLE · LOW</text>
+    </g>
+    <g transform="translate(568, 230)">
+      <rect width="464" height="323" rx="2" fill="#101218" stroke="rgba(240,240,240,0.10)"></rect>
+      <rect width="464" height="3" fill="#D9A55D"></rect>
+
+      <g transform="translate(28, 50)">
+        <rect width="56" height="56" rx="2" fill="#13151C" stroke="rgba(240,240,240,0.10)"></rect>
+        <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="14" font-weight="600" letter-spacing="0.06em" fill="#F0F0F0" x="28" y="35" text-anchor="middle">STK</text>
+      </g>
+
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="100" y="64">STARKNET</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" fill="rgba(240,240,240,0.62)" x="100" y="86">L2 · ZK rollup</text>
+
+      <line x1="28" y1="148" x2="436" y2="148" stroke="rgba(240,240,240,0.10)"></line>
+
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="28" y="178">CHAIN RISK SCORE</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="64" font-weight="500" letter-spacing="-0.04em" fill="#F0F0F0" x="28" y="240">5.50</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.14em" fill="#D9A55D" x="28" y="293">● ELIGIBLE · MID</text>
+    </g>
+    <g transform="translate(1056, 230)">
+      <rect width="464" height="323" rx="2" fill="#101218" stroke="rgba(240,240,240,0.10)"></rect>
+      <rect width="464" height="3" fill="#5DBA88"></rect>
+
+      <g transform="translate(28, 50)">
+        <rect width="56" height="56" rx="2" fill="#13151C" stroke="rgba(240,240,240,0.10)"></rect>
+        <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="14" font-weight="600" letter-spacing="0.06em" fill="#F0F0F0" x="28" y="35" text-anchor="middle">BSE</text>
+      </g>
+
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="100" y="64">BASE</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" fill="rgba(240,240,240,0.62)" x="100" y="86">L2 · OP rollup</text>
+
+      <line x1="28" y1="148" x2="436" y2="148" stroke="rgba(240,240,240,0.10)"></line>
+
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="28" y="178">CHAIN RISK SCORE</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="64" font-weight="500" letter-spacing="-0.04em" fill="#F0F0F0" x="28" y="240">3.40</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.14em" fill="#5DBA88" x="28" y="293">● ELIGIBLE · LOW</text>
+    </g>
+    <g transform="translate(80, 577)">
+      <rect width="464" height="323" rx="2" fill="#101218" stroke="rgba(240,240,240,0.10)"></rect>
+      <rect width="464" height="3" fill="#5DBA88"></rect>
+
+      <g transform="translate(28, 50)">
+        <rect width="56" height="56" rx="2" fill="#13151C" stroke="rgba(240,240,240,0.10)"></rect>
+        <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="14" font-weight="600" letter-spacing="0.06em" fill="#F0F0F0" x="28" y="35" text-anchor="middle">ARB</text>
+      </g>
+
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="100" y="64">ARBITRUM</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" fill="rgba(240,240,240,0.62)" x="100" y="86">L2 · OP rollup</text>
+
+      <line x1="28" y1="148" x2="436" y2="148" stroke="rgba(240,240,240,0.10)"></line>
+
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="28" y="178">CHAIN RISK SCORE</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="64" font-weight="500" letter-spacing="-0.04em" fill="#F0F0F0" x="28" y="240">3.25</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.14em" fill="#5DBA88" x="28" y="293">● ELIGIBLE · LOW</text>
+    </g>
+    <g transform="translate(568, 577)">
+      <rect width="464" height="323" rx="2" fill="#101218" stroke="rgba(240,240,240,0.10)"></rect>
+      <rect width="464" height="3" fill="#D9A55D"></rect>
+
+      <g transform="translate(28, 50)">
+        <rect width="56" height="56" rx="2" fill="#13151C" stroke="rgba(240,240,240,0.10)"></rect>
+        <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="14" font-weight="600" letter-spacing="0.06em" fill="#F0F0F0" x="28" y="35" text-anchor="middle">MON</text>
+      </g>
+
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="100" y="64">MONAD</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" fill="rgba(240,240,240,0.62)" x="100" y="86">L1 · parallel EVM</text>
+
+      <line x1="28" y1="148" x2="436" y2="148" stroke="rgba(240,240,240,0.10)"></line>
+
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="28" y="178">CHAIN RISK SCORE</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="64" font-weight="500" letter-spacing="-0.04em" fill="#F0F0F0" x="28" y="240">5.95</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.14em" fill="#D9A55D" x="28" y="293">● ELIGIBLE · MID</text>
+    </g>
+    <g transform="translate(1056, 577)">
+      <rect width="464" height="323" rx="2" fill="#101218" stroke="rgba(240,240,240,0.10)"></rect>
+      <rect width="464" height="3" fill="#D9A55D"></rect>
+
+      <g transform="translate(28, 50)">
+        <rect width="56" height="56" rx="2" fill="#13151C" stroke="rgba(240,240,240,0.10)"></rect>
+        <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="14" font-weight="600" letter-spacing="0.06em" fill="#F0F0F0" x="28" y="35" text-anchor="middle">HYP</text>
+      </g>
+
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="100" y="64">HYPEREVM</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" fill="rgba(240,240,240,0.62)" x="100" y="86">L1 · HL EVM</text>
+
+      <line x1="28" y1="148" x2="436" y2="148" stroke="rgba(240,240,240,0.10)"></line>
+
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="28" y="178">CHAIN RISK SCORE</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="64" font-weight="500" letter-spacing="-0.04em" fill="#F0F0F0" x="28" y="240">6.35</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.14em" fill="#D9A55D" x="28" y="293">● ELIGIBLE · MID</text>
+    </g>
+
+  <text x="80" y="968" font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.10em" fill="rgba(240,240,240,0.42)">
+    REGISTRY · public/scores/chains/*.yaml · UPDATED PER METHODOLOGY v4.1 · CRS FEEDS PR VIA MULTI-PROTOCOL RULE
+  </text>
+</svg>

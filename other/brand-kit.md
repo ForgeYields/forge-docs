@@ -1,5 +1,7 @@
 # Brand Kit
 
+<figure><img src="../.gitbook/assets/brand-kit-hero.png" alt="ForgeYields brand identity — Higher yields demand higher craft. Brand kit v1.0, 2026. Color palette: Base, FG, Lavender, Royal."><figcaption></figcaption></figure>
+
 ## Tagline
 
 > **Higher yields demand higher craft.**\

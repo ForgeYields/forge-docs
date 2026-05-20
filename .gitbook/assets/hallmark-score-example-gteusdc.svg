@@ -1,0 +1,338 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1400" viewBox="0 0 1600 1400">
+  <defs>
+    <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(115,139,255,0.05)" stroke-width="1"></path>
+    </pattern>
+    <radialGradient id="rightWash" cx="78%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="rgba(115,139,255,0.05)"></stop>
+      <stop offset="100%" stop-color="rgba(115,139,255,0)"></stop>
+    </radialGradient>
+    <filter id="grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="3"></feTurbulence>
+      <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1   0 0 0 0.18 0"></feColorMatrix>
+      <feComposite in2="SourceGraphic" operator="in"></feComposite>
+    </filter>
+  </defs>
+
+  
+  <rect width="1600" height="1400" fill="#0B0C0F"></rect>
+  <rect width="1600" height="1400" fill="url(#grid)"></rect>
+  <rect width="1600" height="1400" filter="url(#grain)" opacity="0.35"></rect>
+  <rect width="1600" height="1400" fill="url(#rightWash)"></rect>
+
+  
+  <g fill="#738BFF">
+    <rect x="58" y="68" width="4" height="4" opacity="0.5"></rect>
+    <rect x="238" y="58" width="3" height="3" opacity="0.4"></rect>
+    <rect x="1378" y="78" width="4" height="4" opacity="0.5"></rect>
+    <rect x="1498" y="58" width="3" height="3" opacity="0.4"></rect>
+    <rect x="58" y="1338" width="3" height="3" opacity="0.4"></rect>
+    <rect x="1498" y="1318" width="4" height="4" opacity="0.45"></rect>
+    <rect x="780" y="700" width="2" height="2" opacity="0.3"></rect>
+  </g>
+
+  
+  <g transform="translate(40,40)">
+    <g transform="translate(0,0) scale(0.30067789197463374,0.3006778919746337)" fill="#738BFF">
+      <path d="M 16.479 30.228 L 30.904 30.228 L 30.904 73.168 L 16.479 73.168 Z"></path>
+      <path d="M 16.479 42.775 L 16.479 27.406 L 59.839 2.614 L 59.839 17.984 Z"></path>
+      <path d="M 16.505 27.339 L 16.505 9.434 L 0 0 L 0.001 17.905 Z"></path>
+      <path d="M 43.839 61.36 L 43.839 45.99 L 59.864 36.84 L 59.864 52.209 Z"></path>
+    </g>
+    <text x="32" y="16" font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" font-weight="500" fill="#F0F0F0" letter-spacing="-0.02em">ForgeYields</text>
+  </g>
+  <text x="1560" y="56" font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" text-anchor="end">HALLMARK · SCORE EXAMPLE</text>
+
+  
+  <g transform="translate(60, 110)">
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" y="0">WORKED EXAMPLE · TYPE W</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="30" font-weight="500" letter-spacing="-0.025em" fill="#F0F0F0" y="40">How one strategy is underwritten, line by line.</text>
+  </g>
+
+  
+  
+  
+  <g transform="translate(60, 200)">
+    <rect width="720" height="1110" rx="2" fill="#101218" stroke="rgba(240,240,240,0.10)"></rect>
+
+    
+    <g transform="translate(60, 50)">
+      <g>
+        <rect width="100" height="26" rx="2" fill="rgba(115,139,255,0.06)" stroke="rgba(240,240,240,0.10)"></rect>
+        <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" fill="#F0F0F0" x="14" y="18">Ethereum</text>
+      </g>
+      <g transform="translate(110, 0)">
+        <rect width="180" height="26" rx="2" fill="rgba(115,139,255,0.06)" stroke="rgba(240,240,240,0.10)"></rect>
+        <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" fill="#F0F0F0" x="14" y="18">Type W · Wrapper Vault</text>
+      </g>
+    </g>
+
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="60" y="120">STRATEGY</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="46" font-weight="500" letter-spacing="-0.025em" fill="#F0F0F0" x="60" y="172">gteUSDc Morpho</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="22" fill="rgba(240,240,240,0.62)" x="60" y="206">(Gauntlet eUSD Core)</text>
+
+    <line x1="60" y1="244" x2="660" y2="244" stroke="rgba(240,240,240,0.10)"></line>
+
+    
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" letter-spacing="0.18em" fill="#738BFF" x="60" y="286">GLOBAL RISK SCORE</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="170" font-weight="500" letter-spacing="-0.04em" fill="#F0F0F0" x="60" y="430">3.63</text>
+
+    
+    <g transform="translate(440, 348)">
+      <rect width="240" height="80" rx="2" fill="rgba(93,186,136,0.10)" stroke="#5DBA88" stroke-width="1"></rect>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="#5DBA88" x="24" y="32">STATUS</text>
+      <g transform="translate(24, 56)">
+        <path d="M 0 -2 L 8 6 L 24 -14" fill="none" stroke="#5DBA88" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      </g>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="26" font-weight="500" letter-spacing="-0.02em" fill="#F0F0F0" x="62" y="62">Eligible</text>
+    </g>
+
+    
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="60" y="564">POSITION ON SCALE</text>
+
+    <rect x="60" y="580" width="330" height="12" fill="#5DBA88" opacity="0.45"></rect>
+    <rect x="390" y="580" width="120" height="12" fill="#D9A55D" opacity="0.45"></rect>
+    <rect x="510" y="580" width="150" height="12" fill="#D97070" opacity="0.45"></rect>
+
+    <g font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" fill="rgba(240,240,240,0.42)">
+      <line x1="60" y1="596" x2="60" y2="604" stroke="rgba(240,240,240,0.42)"></line><text x="60" y="620" text-anchor="middle">0</text>
+      <line x1="210" y1="596" x2="210" y2="604" stroke="rgba(240,240,240,0.42)"></line><text x="210" y="620" text-anchor="middle">2.5</text>
+      <line x1="390" y1="596" x2="390" y2="604" stroke="rgba(240,240,240,0.42)"></line><text x="390" y="620" text-anchor="middle">5.5</text>
+      <line x1="510" y1="596" x2="510" y2="604" stroke="rgba(240,240,240,0.42)"></line><text x="510" y="620" text-anchor="middle">7.5</text>
+      <line x1="660" y1="596" x2="660" y2="604" stroke="rgba(240,240,240,0.42)"></line><text x="660" y="620" text-anchor="middle">10</text>
+    </g>
+
+    <line x1="510" y1="566" x2="510" y2="606" stroke="#D97070" stroke-dasharray="3 4" stroke-width="1"></line>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="10" letter-spacing="0.10em" fill="#D97070" x="510" y="560" text-anchor="middle">CUTOFF</text>
+
+    <g transform="translate(277.8, 586)">
+      <circle r="14" fill="#738BFF" opacity="0.2"></circle>
+      <circle r="7" fill="#738BFF" stroke="#0B0C0F" stroke-width="2"></circle>
+    </g>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" font-weight="600" fill="#738BFF" x="277.8" y="566" text-anchor="middle">↓ 3.63</text>
+
+    
+    <line x1="60" y1="700" x2="660" y2="700" stroke="rgba(240,240,240,0.10)"></line>
+
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="60" y="744">AUDIT TRAIL · LAYER ROLL-UP</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="15" fill="rgba(240,240,240,0.62)" x="60" y="772">Every component number on this page is reconstructible</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="15" fill="rgba(240,240,240,0.62)" x="60" y="792">from the rubrics on the right — line by line.</text>
+
+    <g font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" transform="translate(60, 830)">
+      <g>
+        <text font-size="10" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" y="0">PR · PROTOCOL</text>
+        <text font-size="38" font-weight="500" letter-spacing="-0.025em" fill="#F0F0F0" y="48">2.20</text>
+        <text font-size="11" fill="rgba(240,240,240,0.45)" y="72">morpho-blue, CRS-fed</text>
+      </g>
+      <g transform="translate(210, 0)">
+        <text font-size="10" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" y="0">AR · ASSET (binding)</text>
+        <text font-size="38" font-weight="500" letter-spacing="-0.025em" fill="#F0F0F0" y="48">4.40</text>
+        <text font-size="11" fill="rgba(240,240,240,0.45)" y="72">eusd, max-rule</text>
+      </g>
+      <g transform="translate(420, 0)">
+        <text font-size="10" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" y="0">SSR · STRATEGY</text>
+        <text font-size="38" font-weight="500" letter-spacing="-0.025em" fill="#F0F0F0" y="48">4.40</text>
+        <text font-size="11" fill="rgba(240,240,240,0.45)" y="72">Type W rubric</text>
+      </g>
+    </g>
+
+    <g font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" transform="translate(60, 960)">
+      <text font-size="10" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" y="0">COMPUTATION</text>
+      <text font-size="18" fill="#F0F0F0" y="32" letter-spacing="-0.01em">GRS = 0.35·2.20 + 0.25·4.40 + 0.40·4.40</text>
+      <text font-size="18" font-weight="500" fill="#738BFF" y="60" letter-spacing="-0.01em">       = 0.77 + 1.10 + 1.76  =  3.63</text>
+      <text font-size="11" fill="rgba(240,240,240,0.45)" y="86">No hard-cap thresholds tripped. Strategy enters allow-list.</text>
+    </g>
+  </g>
+
+  
+  
+  
+  <g transform="translate(812, 200)">
+    <rect width="728" height="1110" rx="2" fill="#101218" stroke="rgba(240,240,240,0.10)"></rect>
+
+    
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="32" y="40">COMPOSITION</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="20" font-weight="500" letter-spacing="-0.02em" fill="#F0F0F0" x="32" y="70">GRS = 0.35 · PR + 0.25 · AR + 0.40 · SSR</text>
+
+    <g transform="translate(0, 108)">
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" x="32" y="0">PR</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="19" fill="#F0F0F0" x="72" y="0">Protocol Risk</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" fill="rgba(240,240,240,0.62)" x="72" y="20">morpho-blue (Ethereum) · MPR with CRS feed</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="22" font-weight="500" letter-spacing="-0.02em" fill="#F0F0F0" x="596" y="0" text-anchor="end">2.20</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" letter-spacing="0.04em" fill="rgba(240,240,240,0.42)" x="696" y="0" text-anchor="end">× 0.35</text>
+    </g>
+    <g transform="translate(0, 168)">
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" x="32" y="0">AR</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="19" fill="#F0F0F0" x="72" y="0">Asset Risk</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" fill="rgba(240,240,240,0.62)" x="72" y="20">max(eusd 4.4, wbtc 4.1, eth-plus 4.3, wsteth 3.2)</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="22" font-weight="500" letter-spacing="-0.02em" fill="#F0F0F0" x="596" y="0" text-anchor="end">4.40</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" letter-spacing="0.04em" fill="rgba(240,240,240,0.42)" x="696" y="0" text-anchor="end">× 0.25</text>
+    </g>
+    <g transform="translate(0, 228)">
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" x="32" y="0">SSR</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="19" fill="#F0F0F0" x="72" y="0">Strategy Risk</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" fill="rgba(240,240,240,0.62)" x="72" y="20">Type W · X1 — X5 (see breakdown)</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="22" font-weight="500" letter-spacing="-0.02em" fill="#F0F0F0" x="596" y="0" text-anchor="end">4.40</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" letter-spacing="0.04em" fill="rgba(240,240,240,0.42)" x="696" y="0" text-anchor="end">× 0.40</text>
+    </g>
+
+    <line x1="32" y1="270" x2="696" y2="270" stroke="rgba(240,240,240,0.10)"></line>
+
+    
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="32" y="304">PROTOCOL RUBRIC · morpho-blue  (C1 — C6  →  PRS 1.87)</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" fill="rgba(240,240,240,0.62)" x="32" y="324">Lending primitive, Ethereum-deployed.</text>
+
+    <g transform="translate(0, 354)">
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="10" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" x="32" y="0">#</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="10" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" x="72" y="0">CRITERION</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="10" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" x="350" y="0">EVIDENCE</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="10" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" x="696" y="0" text-anchor="end">SCORE</text>
+    </g>
+
+    <g font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif">
+      <g transform="translate(0, 380)">
+        <text font-size="14" font-weight="600" fill="rgba(240,240,240,0.62)" x="32" y="0">C1</text>
+        <text font-size="15" fill="#F0F0F0" x="72" y="0">Audit Status</text>
+        <text font-size="13" fill="rgba(240,240,240,0.62)" x="350" y="0">Spearbit + OZ + ChainSec</text>
+        <text font-size="18" font-weight="500" fill="#F0F0F0" x="696" y="0" text-anchor="end">2</text>
+      </g>
+      <g transform="translate(0, 408)">
+        <text font-size="14" font-weight="600" fill="rgba(240,240,240,0.62)" x="32" y="0">C2</text>
+        <text font-size="15" fill="#F0F0F0" x="72" y="0">TVL History</text>
+        <text font-size="13" fill="rgba(240,240,240,0.62)" x="350" y="0">$1B+ sustained, &lt;5% drawdown</text>
+        <text font-size="18" font-weight="500" fill="#F0F0F0" x="696" y="0" text-anchor="end">1</text>
+      </g>
+      <g transform="translate(0, 436)">
+        <text font-size="14" font-weight="600" fill="rgba(240,240,240,0.62)" x="32" y="0">C3</text>
+        <text font-size="15" fill="#F0F0F0" x="72" y="0">Governance Quality</text>
+        <text font-size="13" fill="rgba(240,240,240,0.62)" x="350" y="0">3/5 multisig + 48h timelock</text>
+        <text font-size="18" font-weight="500" fill="#F0F0F0" x="696" y="0" text-anchor="end">2</text>
+      </g>
+      <g transform="translate(0, 464)">
+        <text font-size="14" font-weight="600" fill="rgba(240,240,240,0.62)" x="32" y="0">C4</text>
+        <text font-size="15" fill="#F0F0F0" x="72" y="0">Incident &amp; Op Age</text>
+        <text font-size="13" fill="rgba(240,240,240,0.62)" x="350" y="0">Zero exploits, &gt;18mo live</text>
+        <text font-size="18" font-weight="500" fill="#F0F0F0" x="696" y="0" text-anchor="end">2.6</text>
+      </g>
+      <g transform="translate(0, 492)">
+        <text font-size="14" font-weight="600" fill="rgba(240,240,240,0.62)" x="32" y="0">C5</text>
+        <text font-size="15" fill="#F0F0F0" x="72" y="0">Smart Contract Risk</text>
+        <text font-size="13" fill="rgba(240,240,240,0.62)" x="350" y="0">Singleton, minimal deps</text>
+        <text font-size="18" font-weight="500" fill="#F0F0F0" x="696" y="0" text-anchor="end">1</text>
+      </g>
+      <g transform="translate(0, 520)">
+        <text font-size="14" font-weight="600" fill="rgba(240,240,240,0.62)" x="32" y="0">C6</text>
+        <text font-size="15" fill="#F0F0F0" x="72" y="0">Team &amp; Transparency</text>
+        <text font-size="13" fill="rgba(240,240,240,0.62)" x="350" y="0">Doxxed, reputable</text>
+        <text font-size="18" font-weight="500" fill="#F0F0F0" x="696" y="0" text-anchor="end">2</text>
+      </g>
+    </g>
+
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" fill="rgba(115,139,255,0.78)" x="32" y="556">▲ Ethereum CRS = 1.45 feeds into PR via Multi-Protocol Rule</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" fill="rgba(115,139,255,0.78)" x="46" y="572">→ Strategy PR = max(1.87, 1.45) + 1 × 0.20 × mean = 2.20</text>
+
+    <line x1="32" y1="592" x2="696" y2="592" stroke="rgba(240,240,240,0.08)"></line>
+
+    
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="32" y="624">ASSET RUBRIC · eusd  (A1 — A5  →  ARS 4.4  ·  binding)</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" fill="rgba(240,240,240,0.62)" x="32" y="644">Highest-risk asset in dependency set (max rule).</text>
+
+    <g transform="translate(0, 674)">
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="10" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" x="32" y="0">#</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="10" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" x="72" y="0">CRITERION</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="10" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" x="350" y="0">EVIDENCE</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="10" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" x="696" y="0" text-anchor="end">SCORE</text>
+    </g>
+
+    <g font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif">
+      <g transform="translate(0, 700)">
+        <text font-size="14" font-weight="600" fill="rgba(240,240,240,0.62)" x="32" y="0">A1</text>
+        <text font-size="15" fill="#F0F0F0" x="72" y="0">Backing Quality</text>
+        <text font-size="13" fill="rgba(240,240,240,0.62)" x="350" y="0">CDP-backed (Reserve)</text>
+        <text font-size="18" font-weight="500" fill="#F0F0F0" x="696" y="0" text-anchor="end">3</text>
+      </g>
+      <g transform="translate(0, 728)">
+        <text font-size="14" font-weight="600" fill="rgba(240,240,240,0.62)" x="32" y="0">A2</text>
+        <text font-size="15" fill="#F0F0F0" x="72" y="0">Peg History</text>
+        <text font-size="13" fill="rgba(240,240,240,0.62)" x="350" y="0">Minor depegs &lt;5%</text>
+        <text font-size="18" font-weight="500" fill="#F0F0F0" x="696" y="0" text-anchor="end">3</text>
+      </g>
+      
+      <g transform="translate(0, 756)">
+        <text font-size="14" font-weight="600" fill="#D9A55D" x="32" y="0">A3</text>
+        <text font-size="15" font-weight="500" fill="#F0F0F0" x="72" y="0">Liquidity &amp; Exit</text>
+        <text font-size="13" fill="rgba(240,240,240,0.62)" x="350" y="0">DEX-only, no atomic exit</text>
+        <text font-size="18" font-weight="600" fill="#D9A55D" x="696" y="0" text-anchor="end">7</text>
+        <text font-size="13" fill="#D9A55D" x="676" y="0" text-anchor="end">←</text>
+      </g>
+      <g transform="translate(0, 784)">
+        <text font-size="14" font-weight="600" fill="rgba(240,240,240,0.62)" x="32" y="0">A4</text>
+        <text font-size="15" fill="#F0F0F0" x="72" y="0">Collateral Backing</text>
+        <text font-size="13" fill="rgba(240,240,240,0.62)" x="350" y="0">Mixed crypto basket</text>
+        <text font-size="18" font-weight="500" fill="#F0F0F0" x="696" y="0" text-anchor="end">3</text>
+      </g>
+      
+      <g transform="translate(0, 812)">
+        <text font-size="14" font-weight="600" fill="#D9A55D" x="32" y="0">A5</text>
+        <text font-size="15" font-weight="500" fill="#F0F0F0" x="72" y="0">Issuer / Operator</text>
+        <text font-size="13" fill="rgba(240,240,240,0.62)" x="350" y="0">Reserve Protocol</text>
+        <text font-size="18" font-weight="600" fill="#D9A55D" x="696" y="0" text-anchor="end">7</text>
+        <text font-size="13" fill="#D9A55D" x="676" y="0" text-anchor="end">←</text>
+      </g>
+    </g>
+
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" fill="rgba(240,240,240,0.55)" x="32" y="848">Other assets in set (all lower, not binding):</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" fill="rgba(240,240,240,0.55)" x="32" y="864">wbtc 4.1  ·  eth-plus 4.3  ·  wsteth 3.2</text>
+
+    <line x1="32" y1="886" x2="696" y2="886" stroke="rgba(240,240,240,0.08)"></line>
+
+    
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="32" y="918">STRATEGY RUBRIC · Type W  (X1 — X5  →  SSR 4.40)</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" fill="rgba(240,240,240,0.62)" x="32" y="938">Wrapper-vault rubric. X2 carries 30% weight.</text>
+
+    <g transform="translate(0, 968)">
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="10" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" x="32" y="0">#</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="10" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" x="72" y="0">CRITERION</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="10" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" x="350" y="0">EVIDENCE</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="10" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" x="696" y="0" text-anchor="end">SCORE</text>
+    </g>
+
+    <g font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif">
+      <g transform="translate(0, 994)">
+        <text font-size="14" font-weight="600" fill="rgba(240,240,240,0.62)" x="32" y="0">X1</text>
+        <text font-size="15" fill="#F0F0F0" x="72" y="0">Underlying Strategy</text>
+        <text font-size="13" fill="rgba(240,240,240,0.62)" x="350" y="0">Multi-market lending</text>
+        <text font-size="18" font-weight="500" fill="#F0F0F0" x="696" y="0" text-anchor="end">4</text>
+      </g>
+      
+      <g transform="translate(0, 1022)">
+        <text font-size="14" font-weight="600" fill="#738BFF" x="32" y="0">X2</text>
+        <text font-size="15" font-weight="600" fill="#738BFF" x="72" y="0">Curator / Atomist Trust  ★</text>
+        <text font-size="13" fill="rgba(240,240,240,0.62)" x="350" y="0">Gauntlet — reputable</text>
+        <text font-size="18" font-weight="600" fill="#738BFF" x="696" y="0" text-anchor="end">5</text>
+      </g>
+      <g transform="translate(0, 1050)">
+        <text font-size="14" font-weight="600" fill="rgba(240,240,240,0.62)" x="32" y="0">X3</text>
+        <text font-size="15" fill="#F0F0F0" x="72" y="0">Exit Mechanism</text>
+        <text font-size="13" fill="rgba(240,240,240,0.62)" x="350" y="0">MetaMorpho atomic-ish</text>
+        <text font-size="18" font-weight="500" fill="#F0F0F0" x="696" y="0" text-anchor="end">4</text>
+      </g>
+      <g transform="translate(0, 1078)">
+        <text font-size="14" font-weight="600" fill="rgba(240,240,240,0.62)" x="32" y="0">X4</text>
+        <text font-size="15" fill="#F0F0F0" x="72" y="0">Fee Structure</text>
+        <text font-size="13" fill="rgba(240,240,240,0.62)" x="350" y="0">Standard</text>
+        <text font-size="18" font-weight="500" fill="#F0F0F0" x="696" y="0" text-anchor="end">4</text>
+      </g>
+      <g transform="translate(0, 1106)">
+        <text font-size="14" font-weight="600" fill="rgba(240,240,240,0.62)" x="32" y="0">X5</text>
+        <text font-size="15" fill="#F0F0F0" x="72" y="0">Vault Maturity</text>
+        <text font-size="13" fill="rgba(240,240,240,0.62)" x="350" y="0">&gt;1y · &gt;$10M TVL</text>
+        <text font-size="18" font-weight="500" fill="#F0F0F0" x="696" y="0" text-anchor="end">5</text>
+      </g>
+    </g>
+  </g>
+
+  
+  <text x="60" y="1364" font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.10em" fill="rgba(240,240,240,0.42)">METHODOLOGY v4.1 · ASSESSED 2026-05-18 · public/scores/strategies/gteusdc-morpho.yaml</text>
+  <text x="1540" y="1364" font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.10em" fill="rgba(240,240,240,0.42)" text-anchor="end">★ DEFINING DIFFERENTIATOR · 30% WEIGHT WITHIN SSR</text>
+</svg>

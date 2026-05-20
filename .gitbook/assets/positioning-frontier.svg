@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100">
+  <defs>
+    <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(115,139,255,0.05)" stroke-width="1"></path>
+    </pattern>
+    <radialGradient id="rightWash" cx="78%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="rgba(115,139,255,0.05)"></stop>
+      <stop offset="100%" stop-color="rgba(115,139,255,0)"></stop>
+    </radialGradient>
+    <radialGradient id="fyHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(115,139,255,0.45)"></stop>
+      <stop offset="60%" stop-color="rgba(115,139,255,0.10)"></stop>
+      <stop offset="100%" stop-color="rgba(115,139,255,0)"></stop>
+    </radialGradient>
+    <filter id="grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="3"></feTurbulence>
+      <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1   0 0 0 0.18 0"></feColorMatrix>
+      <feComposite in2="SourceGraphic" operator="in"></feComposite>
+    </filter>
+  </defs>
+
+  
+  <rect width="1600" height="1100" fill="#0B0C0F"></rect>
+  <rect width="1600" height="1100" fill="url(#grid)"></rect>
+  <rect width="1600" height="1100" filter="url(#grain)" opacity="0.35"></rect>
+  <rect width="1600" height="1100" fill="url(#rightWash)"></rect>
+
+  
+  <g fill="#738BFF">
+    <rect x="78" y="78" width="4" height="4" opacity="0.55"></rect>
+    <rect x="218" y="58" width="3" height="3" opacity="0.4"></rect>
+    <rect x="558" y="48" width="4" height="4" opacity="0.5"></rect>
+    <rect x="1278" y="68" width="4" height="4" opacity="0.5"></rect>
+    <rect x="1478" y="108" width="3" height="3" opacity="0.45"></rect>
+    <rect x="1517" y="57" width="5" height="5" opacity="0.55"></rect>
+    <rect x="58" y="1038" width="3" height="3" opacity="0.4"></rect>
+    <rect x="1478" y="1038" width="4" height="4" opacity="0.45"></rect>
+  </g>
+  <g fill="rgba(240,240,240,0.30)">
+    <rect x="500" y="80" width="2" height="2"></rect>
+    <rect x="900" y="68" width="2" height="2"></rect>
+    <rect x="1180" y="50" width="2" height="2"></rect>
+    <rect x="180" y="980" width="2" height="2"></rect>
+    <rect x="900" y="1010" width="2" height="2"></rect>
+  </g>
+
+  
+  <g transform="translate(40,40)">
+    <g transform="translate(0,0) scale(0.30067789197463374,0.3006778919746337)" fill="#738BFF">
+      <path d="M 16.479 30.228 L 30.904 30.228 L 30.904 73.168 L 16.479 73.168 Z"></path>
+      <path d="M 16.479 42.775 L 16.479 27.406 L 59.839 2.614 L 59.839 17.984 Z"></path>
+      <path d="M 16.505 27.339 L 16.505 9.434 L 0 0 L 0.001 17.905 Z"></path>
+      <path d="M 43.839 61.36 L 43.839 45.99 L 59.864 36.84 L 59.864 52.209 Z"></path>
+    </g>
+    <text x="32" y="16" font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" font-weight="500" fill="#F0F0F0" letter-spacing="-0.02em">ForgeYields</text>
+  </g>
+  <text x="1560" y="56" font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" text-anchor="end">POSITIONING · 2026</text>
+
+  
+  <g transform="translate(60,110)">
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" y="0">DEFI YIELD LANDSCAPE</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="34" font-weight="500" letter-spacing="-0.025em" fill="#F0F0F0" y="44">Frontier yield, structured-credit discipline.</text>
+  </g>
+
+  
+  
+  
+  
+
+  <line x1="140" y1="220" x2="140" y2="820" stroke="rgba(240,240,240,0.22)" stroke-width="1"></line>
+  <line x1="140" y1="820" x2="1500" y2="820" stroke="rgba(240,240,240,0.22)" stroke-width="1"></line>
+
+  
+  <line x1="820" y1="220" x2="820" y2="820" stroke="rgba(240,240,240,0.10)" stroke-width="1" stroke-dasharray="2 6"></line>
+
+  
+  <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.62)" x="140" y="208">↑ YIELD CEILING</text>
+
+  
+  <g font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="10" letter-spacing="0.16em" fill="rgba(240,240,240,0.42)">
+    <text x="60" y="244">FRONTIER YIELD</text>
+    <text x="60" y="258" fill="rgba(240,240,240,0.30)">(&gt;10%)</text>
+    <text x="60" y="804">SAFE-LIST YIELD</text>
+    <text x="60" y="818" fill="rgba(240,240,240,0.30)">(~4-6%)</text>
+  </g>
+  <g stroke="rgba(240,240,240,0.18)">
+    <line x1="136" y1="370" x2="140" y2="370"></line>
+    <line x1="136" y1="520" x2="140" y2="520"></line>
+    <line x1="136" y1="670" x2="140" y2="670"></line>
+  </g>
+
+  
+  <g font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif">
+    <text font-size="12" letter-spacing="0.18em" fill="rgba(240,240,240,0.62)" x="140" y="852">NO WRAPPER</text>
+    <text font-size="10" letter-spacing="0.10em" fill="rgba(240,240,240,0.42)" x="140" y="870">YOU TAKE THE RISK DIRECTLY</text>
+
+    <text font-size="12" letter-spacing="0.18em" fill="rgba(240,240,240,0.62)" x="1100" y="852">WRAPPER VAULT</text>
+    <text font-size="10" letter-spacing="0.10em" fill="rgba(240,240,240,0.42)" x="1100" y="870">CURATOR TAKES THE RISK</text>
+  </g>
+
+  
+  
+  
+
+  
+  <g>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="10" letter-spacing="0.16em" fill="rgba(240,240,240,0.55)" x="200" y="278">HIGH YIELD · NO CURATOR</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" fill="rgba(240,240,240,0.42)" x="200" y="296" font-style="italic">You eat the risk.</text>
+
+    <g>
+      <circle cx="360" cy="330" r="6" fill="rgba(240,240,240,0.55)"></circle>
+      <circle cx="360" cy="330" r="11" fill="none" stroke="rgba(217,112,112,0.45)" stroke-width="1" stroke-dasharray="2 3"></circle>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" fill="#F0F0F0" x="378" y="328">Anonymous incentive farms</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" fill="rgba(240,240,240,0.45)" x="378" y="344">incentive-emission yield, no audit floor</text>
+    </g>
+    <g>
+      <circle cx="270" cy="400" r="6" fill="rgba(240,240,240,0.55)"></circle>
+      <circle cx="270" cy="400" r="11" fill="none" stroke="rgba(217,112,112,0.45)" stroke-width="1" stroke-dasharray="2 3"></circle>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" fill="#F0F0F0" x="288" y="398">Untested wrapper atomists</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" fill="rgba(240,240,240,0.45)" x="288" y="414">single-EOA control · Hallmark X2 = 9 territory</text>
+    </g>
+  </g>
+
+  
+  <g>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="10" letter-spacing="0.16em" fill="rgba(240,240,240,0.55)" x="200" y="608">DIY DIRECT LENDING</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" fill="rgba(240,240,240,0.42)" x="200" y="626" font-style="italic">Audited, capped by safe-list yield.</text>
+
+    <g>
+      <circle cx="260" cy="680" r="5" fill="rgba(240,240,240,0.62)"></circle>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="12" fill="rgba(240,240,240,0.78)" x="276" y="684">Aave V3 supply</text>
+    </g>
+    <g>
+      <circle cx="420" cy="710" r="5" fill="rgba(240,240,240,0.62)"></circle>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="12" fill="rgba(240,240,240,0.78)" x="436" y="714">Morpho direct supply</text>
+    </g>
+    <g>
+      <circle cx="320" cy="745" r="5" fill="rgba(240,240,240,0.62)"></circle>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="12" fill="rgba(240,240,240,0.78)" x="336" y="749">Compound supply</text>
+    </g>
+  </g>
+
+  
+  
+  
+  
+
+  
+  <g>
+    <line x1="900" y1="390" x2="1500" y2="390" stroke="#738BFF" stroke-width="1.25" stroke-dasharray="6 5" opacity="0.75"></line>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="10" letter-spacing="0.18em" fill="#738BFF" x="1500" y="382" text-anchor="end" opacity="0.95">WRAPPER-SIDE YIELD CEILING</text>
+  </g>
+
+  
+  
+  
+  <g>
+    <circle cx="1100" cy="540" r="6" fill="rgba(240,240,240,0.78)"></circle>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="14" font-weight="500" fill="#F0F0F0" x="1120" y="544" letter-spacing="-0.01em">Yearn V3 vaults</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" fill="rgba(240,240,240,0.45)" x="1120" y="562">mixed-strategy aggregator</text>
+  </g>
+  
+  <g>
+    <circle cx="1100" cy="650" r="6" fill="rgba(240,240,240,0.78)"></circle>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="14" font-weight="500" fill="#F0F0F0" x="1120" y="654" letter-spacing="-0.01em">Morpho · Gauntlet</text>
+  </g>
+  
+  <g>
+    <circle cx="1100" cy="700" r="6" fill="rgba(240,240,240,0.78)"></circle>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="14" font-weight="500" fill="#F0F0F0" x="1120" y="704" letter-spacing="-0.01em">Morpho · Steakhouse</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" fill="rgba(240,240,240,0.45)" x="1120" y="722">curated MetaMorpho · blue-chip lending</text>
+  </g>
+
+  
+  <g>
+    
+    <circle cx="1100" cy="280" r="56" fill="url(#fyHalo)"></circle>
+    
+    <circle cx="1100" cy="280" r="12" fill="#738BFF" stroke="#0B0C0F" stroke-width="2.5"></circle>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="13" font-weight="600" fill="#0B0C0F" x="1100" y="285" text-anchor="middle">★</text>
+
+    
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="#738BFF" x="1130" y="262">★ FORGEYIELDS</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="16" font-weight="500" fill="#F0F0F0" x="1130" y="288" letter-spacing="-0.01em">frontier yield, methodology-gated</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" fill="rgba(240,240,240,0.55)" x="1130" y="310">Hallmark publishes per-strategy GRS scoring</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" fill="rgba(240,240,240,0.55)" x="1130" y="326">+ hard-cap eligibility.</text>
+  </g>
+
+  
+
+  
+  
+  
+  <g transform="translate(80, 920)">
+    <rect x="0" y="0" width="3" height="120" fill="#738BFF" opacity="0.6"></rect>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="22" y="14">POSITIONING</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="24" font-weight="500" letter-spacing="-0.02em" fill="#F0F0F0" x="22" y="56">&#34;We&#39;re not the safe-list. We&#39;re not the wild west.&#34;</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="15" fill="rgba(240,240,240,0.62)" x="22" y="92">Higher-ceiling strategies, gated by published Hallmark scoring.</text>
+  </g>
+
+  
+  <text x="1540" y="1050" font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.10em" fill="rgba(240,240,240,0.42)" text-anchor="end">HALLMARK v4.1 · GRS GATED · forge-labs.gitbook.io/forge-docs</text>
+</svg>

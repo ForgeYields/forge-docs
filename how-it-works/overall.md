@@ -4,7 +4,7 @@ description: Understand ForgeYields cross-chain architecture
 
 # 🌐 Overall
 
-<figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/architecture-technical.svg" alt="ForgeYields technical architecture — three layers (User Interface, Coordination on Starknet, Strategy Execution on Ethereum), with Hallmark methodology sourcing the Manager's allowed DeFi integrations"><figcaption>How ForgeYields actually works on-chain. Three layers — User Interface (Token Gateways), Coordination (Controller on Starknet), Strategy Execution (Vault · Manager on Ethereum). The Manager's allow-list is sourced from public Hallmark scoring.</figcaption></figure>
 
 ### Architecture Breakdown
 

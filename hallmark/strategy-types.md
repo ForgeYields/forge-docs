@@ -4,6 +4,8 @@ Hallmark scores 6 strategy types. Each type has its own S-criteria rubric (or X-
 
 The type determines the **SSR (Strategy-Specific Risk)** component of the GRS. PR (Protocol Risk) and AR (Asset Risk) are computed the same way regardless of type.
 
+<figure><img src="../.gitbook/assets/strategy-types-reference.svg" alt="Hallmark strategy types reference — six types: Type 1 Looping (S1-S4), Type 2A LP Classic (S1-S4), Type 2B Pendle LP (S1-S4), Type 2C PT Bond-like (S1-S4), Type 3 Lending (S1-S5), Type W Wrapper Vault (X1-X5, v4.1)"><figcaption>The six Hallmark strategy types. Type W (Wrapper Vault) uses the X1–X5 rubric introduced in methodology v4.1.</figcaption></figure>
+
 ***
 
 ## Overview
