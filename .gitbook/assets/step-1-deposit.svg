@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="600" viewBox="0 0 1600 600" font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif">
+  <defs>
+    <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(115,139,255,0.05)" stroke-width="1"></path>
+    </pattern>
+    <radialGradient id="rightWash" cx="78%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="rgba(115,139,255,0.05)"></stop>
+      <stop offset="100%" stop-color="rgba(115,139,255,0)"></stop>
+    </radialGradient>
+    <filter id="grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="3"></feTurbulence>
+      <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1   0 0 0 0.18 0"></feColorMatrix>
+      <feComposite in2="SourceGraphic" operator="in"></feComposite>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="rgba(240,240,240,0.45)"></path>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#738BFF"></path>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="600" fill="#0B0C0F"></rect>
+  <rect width="1600" height="600" fill="url(#grid)"></rect>
+  <rect width="1600" height="600" filter="url(#grain)" opacity="0.35"></rect>
+  <rect width="1600" height="600" fill="url(#rightWash)"></rect>
+
+  <g fill="#738BFF">
+    <rect x="78" y="78" width="4" height="4" opacity="0.55"></rect>
+    <rect x="178" y="58" width="3" height="3" opacity="0.40"></rect>
+    <rect x="558" y="48" width="4" height="4" opacity="0.50"></rect>
+    <rect x="1278" y="68" width="4" height="4" opacity="0.50"></rect>
+    <rect x="1478" y="108" width="3" height="3" opacity="0.45"></rect>
+    <rect x="1517" y="57" width="5" height="5" opacity="0.55"></rect>
+    <rect x="58" y="538" width="3" height="3" opacity="0.40"></rect>
+    <rect x="1538" y="528" width="3" height="3" opacity="0.35"></rect>
+  </g>
+
+  
+  <g transform="translate(40,40)">
+    <g transform="translate(0,0) scale(0.30067789197463374,0.3006778919746337)" fill="#738BFF">
+      <path d="M 16.479 30.228 L 30.904 30.228 L 30.904 73.168 L 16.479 73.168 Z"></path>
+      <path d="M 16.479 42.775 L 16.479 27.406 L 59.839 2.614 L 59.839 17.984 Z"></path>
+      <path d="M 16.505 27.339 L 16.505 9.434 L 0 0 L 0.001 17.905 Z"></path>
+      <path d="M 43.839 61.36 L 43.839 45.99 L 59.864 36.84 L 59.864 52.209 Z"></path>
+    </g>
+    <text x="32" y="16" font-size="13" font-weight="500" fill="#F0F0F0" letter-spacing="-0.02em">ForgeYields</text>
+  </g>
+  <text x="1560" y="56" font-size="11" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" text-anchor="end">STEP 01 · DEPOSIT</text>
+
+  
+  <g transform="translate(80,108)">
+    <text font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" y="0">USER JOURNEY · STEP 1</text>
+    <text font-size="32" font-weight="500" letter-spacing="-0.025em" fill="#F0F0F0" y="38">Deposit from any chain.</text>
+    <text font-size="14" fill="rgba(240,240,240,0.62)" y="68">A single call sends underlying assets to the Token Gateway and mints fyToken to the depositor.</text>
+  </g>
+
+  
+  <line x1="120" y1="476" x2="1480" y2="476" stroke="rgba(240,240,240,0.10)" stroke-dasharray="2 6"></line>
+
+  
+  <g transform="translate(140,266)">
+    <rect width="260" height="120" rx="3" fill="transparent" stroke="rgba(240,240,240,0.55)" stroke-width="1.25"></rect>
+    <text font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.55)" x="22" y="34">EXTERNAL</text>
+    <text font-size="22" font-weight="500" fill="#F0F0F0" letter-spacing="-0.015em" x="22" y="68">User Wallet</text>
+    <text font-size="13" fill="rgba(240,240,240,0.62)" x="22" y="94">Holds USDC, ETH, etc.</text>
+    
+    <g transform="translate(218,32)" stroke="rgba(240,240,240,0.55)" stroke-width="1.25" fill="none">
+      <circle cx="12" cy="10" r="6"></circle>
+      <path d="M 0 30 C 2 22, 22 22, 24 30"></path>
+    </g>
+  </g>
+
+  
+  <g>
+    <line x1="408" y1="326" x2="624" y2="326" stroke="rgba(240,240,240,0.55)" stroke-width="1.25" marker-end="url(#arrow)"></line>
+    <text font-size="12" font-family="ui-monospace,&#34;SF Mono&#34;,Menlo,monospace" fill="rgba(240,240,240,0.78)" x="516" y="316" text-anchor="middle">deposit(assets, receiver)</text>
+    <text font-size="11" letter-spacing="0.06em" fill="rgba(240,240,240,0.42)" x="516" y="346" text-anchor="middle">single tx · same chain as the user</text>
+  </g>
+
+  
+  <g transform="translate(632,266)">
+    <rect width="296" height="120" rx="3" fill="#101218" stroke="rgba(240,240,240,0.22)"></rect>
+    <text font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="22" y="34">INTERFACE LAYER</text>
+    <text font-size="22" font-weight="500" fill="#F0F0F0" letter-spacing="-0.015em" x="22" y="68">Token Gateway</text>
+    <text font-size="13" fill="rgba(240,240,240,0.62)" x="22" y="94">Receives assets · accounting</text>
+    
+    <g transform="translate(22,108)">
+      <rect x="-2" y="-12" width="200" height="20" rx="10" fill="rgba(240,240,240,0.04)" stroke="rgba(240,240,240,0.18)"></rect>
+      <circle cx="10" cy="-2" r="2.5" fill="#738BFF"></circle>
+      <text font-size="11" letter-spacing="0.06em" fill="rgba(240,240,240,0.78)" x="22" y="2">Live on Starknet + Ethereum</text>
+    </g>
+  </g>
+
+  
+  <g>
+    <line x1="936" y1="326" x2="1152" y2="326" stroke="#738BFF" stroke-width="1.25" marker-end="url(#arrowBlue)"></line>
+    <text font-size="12" font-family="ui-monospace,&#34;SF Mono&#34;,Menlo,monospace" fill="#738BFF" x="1044" y="316" text-anchor="middle">mint(shares)</text>
+    <text font-size="11" letter-spacing="0.06em" fill="rgba(240,240,240,0.42)" x="1044" y="346" text-anchor="middle">share price = TAUM / supply</text>
+  </g>
+
+  
+  <g transform="translate(1160,246)">
+    <rect width="300" height="160" rx="3" fill="#101218" stroke="#738BFF" stroke-width="1.5"></rect>
+    <rect width="300" height="160" rx="3" fill="#738BFF" opacity="0.05"></rect>
+    <text font-size="11" letter-spacing="0.18em" fill="#738BFF" x="22" y="34">YIELD-BEARING SHARE</text>
+    <text font-size="36" font-weight="500" fill="#F0F0F0" letter-spacing="-0.025em" x="22" y="84">fyToken</text>
+    <line x1="22" y1="104" x2="278" y2="104" stroke="rgba(240,240,240,0.10)"></line>
+    <text font-size="12" fill="rgba(240,240,240,0.62)" x="22" y="128">ERC-4626 receipt</text>
+    <text font-size="12" fill="rgba(240,240,240,0.62)" x="22" y="146">Directional in underlying</text>
+  </g>
+
+  
+  <g transform="translate(140,496)">
+    <rect x="-22" y="-22" width="3" height="60" fill="#738BFF" opacity="0.6"></rect>
+    <text font-size="11" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" y="-2">DESIGN NOTE</text>
+    <text font-size="14" fill="rgba(240,240,240,0.62)" y="22">User signs once on their home chain — no manual bridging, no wrapping.</text>
+  </g>
+  <g transform="translate(1460,498)" text-anchor="end">
+    <text font-size="11" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" y="0">01 / 06</text>
+  </g>
+</svg>

@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="700" viewBox="0 0 1600 700" font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif">
+  <defs>
+    <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(115,139,255,0.05)" stroke-width="1"></path>
+    </pattern>
+    <radialGradient id="rightWash" cx="78%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="rgba(115,139,255,0.05)"></stop>
+      <stop offset="100%" stop-color="rgba(115,139,255,0)"></stop>
+    </radialGradient>
+    <filter id="grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="3"></feTurbulence>
+      <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1   0 0 0 0.18 0"></feColorMatrix>
+      <feComposite in2="SourceGraphic" operator="in"></feComposite>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="rgba(240,240,240,0.45)"></path>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#738BFF"></path>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="700" fill="#0B0C0F"></rect>
+  <rect width="1600" height="700" fill="url(#grid)"></rect>
+  <rect width="1600" height="700" filter="url(#grain)" opacity="0.35"></rect>
+  <rect width="1600" height="700" fill="url(#rightWash)"></rect>
+
+  <g fill="#738BFF">
+    <rect x="78" y="78" width="4" height="4" opacity="0.55"></rect>
+    <rect x="558" y="48" width="4" height="4" opacity="0.50"></rect>
+    <rect x="1278" y="68" width="4" height="4" opacity="0.50"></rect>
+    <rect x="1517" y="57" width="5" height="5" opacity="0.55"></rect>
+    <rect x="58" y="638" width="3" height="3" opacity="0.40"></rect>
+    <rect x="1538" y="628" width="3" height="3" opacity="0.35"></rect>
+  </g>
+
+  <g transform="translate(40,40)">
+    <g transform="translate(0,0) scale(0.30067789197463374,0.3006778919746337)" fill="#738BFF">
+      <path d="M 16.479 30.228 L 30.904 30.228 L 30.904 73.168 L 16.479 73.168 Z"></path>
+      <path d="M 16.479 42.775 L 16.479 27.406 L 59.839 2.614 L 59.839 17.984 Z"></path>
+      <path d="M 16.505 27.339 L 16.505 9.434 L 0 0 L 0.001 17.905 Z"></path>
+      <path d="M 43.839 61.36 L 43.839 45.99 L 59.864 36.84 L 59.864 52.209 Z"></path>
+    </g>
+    <text x="32" y="16" font-size="13" font-weight="500" fill="#F0F0F0" letter-spacing="-0.02em">ForgeYields</text>
+  </g>
+  <text x="1560" y="56" font-size="11" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" text-anchor="end">STEP 04 · STRATEGY EXECUTION</text>
+
+  <g transform="translate(80,108)">
+    <text font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" y="0">USER JOURNEY · STEP 4</text>
+    <text font-size="32" font-weight="500" letter-spacing="-0.025em" fill="#F0F0F0" y="38">Strategy execution.</text>
+    <text font-size="14" fill="rgba(240,240,240,0.62)" y="68">Vault dispatches via Manager — a Merkle-validated allow-list of calls into approved integrations.</text>
+  </g>
+
+  
+  <g transform="translate(650,200)">
+    <rect width="300" height="64" rx="3" fill="#101218" stroke="rgba(240,240,240,0.22)"></rect>
+    <text font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="22" y="26">L3 · STRATEGY EXECUTION</text>
+    <text font-size="20" font-weight="500" fill="#F0F0F0" letter-spacing="-0.015em" x="22" y="52">Vault (Ethereum)</text>
+  </g>
+
+  
+  <g>
+    <line x1="800" y1="264" x2="800" y2="312" stroke="rgba(240,240,240,0.55)" stroke-width="1.25" marker-end="url(#arrow)"></line>
+    <text font-size="11" fill="rgba(240,240,240,0.62)" font-family="ui-monospace,&#34;SF Mono&#34;,Menlo,monospace" x="812" y="292">manage(targets, calldata)</text>
+  </g>
+
+  
+  <g transform="translate(560,320)">
+    <rect width="480" height="84" rx="3" fill="#101218" stroke="#738BFF" stroke-width="1.5"></rect>
+    <rect width="480" height="84" rx="3" fill="#738BFF" opacity="0.05"></rect>
+    <text font-size="11" letter-spacing="0.18em" fill="#738BFF" x="22" y="28">ALLOW-LIST GATE</text>
+    <text font-size="22" font-weight="500" fill="#F0F0F0" letter-spacing="-0.015em" x="22" y="60">Manager (Ethereum)</text>
+    
+    <g transform="translate(388,32)" stroke="#738BFF" stroke-width="1" fill="none">
+      <circle cx="36" cy="0" r="4" fill="#738BFF"></circle>
+      <circle cx="18" cy="20" r="3"></circle>
+      <circle cx="54" cy="20" r="3"></circle>
+      <circle cx="6" cy="40" r="2.5"></circle>
+      <circle cx="30" cy="40" r="2.5"></circle>
+      <circle cx="42" cy="40" r="2.5"></circle>
+      <circle cx="66" cy="40" r="2.5"></circle>
+      <line x1="36" y1="4" x2="18" y2="17"></line>
+      <line x1="36" y1="4" x2="54" y2="17"></line>
+      <line x1="18" y1="23" x2="6" y2="38"></line>
+      <line x1="18" y1="23" x2="30" y2="38"></line>
+      <line x1="54" y1="23" x2="42" y2="38"></line>
+      <line x1="54" y1="23" x2="66" y2="38"></line>
+    </g>
+    <text font-size="11" fill="rgba(240,240,240,0.62)" x="22" y="76">Merkle-validated · off-list calls revert on-chain</text>
+  </g>
+
+  
+  <g stroke="rgba(240,240,240,0.45)" stroke-width="1" fill="none">
+    <path d="M 800 404 C 800 434, 318 434, 318 464" marker-end="url(#arrow)"></path>
+    <path d="M 800 404 C 800 434, 626 434, 626 464" marker-end="url(#arrow)"></path>
+    <path d="M 800 404 C 800 434, 934 434, 934 464" marker-end="url(#arrow)"></path>
+    <path d="M 800 404 C 800 434, 1242 434, 1242 464" marker-end="url(#arrow)"></path>
+  </g>
+
+  
+  <g font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif">
+    
+    <g transform="translate(198,464)">
+      <rect width="240" height="180" rx="3" fill="transparent" stroke="rgba(240,240,240,0.45)"></rect>
+      <text font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.55)" x="20" y="32">CATEGORY · 01</text>
+      <text font-size="22" font-weight="500" fill="#F0F0F0" letter-spacing="-0.015em" x="20" y="64">Lending</text>
+      <line x1="20" y1="80" x2="220" y2="80" stroke="rgba(240,240,240,0.10)"></line>
+      <g font-family="ui-monospace,&#34;SF Mono&#34;,Menlo,monospace" font-size="13" fill="rgba(240,240,240,0.78)">
+        <text x="20" y="106">Aave V3</text>
+        <text x="20" y="128">Morpho</text>
+        <text x="20" y="150">Spark</text>
+      </g>
+    </g>
+    
+    <g transform="translate(506,464)">
+      <rect width="240" height="180" rx="3" fill="transparent" stroke="rgba(240,240,240,0.45)"></rect>
+      <text font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.55)" x="20" y="32">CATEGORY · 02</text>
+      <text font-size="22" font-weight="500" fill="#F0F0F0" letter-spacing="-0.015em" x="20" y="64">LP / DEX</text>
+      <line x1="20" y1="80" x2="220" y2="80" stroke="rgba(240,240,240,0.10)"></line>
+      <g font-family="ui-monospace,&#34;SF Mono&#34;,Menlo,monospace" font-size="13" fill="rgba(240,240,240,0.78)">
+        <text x="20" y="106">Curve</text>
+        <text x="20" y="128">Convex</text>
+        <text x="20" y="150">Balancer</text>
+      </g>
+    </g>
+    
+    <g transform="translate(814,464)">
+      <rect width="240" height="180" rx="3" fill="transparent" stroke="rgba(240,240,240,0.45)"></rect>
+      <text font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.55)" x="20" y="32">CATEGORY · 03</text>
+      <text font-size="22" font-weight="500" fill="#F0F0F0" letter-spacing="-0.015em" x="20" y="64">Yield</text>
+      <line x1="20" y1="80" x2="220" y2="80" stroke="rgba(240,240,240,0.10)"></line>
+      <g font-family="ui-monospace,&#34;SF Mono&#34;,Menlo,monospace" font-size="13" fill="rgba(240,240,240,0.78)">
+        <text x="20" y="106">Pendle</text>
+        <text x="20" y="128">Yearn V3</text>
+      </g>
+    </g>
+    
+    <g transform="translate(1122,464)">
+      <rect width="240" height="180" rx="3" fill="transparent" stroke="rgba(240,240,240,0.45)"></rect>
+      <text font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.55)" x="20" y="32">CATEGORY · 04</text>
+      <text font-size="22" font-weight="500" fill="#F0F0F0" letter-spacing="-0.015em" x="20" y="64">Wrappers</text>
+      <line x1="20" y1="80" x2="220" y2="80" stroke="rgba(240,240,240,0.10)"></line>
+      <g font-family="ui-monospace,&#34;SF Mono&#34;,Menlo,monospace" font-size="13" fill="rgba(240,240,240,0.78)">
+        <text x="20" y="106">Ipor</text>
+        <text x="20" y="128">MetaMorpho</text>
+      </g>
+    </g>
+  </g>
+
+  
+  <g transform="translate(80,340)">
+    <rect x="0" y="-22" width="3" height="60" fill="#738BFF" opacity="0.6"></rect>
+    <text font-size="11" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" x="14" y="-2">CONSTRAINT</text>
+    <text font-size="13" fill="rgba(240,240,240,0.78)" x="14" y="22">Off-list calls revert.</text>
+    <text font-size="13" fill="rgba(240,240,240,0.62)" x="14" y="42">No discretion outside the allow-list.</text>
+  </g>
+
+  
+  <g transform="translate(80,672)">
+    <text font-size="11" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" y="0">DRIFT POLICY</text>
+    <text font-size="13" fill="rgba(240,240,240,0.62)" x="148" y="0">Drift above GRS 7.5 → automatic unwind on next rebalance.</text>
+  </g>
+
+  <g transform="translate(1460,598)">
+    <text font-size="11" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" y="0" text-anchor="end">04 / 06</text>
+  </g>
+</svg>

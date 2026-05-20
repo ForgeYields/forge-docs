@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="640" viewBox="0 0 1600 640" font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif">
+  <defs>
+    <pattern id="grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(115,139,255,0.05)" stroke-width="1"></path>
+    </pattern>
+    <radialGradient id="rightWash" cx="78%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="rgba(115,139,255,0.05)"></stop>
+      <stop offset="100%" stop-color="rgba(115,139,255,0)"></stop>
+    </radialGradient>
+    <filter id="grain" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="3"></feTurbulence>
+      <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1   0 0 0 0.18 0"></feColorMatrix>
+      <feComposite in2="SourceGraphic" operator="in"></feComposite>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="rgba(240,240,240,0.45)"></path>
+    </marker>
+    <marker id="arrowFaint" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="rgba(240,240,240,0.30)"></path>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#738BFF"></path>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="640" fill="#0B0C0F"></rect>
+  <rect width="1600" height="640" fill="url(#grid)"></rect>
+  <rect width="1600" height="640" filter="url(#grain)" opacity="0.35"></rect>
+  <rect width="1600" height="640" fill="url(#rightWash)"></rect>
+
+  <g fill="#738BFF">
+    <rect x="78" y="78" width="4" height="4" opacity="0.55"></rect>
+    <rect x="558" y="48" width="4" height="4" opacity="0.50"></rect>
+    <rect x="1278" y="68" width="4" height="4" opacity="0.50"></rect>
+    <rect x="1517" y="57" width="5" height="5" opacity="0.55"></rect>
+    <rect x="58" y="578" width="3" height="3" opacity="0.40"></rect>
+    <rect x="1538" y="568" width="3" height="3" opacity="0.35"></rect>
+  </g>
+
+  <g transform="translate(40,40)">
+    <g transform="translate(0,0) scale(0.30067789197463374,0.3006778919746337)" fill="#738BFF">
+      <path d="M 16.479 30.228 L 30.904 30.228 L 30.904 73.168 L 16.479 73.168 Z"></path>
+      <path d="M 16.479 42.775 L 16.479 27.406 L 59.839 2.614 L 59.839 17.984 Z"></path>
+      <path d="M 16.505 27.339 L 16.505 9.434 L 0 0 L 0.001 17.905 Z"></path>
+      <path d="M 43.839 61.36 L 43.839 45.99 L 59.864 36.84 L 59.864 52.209 Z"></path>
+    </g>
+    <text x="32" y="16" font-size="13" font-weight="500" fill="#F0F0F0" letter-spacing="-0.02em">ForgeYields</text>
+  </g>
+  <text x="1560" y="56" font-size="11" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" text-anchor="end">STEP 02 · NETTING</text>
+
+  <g transform="translate(80,108)">
+    <text font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" y="0">USER JOURNEY · STEP 2</text>
+    <text font-size="32" font-weight="500" letter-spacing="-0.025em" fill="#F0F0F0" y="38">Netting and settlement.</text>
+    <text font-size="14" fill="rgba(240,240,240,0.62)" y="68">Hundreds of chain-level flows collapse into one cross-chain net delta, coordinated on Starknet.</text>
+  </g>
+
+  
+  
+  <g transform="translate(100,222)">
+    <rect width="380" height="138" rx="3" fill="#101218" stroke="rgba(240,240,240,0.22)"></rect>
+    <text font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="20" y="28">CHAIN · STARKNET</text>
+    <text font-size="13" font-weight="500" fill="#F0F0F0" x="20" y="50">Deposits &amp; redeems</text>
+    
+    <g font-family="ui-monospace,&#34;SF Mono&#34;,Menlo,monospace" font-size="11" fill="rgba(240,240,240,0.62)">
+      <line x1="20" y1="70" x2="180" y2="70" stroke="rgba(240,240,240,0.30)" marker-end="url(#arrowFaint)"></line>
+      <text x="190" y="74">+ 84,000 USDC</text>
+      <line x1="20" y1="88" x2="160" y2="88" stroke="rgba(240,240,240,0.30)" marker-end="url(#arrowFaint)"></line>
+      <text x="170" y="92">+ 12,500 USDC</text>
+      <line x1="180" y1="106" x2="20" y2="106" stroke="rgba(240,240,240,0.30)" marker-end="url(#arrowFaint)"></line>
+      <text x="190" y="110">− 41,200 USDC</text>
+      <line x1="20" y1="124" x2="140" y2="124" stroke="rgba(240,240,240,0.30)" marker-end="url(#arrowFaint)"></line>
+      <text x="150" y="128">+ 6,300 USDC</text>
+    </g>
+  </g>
+
+  
+  <g transform="translate(100,392)">
+    <rect width="380" height="138" rx="3" fill="#101218" stroke="rgba(240,240,240,0.22)"></rect>
+    <text font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" x="20" y="28">CHAIN · ETHEREUM</text>
+    <text font-size="13" font-weight="500" fill="#F0F0F0" x="20" y="50">Deposits &amp; redeems</text>
+    <g font-family="ui-monospace,&#34;SF Mono&#34;,Menlo,monospace" font-size="11" fill="rgba(240,240,240,0.62)">
+      <line x1="20" y1="70" x2="170" y2="70" stroke="rgba(240,240,240,0.30)" marker-end="url(#arrowFaint)"></line>
+      <text x="180" y="74">+ 220,000 USDC</text>
+      <line x1="160" y1="88" x2="20" y2="88" stroke="rgba(240,240,240,0.30)" marker-end="url(#arrowFaint)"></line>
+      <text x="170" y="92">− 95,400 USDC</text>
+      <line x1="20" y1="106" x2="150" y2="106" stroke="rgba(240,240,240,0.30)" marker-end="url(#arrowFaint)"></line>
+      <text x="160" y="110">+ 28,600 USDC</text>
+      <line x1="180" y1="124" x2="20" y2="124" stroke="rgba(240,240,240,0.30)" marker-end="url(#arrowFaint)"></line>
+      <text x="190" y="128">− 18,900 USDC</text>
+    </g>
+  </g>
+
+  
+  <text font-size="11" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" x="100" y="200">USER-LEVEL FLOWS · MANY</text>
+
+  
+  <g>
+    
+    <g stroke="rgba(240,240,240,0.20)" fill="none">
+      <path d="M 482 250 C 600 250, 700 290, 780 326"></path>
+      <path d="M 482 288 C 600 288, 700 304, 780 326"></path>
+      <path d="M 482 326 L 780 326"></path>
+      <path d="M 482 360 C 600 360, 700 344, 780 326"></path>
+      <path d="M 482 420 C 600 420, 700 372, 780 326"></path>
+      <path d="M 482 460 C 600 460, 700 392, 780 326"></path>
+      <path d="M 482 498 C 600 498, 700 412, 780 326"></path>
+    </g>
+    
+    <g transform="translate(700,210)">
+      <rect width="200" height="28" rx="14" fill="rgba(115,139,255,0.06)" stroke="rgba(115,139,255,0.40)"></rect>
+      <text font-size="11" letter-spacing="0.14em" fill="#738BFF" x="100" y="18" text-anchor="middle">BATCHED AT ROLLUP LEVEL</text>
+    </g>
+    
+    <circle cx="780" cy="326" r="6" fill="#101218" stroke="rgba(240,240,240,0.55)"></circle>
+  </g>
+
+  
+  <g>
+    <line x1="790" y1="326" x2="1108" y2="326" stroke="#738BFF" stroke-width="3" marker-end="url(#arrowBlue)"></line>
+    <text font-size="13" font-weight="500" fill="#738BFF" letter-spacing="0.02em" x="950" y="312" text-anchor="middle">net delta</text>
+    <text font-size="11" font-family="ui-monospace,&#34;SF Mono&#34;,Menlo,monospace" fill="rgba(240,240,240,0.62)" x="950" y="354" text-anchor="middle">+ 195,900 USDC</text>
+  </g>
+
+  
+  <g transform="translate(1120,250)">
+    <rect width="380" height="152" rx="3" fill="#101218" stroke="#738BFF" stroke-width="1.5"></rect>
+    <rect width="380" height="152" rx="3" fill="#738BFF" opacity="0.05"></rect>
+    <text font-size="11" letter-spacing="0.18em" fill="#738BFF" x="22" y="34">COORDINATION LAYER</text>
+    <text font-size="32" font-weight="500" fill="#F0F0F0" letter-spacing="-0.025em" x="22" y="80">Controller</text>
+    <text font-size="13" fill="rgba(240,240,240,0.62)" x="22" y="104">Starknet · settles every epoch</text>
+    <g transform="translate(22,118)">
+      <rect x="-2" y="-12" width="160" height="20" rx="10" fill="rgba(240,240,240,0.04)" stroke="rgba(240,240,240,0.18)"></rect>
+      <circle cx="10" cy="-2" r="2.5" fill="#5DBA88"></circle>
+      <text font-size="11" letter-spacing="0.06em" fill="rgba(240,240,240,0.78)" x="22" y="2">epoch N · clearing</text>
+    </g>
+  </g>
+
+  
+  <g transform="translate(100,572)">
+    <rect x="-22" y="-22" width="3" height="60" fill="#738BFF" opacity="0.6"></rect>
+    <text font-size="11" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" y="-2">RESULT</text>
+    <text font-size="14" fill="rgba(240,240,240,0.62)" y="22">Hundreds of user-level flows → one cross-chain net delta.</text>
+  </g>
+  <g transform="translate(1120,592)">
+    <text font-size="12" fill="rgba(240,240,240,0.55)" y="0">Drastically reduces gas + bridge hops vs. settling per-user.</text>
+  </g>
+  <g transform="translate(1460,498)" text-anchor="end">
+    <text font-size="11" letter-spacing="0.14em" fill="rgba(240,240,240,0.42)" y="0">02 / 06</text>
+  </g>
+</svg>
