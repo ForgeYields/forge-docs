@@ -25,7 +25,7 @@ Three audiences:
 
 The methodology, scores, schemas, and validators are all public:
 - **Scores:** [github.com/ForgeYields/forge-hallmark](https://github.com/ForgeYields/forge-hallmark)
-- **Methodology:** `/methodology/v3.10/` (versioned, with amendments through v4.1)
+- **Methodology:** `/methodology/` (current v4.1, with amendments timeline in `/methodology/amendments/`)
 - **Validators:** `scripts/validate-scores.js`, `check-cascade-integrity.js`, `check-drift.js`
 
 The raw assessment notes (qualitative analysis behind each score) are kept private under NDA where they reference confidential security disclosures. Public scores are reconstructible from public information alone — private inputs can only *tighten* a score, never loosen it.
@@ -95,7 +95,7 @@ The Risk Analyst reviews and merges. Methodology changes (vs individual scores) 
 
 A strategy that delegates execution to a third-party permissioned vault (Ipor Fusion, MetaMorpho, Yearn V3, generic ERC-4626 wrappers).
 
-Type W exists because the trust model is fundamentally different from direct execution: you're not just trusting Aave's contracts, you're also trusting the curator/atomist who decides what the wrapper does. Hallmark scores this with the X1–X5 rubric (introduced in [v4.1](https://github.com/ForgeYields/forge-hallmark/blob/main/methodology/v3.10/amendments/v41-amendment.md)):
+Type W exists because the trust model is fundamentally different from direct execution: you're not just trusting Aave's contracts, you're also trusting the curator/atomist who decides what the wrapper does. Hallmark scores this with the X1–X5 rubric (introduced in [v4.1](https://github.com/ForgeYields/forge-hallmark/blob/main/methodology/amendments/v41-amendment.md)):
 
 | Criterion | Weight | What it measures |
 |---|---|---|
@@ -109,7 +109,7 @@ X2 carries 30% because curator trust is the defining differentiator between a ro
 
 ### What's CRS (Chain Risk Score)?
 
-Layer-0 chain risk, introduced in [v4.0](https://github.com/ForgeYields/forge-hallmark/blob/main/methodology/v3.10/amendments/v40-amendment.md). Scores chains independently using the N1–N5 rubric (consensus, sequencer, operational track record, bridge, VM maturity). Chain risk feeds into protocol risk via the existing Multi-Protocol Rule — no new weight constants.
+Layer-0 chain risk, introduced in [v4.0](https://github.com/ForgeYields/forge-hallmark/blob/main/methodology/amendments/v40-amendment.md). Scores chains independently using the N1–N5 rubric (consensus, sequencer, operational track record, bridge, VM maturity). Chain risk feeds into protocol risk via the existing Multi-Protocol Rule — no new weight constants.
 
 This closes the gap where the same Morpho deployment on Ethereum vs Monad was scored identically pre-v4.0.
 

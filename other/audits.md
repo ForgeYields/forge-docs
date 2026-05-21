@@ -33,7 +33,7 @@ The Hallmark methodology that gates strategy eligibility is published, versioned
 **What's public:**
 - The full [rubric](../hallmark/methodology.md) — every criterion, weight, and scoring band
 - Every [score](https://github.com/ForgeYields/forge-hallmark) — one YAML per protocol / asset / strategy / chain, with evidence
-- Every [amendment](https://github.com/ForgeYields/forge-hallmark/tree/main/methodology/v3.10/amendments) — dated changes with rationale and backwards-compatibility notes
+- Every [amendment](https://github.com/ForgeYields/forge-hallmark/tree/main/methodology/amendments) — dated changes with rationale and backwards-compatibility notes
 - All [validation scripts](https://github.com/ForgeYields/forge-hallmark) — `validate-scores.js`, `check-cascade-integrity.js`, `check-drift.js`
 
 **Why this matters:** the audits of our contracts and the allocator prove the *execution* is correct. Hallmark proves the *strategy selection* is defensible. Both are required.
