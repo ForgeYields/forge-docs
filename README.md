@@ -19,7 +19,7 @@ ForgeYields gives you the frontier — with the discipline of structured credit.
 * **Diversified frontier yields** — selected and rebalanced across chains.
 * **Underwritten by [Hallmark](hallmark/overview.md)** — every strategy passes a quantitative bar before deposit.
 * **Non-custodial** — you hold [fyTokens](basics/fytokens.md); relayers act through an [on-chain Merkle-validated allow-list](how-it-works/overall.md).
-* **Verifiable** — every score is [published](hallmark/transparency.md), every allocation logged in real-time [Atomic Reports](basics/yield-allocation.md).
+* **Verifiable** — every score is [published](hallmark/transparency.md), every allocator action logged in the real-time [Atomic Transparency Ledger](basics/atomic-transparency-ledger.md).
 * **No lockups** — mint once, auto-compound, redeem on demand.
 * **Clear performance** — live [Projected vs Realized yield](basics/performance-tracking.md) tracking.
 

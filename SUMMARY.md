@@ -4,6 +4,7 @@
 
 * [🖖 Introduction](README.md)
 * [🔑 Yield Allocation](basics/yield-allocation.md)
+* [📜 Atomic Transparency Ledger](basics/atomic-transparency-ledger.md)
 * [📊 Performance Tracking](basics/performance-tracking.md)
 * [🍯 fyTokens](basics/fytokens.md)
 * [📚 Features](basics/features.md)

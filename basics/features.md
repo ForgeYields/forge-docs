@@ -39,11 +39,11 @@ Deposits mint instantly. Withdrawals take slightly longer because your capital i
 
 * A small redemption fee (visible in the UI, per strategy)
 * Timing depends on liquidity availability
-* Every redemption tracked in [Atomic Reports](yield-allocation.md)
+* Every redemption tracked in the [Atomic Transparency Ledger](atomic-transparency-ledger.md)
 
 #### **Full transparency**
 
-Every Hallmark score is [public](../hallmark/transparency.md), every methodology amendment is dated and signed, every allocation is logged in the Atomic Transparency Ledger. If a position later goes wrong, the post-mortem can attribute the failure to a specific criterion — not vague "model failure."
+Every Hallmark score is [public](../hallmark/transparency.md), every methodology amendment is dated and signed, every allocator action is logged in the [Atomic Transparency Ledger](atomic-transparency-ledger.md). If a position later goes wrong, the post-mortem can attribute the failure to a specific criterion — not vague "model failure."
 
 #### **Non-custodial control**
 

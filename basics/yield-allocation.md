@@ -15,15 +15,9 @@ ForgeYields runs a continuous allocator across chains and protocols. The allocat
 
 #### **Real-time transparency on every allocation step**
 
-ForgeYields publishes Atomic Reports immediately after each execution. Each report shows the allocator's true live state:
+Every allocator execution is published in full to the **[📜 Atomic Transparency Ledger](atomic-transparency-ledger.md)** — AUM breakdown by chain and protocol, executed transactions with explorer links, flow deltas and PnL, dust tracking, exportable JSON/CSV. New report after every action, no smoothing, no aggregation.
 
-* **AUM breakdown** by chain and by protocol
-* **Executed transactions** with explorer links
-* **Flow deltas and PnL:** swaps, bridge costs, incentive capture
-* **Cash vs positions:** updated balances after every step
-* **Dust tracking:** leftover tokens, residual balances, rounding effects
-* **Recent transactions feed:** live stream of allocator actions
-* Exportable **JSON** for integrators, dashboards, monitoring
+The Ledger is the operational counterpart to [Hallmark](../hallmark/overview.md): Hallmark gates *what's allowed in*, the Ledger shows *what's actually happening*.
 
 #### **Risk management in operations**
 

@@ -76,7 +76,7 @@ If the new score is still ≤ 7.5: the allocator may reweight on the next rebala
 
 If the new score crosses above 7.5: the allocator initiates exit from that strategy on the next rebalance. Your fyToken share price reflects the unwound position.
 
-Score changes are visible in real-time in the public feed and in the [Atomic Reports](../basics/yield-allocation.md).
+Score changes are visible in real-time in the public feed and the corresponding unwind appears in the [Atomic Transparency Ledger](../basics/atomic-transparency-ledger.md).
 
 ### Can I propose a score change?
 

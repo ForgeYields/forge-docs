@@ -19,7 +19,7 @@ Earn a share of ForgeYields' fees on the deposits routed through your integratio
 Users always control their assets. Every deposit, batch, rotation, and settlement executes fully on-chain. fyTokens are ERC-4626 — fully composable across DeFi.
 
 **Extreme transparency**\
-Automatic 30-minute Atomic Reports covering every allocation step: chain-level and protocol-level AUM, executed transactions, inflow/outflow changes, PnL, balance updates, dust tracking, real-time activity feed. Exportable JSON/CSV. Plus the entire Hallmark score feed is [publicly readable](../hallmark/transparency.md).
+The [Atomic Transparency Ledger](../basics/atomic-transparency-ledger.md) publishes a new report after every allocator execution (typically every 30 min): chain-level and protocol-level AUM, executed transactions, inflow/outflow changes, PnL, balance updates, dust tracking, live activity feed. Exportable JSON/CSV. Plus the entire [Hallmark score feed](../hallmark/transparency.md) is publicly readable — two pillars of transparency, methodology + operational.
 
 **Simple, universal integration**\
 One integration, every chain. Synchronous deposits via ERC-4626 standard. Asynchronous redeem via a request/claim flow. See [Deposit](deposit.md) and [Redeem](redeem.md) for code samples.
