@@ -100,7 +100,7 @@ If a strategy uses another scored strategy or vault token as collateral, the dep
 
 ## Versioning
 
-The methodology is versioned (currently v4.1). Each amendment is a published, dated document with backwards-compatibility notes. All scores reference the methodology version they were computed under, so historical scores remain interpretable even after the rubric evolves.
+The methodology is versioned (currently v4.2). Each amendment is a published, dated document with backwards-compatibility notes. All scores reference the methodology version they were computed under, so historical scores remain interpretable even after the rubric evolves.
 
 | Version | Date | Headline change |
 |---|---|---|
@@ -111,3 +111,4 @@ The methodology is versioned (currently v4.1). Each amendment is a published, da
 | v3.9 | 2026-05-07 | L1 C3 Custody Mode Recognition (MPC) |
 | v4.0 | 2026-05-12 | Chain Risk (CRS) as a distinct layer |
 | v4.1 | 2026-05-18 | Type W (Wrapper Vault) for Ipor Fusion / MetaMorpho-style vaults |
+| v4.2 | 2026-05-22 | L3 procedural: GRS always computed; verdict derived separately (cascade exclusion ≠ skip computation) |

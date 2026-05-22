@@ -25,7 +25,7 @@ Three audiences:
 
 The methodology, scores, schemas, and validators are all public:
 - **Scores:** [github.com/ForgeYields/forge-hallmark](https://github.com/ForgeYields/forge-hallmark)
-- **Methodology:** `/methodology/` (current v4.1, with amendments timeline in `/methodology/amendments/`)
+- **Methodology:** `/methodology/` (current v4.2, with amendments timeline in `/methodology/amendments/`)
 - **Validators:** `scripts/validate-scores.js`, `check-cascade-integrity.js`, `check-drift.js`
 
 The raw assessment notes (qualitative analysis behind each score) are kept private under NDA where they reference confidential security disclosures. Public scores are reconstructible from public information alone — private inputs can only *tighten* a score, never loosen it.

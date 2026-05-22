@@ -2,7 +2,7 @@
 
 Hallmark scores every chain ForgeYields deploys to before any protocol on it is allowed. Chain risk feeds into Protocol Risk via the Multi-Protocol Rule — a strategy on Morpho-Ethereum and a strategy on Morpho-Monad are scored differently because the underlying chains carry different risk.
 
-<figure><img src="../.gitbook/assets/chain-registry.svg" alt="Hallmark chain registry — six chains scored under Layer 0 (CRS): Ethereum 1.45 (L1), Starknet 5.50 (L2 ZK rollup), Base 3.40 (L2 OP rollup), Arbitrum 3.25 (L2 OP rollup), Monad 5.95 (L1 parallel EVM), HyperEVM 6.35 (L1 HL EVM). Bands: green low risk (0-5.5), amber elevated (5.5-7.5), red excluded (7.5-10)."><figcaption>Current Hallmark-rated chains and their Chain Risk Scores (CRS), per methodology v4.1.</figcaption></figure>
+<figure><img src="../.gitbook/assets/chain-registry.svg" alt="Hallmark chain registry — six chains scored under Layer 0 (CRS): Ethereum 1.45 (L1), Starknet 5.50 (L2 ZK rollup), Base 3.40 (L2 OP rollup), Arbitrum 3.25 (L2 OP rollup), Monad 5.95 (L1 parallel EVM), HyperEVM 6.35 (L1 HL EVM). Bands: green low risk (0-5.5), amber elevated (5.5-7.5), red excluded (7.5-10)."><figcaption>Current Hallmark-rated chains and their Chain Risk Scores (CRS), per methodology v4.2.</figcaption></figure>
 
 ## The CRS rubric (N1–N5)
 
