@@ -1,6 +1,6 @@
 # Audits
 
-ForgeYields stands on a three-layer audit stack: the contracts we own, the allocator we license, and the underwriting methodology we publish. All three are independently reviewable.
+ForgeYields stands on a three-layer assurance stack: the contracts we own (audited, with core solvency formally verified), the allocator we license (audited), and the underwriting methodology we publish (Hallmark, versioned and open-source). All three are independently reviewable.
 
 ***
 
@@ -12,6 +12,16 @@ ForgeYields stands on a three-layer audit stack: the contracts we own, the alloc
 **Report:** [Csc Audit Report](https://github.com/ForgeYields/audits/blob/main/Forge%20-%20Csc%20Audit%20Report.pdf)
 
 The Clearing Engine has an intentionally minimal attack surface: only deposit and redemption-request functions are exposed, and redemption is asynchronous. Direct liquidity extraction from a single chain is impossible by design, materially limiting exploit blast radius.
+
+### Formal verification — TokenGateway
+
+Beyond auditing, the core solvency invariant of **TokenGateway** — the contract handling deposit, redeem, and bridging flows — has been **formally proven**.
+
+**Property proven:** global solvency invariant — the system can always honor outstanding user claims across all reachable contract states.\
+**Verifier:** [LFG Labs](https://lfglabs.dev)\
+**Report:** [ForgeYields Global Solvency](https://lfglabs.dev/research/forgeyields-global-solvency)
+
+Formal verification provides a mathematical proof — strictly stronger than auditing — that the invariant holds across every reachable execution path. For a contract custodying user assets, this closes the residual class of bugs that auditing alone cannot eliminate.
 
 ***
 
