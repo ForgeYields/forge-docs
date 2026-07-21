@@ -144,7 +144,7 @@ X2 carries the heaviest weight (current values in the [Methodology](methodology.
 
 Layer 0 of the framework: every chain is scored independently using the N1–N5 rubric (consensus, sequencer, operational track record, bridge, VM maturity), and chain risk flows into the strategies deployed there through the protocol-risk composition.
 
-This closes the gap where the same Morpho deployment on Ethereum vs Monad would otherwise score identically. See [Chains](chains.md).
+This closes the gap where the same Morpho deployment on Ethereum vs Monad would otherwise score identically. See [Layer 0 — Chains](layer-0-chains.md).
 
 ### What's VRS (Vault Risk Score)?
 

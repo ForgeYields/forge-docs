@@ -2,7 +2,7 @@
 description: Understand ForgeYields, step by step
 ---
 
-# 🔄 Step by Steps
+# 🔄 Step by step
 
 #### 1. Deposit from Any Chain
 

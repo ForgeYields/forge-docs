@@ -1,4 +1,4 @@
-# Audits
+# 🔒 Audits
 
 ForgeYields stands on a four-layer assurance stack: the contracts we own (audited, with core solvency formally verified), the allocator we license (audited), the scoring methodology we publish (Hallmark, versioned and open-source), and the allocation rules we publish (the [Allocator Policy](../hallmark/allocator-policy.md), as prose and machine-readable JSON). All four are independently reviewable.
 

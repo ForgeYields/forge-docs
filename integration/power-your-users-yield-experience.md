@@ -1,4 +1,4 @@
-# Integrate ForgeYields
+# 🔗 Integrate ForgeYields
 
 Whether you're building a wallet, DeFi app, or protocol, ForgeYields gives your users direct access to cross-chain DeFi yield from the frontier — strategies underwritten line by line by [Hallmark](../hallmark/overview.md), not blue-chip-only auto-compounders.
 

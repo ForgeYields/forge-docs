@@ -1,4 +1,4 @@
-# 💰 Deposit
+# 💰 Deposit (contracts)
 
 ### 1. Deposit flow (generic)
 

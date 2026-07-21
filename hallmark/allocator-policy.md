@@ -1,4 +1,4 @@
-# Allocator policy
+# ⚖️ Allocator policy
 
 **Hallmark measures risk. The Allocator Policy decides what ForgeYields does about it.**
 

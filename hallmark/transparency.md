@@ -1,4 +1,4 @@
-# Transparency & Public Scores
+# 📂 Transparency & public scores
 
 Hallmark is designed to be **independently verifiable**. Every underwriting decision has a published artifact, every methodology change has a dated amendment, and every score-to-allocation link is auditable. Frontier yield requires frontier transparency.
 

@@ -1,8 +1,10 @@
-# 🧩 Strategy types
+# Layer 3 — Strategy types
 
-Hallmark scores 6 strategy types. Each type has its own S-criteria rubric (or X-criteria for Type W), reflecting that the *kinds of things that can go wrong* differ structurally between a looping position, an LP, a lending supply, and a wrapper vault.
+Hallmark scores every deployable position — the actual strategy capital flows into — as its own layer: **Layer 3**, the **Global Risk Score (GRS, 1–10)**, composed across 6 strategy types. Each type has its own S-criteria rubric (or X-criteria for Type W), reflecting that the *kinds of things that can go wrong* differ structurally between a looping position, an LP, a lending supply, and a wrapper vault.
 
-The type determines the **SSR (Strategy-Specific Risk)** component of the GRS. PR (Protocol Risk) and AR (Asset Risk) are computed the same way regardless of type.
+> **Canonical rubric.** Criterion weights, scoring bands, and composition formulas live in the versioned [Layer 3 methodology file](https://github.com/ForgeYields/forge-hallmark/blob/main/methodology/layer3_strategy_assessment_methodology.md) — this page describes the structure only. If the two ever diverge, the canonical file wins.
+
+The type determines the **SSR (Strategy-Specific Risk)** component of the GRS. PR (Protocol Risk) and AR (Asset Risk) are computed the same way regardless of type. Strategies that use another scored strategy or vault token as collateral trigger recursive scoring rules, and any score change in an underlying propagates to every dependent.
 
 <figure><img src="../.gitbook/assets/strategy-types-reference.svg" alt="Hallmark strategy types reference — six types: Type 1 Looping (S1-S4), Type 2A LP Classic (S1-S4), Type 2B Pendle LP (S1-S4), Type 2C PT Bond-like (S1-S4), Type 3 Lending (S1-S5), Type W Wrapper Vault (X1-X5)"><figcaption>The six Hallmark strategy types. Type W (Wrapper Vault) uses the X1–X5 rubric.</figcaption></figure>
 

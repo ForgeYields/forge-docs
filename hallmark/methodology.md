@@ -1,4 +1,4 @@
-# Methodology
+# 📐 Methodology
 
 Hallmark is an **open, pure-scoring risk measurement protocol**. It assigns numerical risk scores and classification labels to every chain, protocol, asset, and strategy in scope — and stops there. What a score *means* for a deployment decision is a consumer question, answered by an allocator policy such as the [ForgeYields Allocator Policy](allocator-policy.md), not by Hallmark.
 
@@ -24,32 +24,16 @@ Layer 3 composes the layers below it: the GRS combines a protocol-risk component
 
 ## What each layer measures
 
-**Layer 0 — Chain** ([canonical file](https://github.com/ForgeYields/forge-hallmark/blob/main/methodology/full-framework.md)): consensus and validator decentralization, sequencer architecture, operational track record, bridge/exit security, and VM maturity. Per-chain protocol re-deployments inherit chain risk rather than being treated as new protocols.
+Each layer has its own reference page — scope, rubric, how the score feeds the composite, and re-scoring cadence:
 
-**Layer 1 — Protocol** ([canonical file](https://github.com/ForgeYields/forge-hallmark/blob/main/methodology/layer1_protocol_assessment_methodology.md)):
+| Layer | Reference page | Rubric in one line |
+|---|---|---|
+| **Layer 0 — Chain** | [Layer 0 — Chains](layer-0-chains.md) | Consensus and validator decentralization, sequencer architecture, operational track record, bridge/exit security, VM maturity |
+| **Layer 1 — Protocol** | [Layer 1 — Protocols](layer-1-protocols.md) | Audit status, TVL history, governance quality, incident history and operational age, smart-contract risk, team and transparency |
+| **Layer 2 — Asset** | [Layer 2 — Assets](layer-2-assets.md) | Peg mechanism, depeg history, liquidity depth, collateral backing after look-through, market cap and supply concentration |
+| **Layer 3 — Strategy** | [Layer 3 — Strategy types](layer-3-strategy-types.md) | Per-type S-criteria (looping, AMM LP, Pendle LP/PT, lending) or X-criteria for wrapper vaults — the wrapper layer itself: curator/atomist custody, exit mechanism, fees, maturity |
 
-| Criterion | What it measures |
-|---|---|
-| **C1** Audit status | Audit count and tier, findings resolution, unaudited code delta; immutable-core protocols are not penalized for audit age |
-| **C2** TVL history | Absolute TVL, drawdown, distance from highs |
-| **C3** Governance quality | Multisig configuration, timelocks, upgrade controls, custody mode |
-| **C4** Incident history & operational age | Past exploits, loss magnitude, remediation quality, track record |
-| **C5** Smart contract risk | Complexity, dependencies, cross-chain configuration, off-chain reliance, known exploit lineages |
-| **C6** Team & transparency | Doxxing status, track record, communication consistency |
-
-**Layer 2 — Asset** ([canonical file](https://github.com/ForgeYields/forge-hallmark/blob/main/methodology/layer2_asset_assessment_methodology.md)):
-
-| Criterion | What it measures |
-|---|---|
-| **A1** Peg mechanism | Type, robustness, and mutability of the peg/value mechanism |
-| **A2** Depeg history | Historical deviation magnitude, duration, frequency |
-| **A3** Liquidity depth | DEX/CEX depth at institutional size, redemption-path reality, exit constraints |
-| **A4** Collateral backing | Reserve composition after look-through, attestation quality, custody model, backing counterparties |
-| **A5** Market cap / supply concentration | Size and holder concentration, with a bounded structural-holder carve-out |
-
-Assets that wrap or derive from other assets are assessed on their **ultimate** backing after look-through — a wrapper hop never launders the risk of what sits underneath. Yield-bearing stablecoins, LSTs/LRTs, RWA tokens, and wrappers additionally require a Layer 1 assessment of their issuing protocol.
-
-**Layer 3 — Strategy** ([canonical file](https://github.com/ForgeYields/forge-hallmark/blob/main/methodology/layer3_strategy_assessment_methodology.md)): each strategy type has its own S-criteria rubric — looping (Type 1), classic AMM LP (Type 2A), Pendle LP (Type 2B), Pendle PT (Type 2C), and direct lending (Type 3). Wrapper-vault strategies (Type W) use the X-criteria rubric instead, measuring the wrapper layer itself: underlying strategy risk, curator/atomist custody, exit mechanism, fee structure, and vault maturity. Strategies that use another scored strategy or vault token as collateral trigger recursive scoring rules, and any score change in an underlying propagates to every dependent.
+The layer pages describe structure only; criterion weights and bands stay in the [canonical methodology files](https://github.com/ForgeYields/forge-hallmark/tree/main/methodology).
 
 ## Classification labels
 

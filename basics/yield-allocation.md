@@ -2,7 +2,7 @@
 description: How capital flows from deposit to deployed strategy.
 ---
 
-# 🔑 Yield Allocation
+# 🔑 Yield allocation
 
 
 <figure><img src="../.gitbook/assets/allocation-pipeline.svg" alt="ForgeYields rebalancing pipeline — inputs (Hallmark scores synced every 15 minutes, Allocator Policy verdicts and limits, epoch net flows from protocol clearing, live monitoring) feed target allocations where excluded strategies get zero weight and all weights respect the caps; the risk committee approves every target; execution runs through crash-safe batch construction and on-chain execution; every movement is recorded in the Atomic Transparency Ledger with its policy rationale, which loops back into continuous monitoring."><figcaption>The allocation pipeline: measure, decide, approve, execute, record — with net inflows sitting as idle and net outflows forming a redemption sleeve, both treated as ordinary allocation targets.</figcaption></figure>

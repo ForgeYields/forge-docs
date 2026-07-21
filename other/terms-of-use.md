@@ -1,4 +1,4 @@
-# Terms of use
+# 📜 Terms of use
 
 Please read these Terms of Use carefully. By interacting with the ForgeYields website, smart contracts, or any associated interface, you acknowledge and agree to be bound by these Terms.\
 If you do not agree, do not use ForgeYields.

@@ -1,4 +1,4 @@
-# Privacy policy
+# 🔏 Privacy policy
 
 ForgeYields (“we”, “our”, “the Protocol”) is a non-custodial, smart-contract-based yield platform.\
 This Privacy Policy explains what information we collect, how it is used, and your rights regarding that information.

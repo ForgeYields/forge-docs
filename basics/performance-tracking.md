@@ -2,7 +2,7 @@
 description: Projected vs Realized APY
 ---
 
-# 📊 Performance Tracking
+# 📊 Performance tracking
 
 * **Two views: Projected vs Realized APY**
   * **Projected yield:** Current route APY from live integrations. Volatile as allocations shift across chains. **Excludes** fees, gas, slippage, and other ops costs. Purpose: forward signal.

@@ -1,4 +1,4 @@
-# Strategies Info
+# Strategies info
 
 #### Endpoint
 

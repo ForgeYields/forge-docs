@@ -1,6 +1,8 @@
-# ⛓ Chains
+# Layer 0 — Chains
 
-Hallmark scores every chain ForgeYields deploys to as its own layer — **Layer 0**, the Chain Risk Score (CRS) — before any protocol on it is allowed. Chain risk also feeds each strategy's GRS through Protocol Risk via the Multi-Protocol Rule — a strategy on Morpho-Ethereum and a strategy on Morpho-Monad are scored differently because the underlying chains carry different risk.
+Hallmark scores every chain ForgeYields deploys to — Ethereum, Starknet, Monad, and the rest of the rated registry — as its own layer: **Layer 0**, the **Chain Risk Score (CRS, 1–10)**. A chain is scored before any protocol on it is allowed, and per-chain protocol re-deployments inherit chain risk rather than being treated as new protocols. Chain risk also feeds each strategy's GRS through Protocol Risk via the Multi-Protocol Rule — a strategy on Morpho-Ethereum and a strategy on Morpho-Monad are scored differently because the underlying chains carry different risk.
+
+> **Canonical rubric.** Criterion weights, scoring bands, and formulas live in the versioned [Layer 0 methodology](https://github.com/ForgeYields/forge-hallmark/blob/main/methodology/full-framework.md) — this page describes the structure only. If the two ever diverge, the canonical file wins.
 
 <figure><img src="../.gitbook/assets/chain-registry.svg" alt="Hallmark chain registry — six chains scored under Layer 0 (CRS): Ethereum (L1), Starknet (L2 ZK rollup), Base (L2 OP rollup), Arbitrum (L2 OP rollup), Monad (L1 parallel EVM), HyperEVM (L1 HL EVM). Bands: green low risk (0-5.5), amber elevated (5.5-7.5), red high risk (7.5-10)."><figcaption>Hallmark-rated chains and their Chain Risk Scores (CRS), per the current methodology version. Values shown are a snapshot — see the live registry for current scores.</figcaption></figure>
 
@@ -35,4 +37,4 @@ Chains are re-evaluated on the cadence set by the [Allocator Policy](allocator-p
 - **Quarterly** baseline (full N1–N5 re-score)
 - **Event-driven** on material incidents — chain halt, sequencer failure, bridge exploit, governance change
 
-See [Transparency & Public Scores](transparency.md) for how to verify any CRS yourself from the public feed at `forge-hallmark/scores/chains/*.yaml`.
+See [Transparency & public scores](transparency.md) for how to verify any CRS yourself from the public feed at `forge-hallmark/scores/chains/*.yaml`.
