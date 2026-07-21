@@ -33,3 +33,4 @@ DeFi users — retail and institutional — who want real yield without the manu
 * **Read the methodology** → [Hallmark — Overview](hallmark/overview.md)
 * **See a worked score** → [How a score is built](hallmark/example-score.md)
 * **Start depositing** → [Connect to Forge](user-guide/connect-to-forge.md)
+
