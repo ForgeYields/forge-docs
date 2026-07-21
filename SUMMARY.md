@@ -3,35 +3,38 @@
 ## Basics
 
 * [🖖 Introduction](README.md)
-* [🔑 Yield Allocation](basics/yield-allocation.md)
-* [📜 Atomic Transparency Ledger](basics/atomic-transparency-ledger.md)
-* [📊 Performance Tracking](basics/performance-tracking.md)
-* [🍯 fyTokens](basics/fytokens.md)
 * [📚 Features](basics/features.md)
+* [🍯 fyTokens](basics/fytokens.md)
+* [🔑 Yield allocation](basics/yield-allocation.md)
+* [📊 Performance tracking](basics/performance-tracking.md)
+* [📜 Atomic Transparency Ledger](basics/atomic-transparency-ledger.md)
 * [⚠️ Risks](basics/risks.md)
 
 ## Hallmark
 
 * [🛡️ Overview](hallmark/overview.md)
 * [📐 Methodology](hallmark/methodology.md)
-* [🧩 Strategy types](hallmark/strategy-types.md)
-* [⛓️ Chains](hallmark/chains.md)
+  * [Layer 0 — Chains](hallmark/layer-0-chains.md)
+  * [Layer 1 — Protocols](hallmark/layer-1-protocols.md)
+  * [Layer 2 — Assets](hallmark/layer-2-assets.md)
+  * [Layer 3 — Strategy types](hallmark/layer-3-strategy-types.md)
+* [⚖️ Allocator policy](hallmark/allocator-policy.md)
 * [🔍 How a score is built](hallmark/example-score.md)
+* [📂 Transparency & public scores](hallmark/transparency.md)
 * [❓ FAQ](hallmark/faq.md)
-* [📂 Transparency & Public Scores](hallmark/transparency.md)
 
 ## How it works
 
-* [🔄 Step by Steps](how-it-works/step-by-steps.md)
-* [🌐 Overall](how-it-works/overall.md)
+* [🔄 Step by step](how-it-works/step-by-steps.md)
+* [🌐 Architecture](how-it-works/overall.md)
 
 ## Integration
 
 * [🔗 Integrate ForgeYields](integration/power-your-users-yield-experience.md)
-* [💰 Deposit](integration/deposit.md)
-* [💸 Redeem](integration/redeem.md)
+* [💰 Deposit (contracts)](integration/deposit.md)
+* [💸 Redeem (contracts)](integration/redeem.md)
 * [⚡ API](integration/api/README.md)
-  * [Strategies Info](integration/api/strategies-info.md)
+  * [Strategies info](integration/api/strategies-info.md)
   * [Pending redeems](integration/api/pending-redeems.md)
 
 ## User guide
@@ -43,6 +46,6 @@
 ## Other
 
 * [🔒 Audits](other/audits.md)
-* [🎨 Brand Kit](other/brand-kit.md)
+* [🎨 Brand kit](other/brand-kit.md)
 * [📜 Terms of use](other/terms-of-use.md)
-* [🛡️ Privacy policy](other/privacy-policy.md)
+* [🔏 Privacy policy](other/privacy-policy.md)

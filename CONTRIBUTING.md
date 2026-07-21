@@ -41,12 +41,12 @@ GitBook has a REST API for creating/updating pages. Needs a personal access toke
 ## Quality bar
 
 These drafts are written for the institutional LP reader. They are factually grounded in:
-- `methodology/risk_methodology.md` (v3.9 base + v4.0/v4.1 amendments)
-- `methodology/v40_amendment.md` (Chain Risk / CRS)
-- `methodology/v41_amendment.md` (Type W wrapper vaults)
+- `methodology/full-framework.md` (current consolidated version) + `methodology/amendments/` in the public [forge-hallmark](https://github.com/ForgeYields/forge-hallmark) repo
+- The public Allocator Policy (prose + `allocator_policy_v*.json`) — the verdict/caps/exit-rules layer derived from Hallmark scores
 - `.claude/agents/fy-risk.md` (Hallmark file layout)
 
 Before publishing, sanity-check:
-- The methodology version numbers in `methodology.md` match the current state of `methodology/`.
+- The methodology version numbers in `methodology.md` match the current state of `methodology/` — prefer "current methodology version" + a repo link over pinned version numbers in prose.
+- Verdict/caps/cadence language is attributed to the Allocator Policy, never to Hallmark (Hallmark publishes scores and labels only).
 - The cascade integrity / drift validator names match what's actually in `forge-hallmark-private/scripts/`.
 - The "What's public" section in `transparency.md` aligns with what you actually intend to publish (it currently assumes the YAML scores feed is publicly readable).

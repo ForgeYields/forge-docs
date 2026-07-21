@@ -2,7 +2,7 @@
 description: Understand ForgeYields, step by step
 ---
 
-# 🔄 Step by Steps
+# 🔄 Step by step
 
 #### 1. Deposit from Any Chain
 
@@ -22,13 +22,13 @@ Only the final net result is processed through Ethereum's canonical bridge. Asse
 
 <figure><img src="../.gitbook/assets/step-3-vault-settlement.svg" alt="Step 3 — The net delta from the Controller flows through Ethereum's canonical bridge into the main Vault (Veda BoringVault on Ethereum)."><figcaption>Only the final net result is bridged. All yield activity Ethereum-secured.</figcaption></figure>
 
-#### 4. Strategy Eligibility (Hallmark)
+#### 4. Strategy Eligibility (Hallmark + Allocator Policy)
 
-Before any strategy can receive capital, it must clear [Hallmark](../hallmark/overview.md) — ForgeYields' published underwriting framework. Hallmark scores every protocol, asset, chain, and (for wrapper vaults) curator on a 1–10 scale. The composite **Global Risk Score (GRS)** must be ≤ 7.5 for the strategy to enter the allocator's eligible set. Scores are versioned, publicly verifiable, and rescored on material events.
+Before any strategy can receive capital, it is scored by [Hallmark](../hallmark/overview.md) — ForgeYields' published risk-scoring framework. Hallmark scores every chain, protocol, asset, and strategy (including, for wrapper vaults, curator trust) on a 1–10 scale — descriptive scores and labels only. The ForgeYields [Allocator Policy](../hallmark/allocator-policy.md) derives verdicts from those scores: only strategies with an **APPROVED** verdict enter the allocator's eligible set. Scores are versioned, publicly verifiable, and rescored on material events.
 
 #### 5. Strategy Execution
 
-The allocation engine deploys across the eligible set. All actions are strictly validated against a Merkle-tree whitelist of allowed calls — the relayer cannot deviate from the pre-approved set. If a strategy's GRS later drifts above 7.5, the allocator unwinds the position on the next rebalance.
+The allocation engine deploys across the approved set. All actions are strictly validated against a Merkle-tree whitelist of allowed calls, within slippage bounds — the relayer cannot deviate from the pre-approved set. If a strategy's Policy verdict later flips to EXCLUDED, the allocator unwinds the position per the Policy's exit rules — and the [Atomic Transparency Ledger](../basics/atomic-transparency-ledger.md) records the policy rationale for every movement.
 
 <figure><img src="../.gitbook/assets/step-5-execution.svg" alt="Step 5 — The Vault dispatches via the Manager, which enforces a Merkle-validated allow-list. Capital fans out into categorized integrations: lending (Aave, Morpho, Spark), LP/DEX (Curve, Convex, Balancer), yield (Pendle, Yearn V3), and wrappers (Ipor Fusion, MetaMorpho). Off-list calls revert."><figcaption>Vault → Manager → Merkle-validated allow-list → integrations. Off-list calls revert on-chain.</figcaption></figure>
 

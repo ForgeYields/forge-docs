@@ -1,114 +1,93 @@
 # 📐 Methodology
 
-Hallmark is the underwriting framework behind every ForgeYields allocation. It scores risk in **three layers** — each a self-contained rubric — that compose into a single Global Risk Score per strategy.
+Hallmark is an **open, pure-scoring risk measurement protocol**. It assigns numerical risk scores and classification labels to every chain, protocol, asset, and strategy in scope — and stops there. What a score *means* for a deployment decision is a consumer question, answered by an allocator policy such as the [ForgeYields Allocator Policy](allocator-policy.md), not by Hallmark.
 
-<figure><img src="../.gitbook/assets/hallmark-methodology-diagram.svg" alt="Hallmark methodology — Protocol Risk × 0.35 + Asset Risk × 0.25 + Strategy-Specific Risk × 0.40 = Global Risk Score, with eligibility cutoff at 7.5 and hard-cap overrides on single-criterion thresholds"><figcaption><p>How the three layers compose into a Global Risk Score. Hard-cap thresholds on any single criterion can exclude a strategy regardless of composite GRS.</p></figcaption></figure>
+> **Where the numbers live.** This page describes the structure of the methodology. Criterion weights, formulas, and scoring bands are deliberately not duplicated here — the canonical source is the versioned [methodology files](https://github.com/ForgeYields/forge-hallmark/tree/main/methodology) in the public Hallmark repository, which always state the current version. If this page and those files ever diverge, the methodology files win.
 
-## The three layers
 
-| Layer                  | Scope                                                   | Output                     |
-| ---------------------- | ------------------------------------------------------- | -------------------------- |
-| **Layer 1 — Protocol** | Per-protocol assessment (Aave, Morpho, Curve, Pendle…)  | Protocol Risk Score (1–10) |
-| **Layer 2 — Asset**    | Per-asset assessment (USDC, wstETH, sUSDe, PT-tokens…)  | Asset Risk Score (1–10)    |
-| **Layer 3 — Strategy** | Per-strategy composite (the actual deployable position) | Global Risk Score (1–10)   |
+<figure><img src="../.gitbook/assets/hallmark-scoring-flow.svg" alt="Hallmark scoring flow — four layers scored top-down: L0 chain (CRS), L1 protocol (PRS), L2 asset (ARS), L3 strategy (GRS), each producing descriptive scores and labels only; the scores then feed the separate ForgeYields Allocator Policy, which derives verdicts, concentration caps, and exit rules. Any allocator can consume the same scores with its own policy."><figcaption>The four Hallmark layers produce scores and labels; the Allocator Policy — a separate, public document — turns them into decisions.</figcaption></figure>
 
-**Scoring convention:** 1 = lowest risk, 10 = highest risk. **Eligibility cutoff: GRS ≤ 7.5.**
+## The four layers
 
-***
+Hallmark scores risk in four layers, each a self-contained rubric with published sub-scores:
 
-## Layer 1 — Protocol Risk
+| Layer | Scope | Output | Sub-scores |
+|---|---|---|---|
+| **Layer 0 — Chain** | Per-chain assessment (Ethereum, Starknet, Monad…) | Chain Risk Score (CRS, 1–10) | N1–N5 |
+| **Layer 1 — Protocol** | Per-protocol assessment (Aave, Morpho, Curve, Pendle…) | Protocol Risk Score (PRS, 1–10) | C1–C6 |
+| **Layer 2 — Asset** | Per-asset assessment (USDC, wstETH, sUSDe, PT tokens…) | Asset Risk Score (ARS, 1–10) | A1–A5 |
+| **Layer 3 — Strategy** | Per-strategy composite (the actual deployable position) | Global Risk Score (GRS, 1–10) | S1–S5 or X1–X5 |
 
-Six weighted criteria assess the systemic risk of each protocol ForgeYields interacts with.
+**Scoring convention:** 1 = lowest risk, 10 = highest risk. Every score is published with its full sub-score breakdown and evidence.
 
-| #      | Criterion                          | Weight | What it measures                                                                     |
-| ------ | ---------------------------------- | ------ | ------------------------------------------------------------------------------------ |
-| **C1** | Audit Status                       | 25%    | Audit count, auditor tier, recency, unaudited code delta                             |
-| **C2** | TVL History                        | 10%    | Absolute TVL, 30d drawdown, ATH distance                                             |
-| **C3** | Governance Quality                 | 20%    | Multisig configuration, timelock duration, upgrade controls, custody mode            |
-| **C4** | Incident History & Operational Age | 20%    | Past exploits, loss magnitude, response, operational track record                    |
-| **C5** | Smart Contract Risk                | 15%    | Code complexity, external dependencies, upgradeability pattern, off-chain dependence |
-| **C6** | Team & Transparency                | 10%    | Doxxing status, public reputation, communication consistency                         |
+Layer 3 composes the layers below it: the GRS combines a protocol-risk component, an asset-risk component, and a strategy-specific component. Multi-protocol and multi-asset strategies are penalized for compositional complexity, and chain risk enters the protocol-risk component through the same dependency mechanics. The exact weights and composition formulas are stated in the [Layer 3 methodology](https://github.com/ForgeYields/forge-hallmark/blob/main/methodology/layer3_strategy_assessment_methodology.md).
 
-**Formula:** `PR = 0.25·C1 + 0.10·C2 + 0.20·C3 + 0.20·C4 + 0.15·C5 + 0.10·C6`
+## What each layer measures
 
-### Notable refinements
+Each layer has its own reference page — scope, rubric, how the score feeds the composite, and re-scoring cadence:
 
-* **Type A vs Type B contracts (C1):** Immutable-core protocols are not penalized for audit age — only audit quality and unaudited code delta matter. Upgradeable-core protocols face the full recency rubric.
-* **Custody Mode Recognition (C3):** MPC threshold-signature setups are treated distinctly from plain multisigs and EOAs, reflecting their operational security profile.
-* **Off-chain dependence (C5):** Protocols relying on CEX accounts for delta-hedging or cloud services for core operations score a minimum of 7 — these counterparty/operational risks are not mitigated by smart-contract audits.
+| Layer | Reference page | Rubric in one line |
+|---|---|---|
+| **Layer 0 — Chain** | [Layer 0 — Chains](layer-0-chains.md) | Consensus and validator decentralization, sequencer architecture, operational track record, bridge/exit security, VM maturity |
+| **Layer 1 — Protocol** | [Layer 1 — Protocols](layer-1-protocols.md) | Audit status, TVL history, governance quality, incident history and operational age, smart-contract risk, team and transparency |
+| **Layer 2 — Asset** | [Layer 2 — Assets](layer-2-assets.md) | Peg mechanism, depeg history, liquidity depth, collateral backing after look-through, market cap and supply concentration |
+| **Layer 3 — Strategy** | [Layer 3 — Strategy types](layer-3-strategy-types.md) | Per-type S-criteria (looping, AMM LP, Pendle LP/PT, lending) or X-criteria for wrapper vaults — the wrapper layer itself: curator/atomist custody, exit mechanism, fees, maturity |
 
-### Chain Risk (CRS)
+The layer pages describe structure only; criterion weights and bands stay in the [canonical methodology files](https://github.com/ForgeYields/forge-hallmark/tree/main/methodology).
 
-Chain-level risk (Ethereum, Starknet, Monad, etc.) is scored separately from protocol risk using the **N-criteria rubric** and published as `Chain Risk Score (CRS)`. Per-chain protocol re-deployments inherit chain risk but are not treated as new protocols.
+## Classification labels
 
-***
+Scores compress; labels preserve the facts a consumer policy needs to act on. Alongside every score, Hallmark publishes descriptive classification labels in the score YAML — the current label set includes:
 
-## Layer 2 — Asset Risk
+| Label | The question it answers |
+|---|---|
+| `custody_tier` (A / B / B+ / C) | Who can move funds — plain key, attested MPC, regulated public custodian, or timelocked multisig? |
+| `upgradeability` (A / B / mixed) | Is the deployed core immutable or upgradeable? |
+| `rwa_class` (T / C / I) | What backs an RWA asset — sovereign debt, corporate credit, or insurance risk? |
+| `tranche_position` | Senior or junior in the waterfall? |
+| `endogenous_backing` | Is the asset predominantly backed by a reflexive claim on its own issuer's system, after look-through? |
+| `redemption_terms_mutable` | Can the issuer unilaterally change the redemption *value* of outstanding tokens without a binding timelock? |
+| `regime_dependent_yield` | Does the asset's peg or principal depend on the continued profitability of a market-neutral trade? |
+| `custody_model` (i / ii / iii) | For wrapped assets — regulated custodian, distributed threshold custody, or operator-controlled? |
+| `backing_counterparties` | Where does the backing actually sit, and is each counterparty a custodian or a credit exposure? |
+| `implementation_family` / `toolchain` / `ultimate_venues` | What deployed code lineage, compiler, and end venues does the position ultimately depend on? |
 
-Each asset (stablecoin, LST, LRT, wrapped asset) is scored on backing, peg behavior, and redemption mechanics.
+Labels are descriptive only. The cap tightenings, cascades, and cadence rules keyed to them are [consumer-policy](allocator-policy.md) concerns.
 
-| #      | Criterion          | What it measures                                                                   |
-| ------ | ------------------ | ---------------------------------------------------------------------------------- |
-| **A1** | Backing Quality    | Collateral type, attestation cadence, transparency                                 |
-| **A2** | Peg History        | Historical deviation magnitude and recovery time                                   |
-| **A3** | Liquidity & Exit   | Onchain liquidity depth, async exit credit (queue/cooldown), redemption guarantees |
-| **A4** | Collateral Backing | Bridge risk, custody assumptions, dependency on canonical bridges                  |
-| **A5** | Issuer/Operator    | Counterparty risk of the issuer or operator                                        |
+### The Known-Vector Table
 
-**Async exit credit (v3.7):** Assets with built-in async redemption queues receive partial credit on A3 even when onchain liquidity is thin, provided the queue is honored and bounded.
+For exploit classes that recur across protocol *lineages* — the same mechanism reimplemented, sometimes in a different language — Hallmark maintains a versioned appendix: the **Known-Vector Table**. Each row records a logic family, its vulnerability class, public post-mortem citations, a quantitative standard mitigation, and an on-chain verification procedure. A protocol matching a row whose mitigation check fails (or cannot be executed) receives the maximum smart-contract-risk band — matching is at mechanism level, so a reimplementation of a vulnerable design counts, while merely sharing a language does not. Rows are added, edited, or retired only through the RFC process below; no assessor may apply an unratified row or skip a ratified one.
 
-***
+## Scoring discipline
 
-## Layer 3 — Strategy Risk
+- **Every score carries evidence.** Each criterion score is published with its rationale; a score without evidence is not a valid score.
+- **Scores are always fully computed.** Every component and composite is published for every subject — including strategies whose dependencies would exclude them under a consumer policy. A cascade never leaves a field blank; measurement and deployment eligibility are separate concerns.
+- **Missing data scores conservatively.** A structured missing-data protocol governs what happens when data is unavailable, contradictory, or too young to assess — defaulting to the conservative reading, never to the benefit of the doubt.
+- **Private inputs only tighten.** Non-public inputs (NDA disclosures, team interviews) can push a score more conservative, never looser — every score must be reconstructible from public information alone.
 
-Layer 3 combines protocol and asset risk with strategy-specific factors to produce the **Global Risk Score (GRS)** used for eligibility.
+## Versioning, amendments, and the RFC process
 
-**Formula:** `GRS = PR × 0.35 + AR × 0.25 + SSR × 0.40`
+The methodology is versioned; the current version is always stated at the top of the [canonical methodology files](https://github.com/ForgeYields/forge-hallmark/tree/main/methodology). Every score references the methodology version it was computed under, so historical scores remain interpretable after the rubric evolves.
 
-Where **SSR (Strategy-Specific Risk)** is computed from rubric-specific criteria depending on strategy type.
+Changes follow a fixed discipline:
 
-### Strategy types
+1. **Every change is a dated, published amendment** — see the [amendments directory](https://github.com/ForgeYields/forge-hallmark/tree/main/methodology/amendments) — with rationale, evidence, and backwards-compatibility notes. No silent edits; superseded versions are archived unmodified.
+2. **Material changes flow through an RFC-style pipeline:** drafted with incident evidence, adversarially reviewed against the live registry for false-positive damage, then ratified — with named re-scores reviewed individually before publication. Rules that fired on positions they shouldn't have were rewritten or rejected before ratification.
+3. **Amendments must pass a standing acceptance test:** a no-hindsight backtest against a suite of historical incidents, including control incidents that no honest ex-ante rule should fire on. An amendment that "catches" the controls is overfitted by definition and does not ship.
 
-| Type        | Description                                                              | Rubric |
-| ----------- | ------------------------------------------------------------------------ | ------ |
-| **Type 1**  | Looping / leveraged lending (e.g. wstETH/WETH looper on Aave)            | S1–S5  |
-| **Type 2A** | Pendle LP (PT/YT split)                                                  | S1–S5  |
-| **Type 2B** | Curve/Balancer LP                                                        | S1–S5  |
-| **Type 2C** | Concentrated liquidity LP (Uniswap v3, Ekubo)                            | S1–S5  |
-| **Type 3**  | Direct lending / non-looped supply                                       | S1–S5  |
-| **Type W**  | **Wrapper Vault** (Ipor Fusion, MetaMorpho, Yearn V3, ERC-4626 wrappers) | X1–X5  |
+## What Hallmark does NOT do
 
-### Type W — Wrapper Vault (v4.1)
+Hallmark publishes measurements, not decisions. It does **not**:
 
-Type W exists because depositing into a third-party permissioned vault introduces a **two-layer trust model** that Types 1/2/3 don't cleanly capture. When ForgeYields directly executes a strategy, all risk lives at L1 + L2 + strategy mechanics. When ForgeYields deposits into a vault that internally executes a strategy, the **curator/atomist, exit queue, fee structure, and vault maturity** become first-order concerns.
+- emit deployment verdicts — there is no "approved" or "excluded" at the scoring layer;
+- set eligibility thresholds or score cutoffs;
+- set concentration caps, exit timelines, or remediation plans;
+- decide reassessment cadences for any allocator's deployment purposes.
 
-<figure><img src="../.gitbook/assets/type-w-trust-model.svg" alt="Type W trust model — Depositor → ForgeYields fyToken → Wrapper Vault (curator/atomist) → Underlying Strategy. X-criteria measure trust at the wrapper layer, with X2 (Curator/Atomist Trust) carrying 30% weight as the defining differentiator."><figcaption><p>Type W adds a 4th party (the Wrapper Vault) to the capital flow. The X-criteria measure trust at that wrapper layer — X2 (Curator/Atomist Trust) at 30% weight is the defining differentiator.</p></figcaption></figure>
+All of that lives in the consumer's policy. ForgeYields' own answers — binary verdicts, cap-bands, cascade rules, cadences, and the machine-readable policy file the allocator actually runs — are documented on the [Allocator policy](allocator-policy.md) page. Other institutions consuming the same Hallmark scores can, and are expected to, decide differently.
 
-| Criterion                       | Weight | What it measures                                                                               |
-| ------------------------------- | ------ | ---------------------------------------------------------------------------------------------- |
-| **X1** Underlying Strategy Risk | 25%    | What the wrapper does economically (looping, LP, lending) — scored as if direct                |
-| **X2** Curator/Atomist Trust    | 30%    | Who can move funds. EOA = 9, MPC-attested = 6–8, multisig + timelock = 3–5                     |
-| **X3** Exit Mechanism           | 20%    | Atomic = 1–2, queue ≤ 1d = 3–4, queue ≤ 7d = 5–6, queue > 7d or pause history = 7–9            |
-| **X4** Fee Structure            | 15%    | Transparent low = 1–3, standard = 4–5, opaque/high = 6–8, unilateral change = 8–9              |
-| **X5** Vault Maturity           | 10%    | >2y + >$100M = 1–3, >1y + >$10M = 4–5, <1y or <$10M = 6–8, <3 months or recent incident = 8–10 |
+## Where to go next
 
-### Recursive Strategy Collateral Rule (v3.8)
-
-If a strategy uses another scored strategy or vault token as collateral, the dependency cascades: any score change in the underlying triggers a re-score of the dependent. Hallmark's validators enforce this graph integrity.
-
-***
-
-## Versioning
-
-The methodology is versioned (currently v4.2). Each amendment is a published, dated document with backwards-compatibility notes. All scores reference the methodology version they were computed under, so historical scores remain interpretable even after the rubric evolves.
-
-| Version | Date       | Headline change                                                                                       |
-| ------- | ---------- | ----------------------------------------------------------------------------------------------------- |
-| v3.5    | 2026-04-23 | C4 max rule                                                                                           |
-| v3.6    | 2026-04-23 | C5 cross-chain, C1 audit coverage                                                                     |
-| v3.7    | 2026-05-06 | L2 A3 async exit credit + WATCHLIST band 6.0–6.5                                                      |
-| v3.8    | 2026-05-07 | L3 Recursive Strategy Collateral Rule                                                                 |
-| v3.9    | 2026-05-07 | L1 C3 Custody Mode Recognition (MPC)                                                                  |
-| v4.0    | 2026-05-12 | Chain Risk (CRS) as a distinct layer                                                                  |
-| v4.1    | 2026-05-18 | Type W (Wrapper Vault) for Ipor Fusion / MetaMorpho-style vaults                                      |
-| v4.2    | 2026-05-22 | L3 procedural: GRS always computed; verdict derived separately (cascade exclusion ≠ skip computation) |
+- [Allocator policy →](allocator-policy.md) — how ForgeYields turns these scores into deployment decisions
+- [How a score is built →](example-score.md) — a worked example, end to end
+- [Transparency & public scores →](transparency.md) — the published artifacts and how to verify them

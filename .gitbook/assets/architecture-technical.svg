@@ -282,8 +282,8 @@
     <line x1="1010" y1="690" x2="1010" y2="518" stroke="#738BFF" stroke-width="1.25" marker-end="url(#arrowBlue)"></line>
     <g font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" fill="rgba(240,240,240,0.78)">
       <text x="1028" y="565">Sources allowed DeFi</text>
-      <text x="1028" y="580">integrations from public</text>
-      <text x="1028" y="595">Hallmark scoring</text>
+      <text x="1028" y="580">integrations from Hallmark</text>
+      <text x="1028" y="595">scores + Policy verdicts</text>
     </g>
   </g>
 
@@ -297,9 +297,9 @@
         <path d="M 16.505 27.339 L 16.505 9.434 L 0 0 L 0.001 17.905 Z"></path>
         <path d="M 43.839 61.36 L 43.839 45.99 L 59.864 36.84 L 59.864 52.209 Z"></path>
       </g>
-      <text font-size="11" letter-spacing="0.18em" fill="#738BFF" x="42" y="34">METHODOLOGY</text>
-      <text font-size="22" fill="#F0F0F0" x="42" y="60" font-weight="500" letter-spacing="-0.02em">Hallmark</text>
-      <text font-size="11" fill="rgba(240,240,240,0.55)" x="42" y="76" letter-spacing="0.06em">v4.1 · public scoring feed</text>
+      <text font-size="11" letter-spacing="0.18em" fill="#738BFF" x="42" y="34">UNDERWRITING</text>
+      <text font-size="18" fill="#F0F0F0" x="42" y="60" font-weight="500" letter-spacing="-0.02em">Hallmark + Policy</text>
+      <text font-size="11" fill="rgba(240,240,240,0.55)" x="42" y="76" letter-spacing="0.06em">public scores · public policy</text>
     </g>
   </g>
 

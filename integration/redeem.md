@@ -1,4 +1,4 @@
-# 💸 Redeem
+# 💸 Redeem (contracts)
 
 ### 1. Redeem flow (generic)
 
