@@ -76,4 +76,4 @@ The scoring/policy split is backed by published evidence, not assertion: a 28-in
 
 ## What's not public (and why)
 
-A subset of inputs to scoring is non-public: private security disclosures shared under NDA, team interviews, and operational due diligence notes. These influence the *evidence* fields but are never the sole basis for a score — every score must be reconstructible from public information alone. Private inputs can only tighten a score (push it higher / more conservative), never loosen it.
+A subset of inputs to scoring is non-public: private security disclosures shared under NDA, team interviews, and operational due diligence notes. These influence the _evidence_ fields but are never the sole basis for a score — every score must be reconstructible from public information alone. Private inputs can only tighten a score (push it higher / more conservative), never loosen it.
