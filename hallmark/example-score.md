@@ -1,8 +1,10 @@
 # 🔍 How a score is built — gteUSDc Morpho
 
-This is a worked example: one live strategy, every number, the evidence behind each criterion, and how it composes into the final GRS. If you read this end-to-end, you'll know how to verify any other Hallmark score yourself.
+This is a worked example: one strategy, every number, the evidence behind each criterion, and how it composes into the final GRS. If you read this end-to-end, you'll know how to verify any other Hallmark score yourself.
 
-<figure><img src="../.gitbook/assets/hallmark-score-example-gteusdc.svg" alt="Hallmark score example for gteUSDc Morpho — GRS 3.63, Eligible. Composition: PR 2.20 × 0.35 + AR 4.40 × 0.25 + SSR 4.40 × 0.40 = 3.63. Full breakdowns shown for the Protocol Rubric (morpho-blue C1-C6), Asset Rubric (eusd A1-A5 binding via max rule), and Type W Strategy Rubric (X1-X5)"><figcaption>One strategy, every number, line by line. Every value in the composition is reconstructible from the criteria below — no black boxes.</figcaption></figure>
+> **Illustrative values.** The scores, weights, and dates below are a frozen snapshot from the assessment this walkthrough was written against. Live scores — and the current methodology version — are in the [public registry](https://github.com/ForgeYields/forge-hallmark); the strategy YAML is always the canonical number.
+
+<figure><img src="../.gitbook/assets/hallmark-score-example-gteusdc.svg" alt="Hallmark score example for gteUSDc Morpho — composition of GRS from PR, AR, and SSR. Full breakdowns shown for the Protocol Rubric (morpho-blue C1-C6), Asset Rubric (eusd A1-A5 binding via max rule), and Type W Strategy Rubric (X1-X5)"><figcaption>One strategy, every number, line by line. Every value in the composition is reconstructible from the criteria below — no black boxes.</figcaption></figure>
 
 ***
 
@@ -21,18 +23,16 @@ This is a [Type W (Wrapper Vault)](methodology.md#type-w--wrapper-vault-v41) str
 
 ***
 
-## The five numbers
+## The four numbers
 
 ```
 GRS              =  3.63    ← composite, on the 1–10 scale
 ├── PR (Protocol)   =  2.2  ← weighted 0.35
 ├── AR (Asset)      =  4.4  ← weighted 0.25
 └── SSR (Strategy)  =  4.40 ← weighted 0.40
-
-Eligibility cutoff: 7.5     ✅ eligible
 ```
 
-GRS 3.63 is in the "low-band" eligibility range — well below the 7.5 cutoff, comfortably below the 6.0 WATCHLIST threshold. Allocator can deploy without size caps.
+These four numbers — plus the sub-scores and classification labels behind them — are the complete Hallmark output for this strategy. Hallmark stops here: no verdict, no cap, no eligibility flag. What happens next is a policy question, and we walk through it at the end of this page.
 
 ***
 
@@ -101,7 +101,7 @@ This is where Type W's X1–X5 rubric applies. Each criterion is scored 0–10, 
 = 1.00 + 1.50 + 0.80 + 0.60 + 0.50
 = **4.40**
 
-X2 (Curator/Atomist Trust) is doing the heavy lifting at 30% weight — and Gauntlet's reputation lands it at a 5. If the curator were a single EOA (X2=9 hard cap), this strategy's SSR would collapse upward and the GRS would exceed eligibility regardless of the other factors. **That's the whole point of Type W having X2 weighted 30%.**
+X2 (Curator/Atomist Trust) is doing the heavy lifting at 30% weight — and Gauntlet's reputation lands it at a 5. If the curator were a single EOA (X2=9 rubric cap), this strategy's SSR would collapse upward and the GRS with it — high enough that any reasonable allocator policy would refuse it. **That's the whole point of Type W weighting X2 heaviest.**
 
 ***
 
@@ -114,7 +114,19 @@ GRS = 0.35·PR + 0.25·AR + 0.40·SSR
     = 3.63
 ```
 
-**Verdict:** Eligible. No WATCHLIST flag. Allocator may deploy without size restriction.
+That's the end of the scoring step. The output is **GRS 3.63** plus the sub-scores and labels above — a measurement, published to the public feed. Hallmark emits no verdict.
+
+***
+
+## Second step — what ForgeYields' Policy derives from it
+
+*Everything below this line is policy-side, not Hallmark.* ForgeYields' public [Allocator Policy](allocator-policy.md) consumes the scores above and derives the deployment decision:
+
+- **Verdict: APPROVED.** The composite scores sit below the Policy's exclusion thresholds, and none of the non-compensable hard triggers (governance, audit, incident-history criteria) fire on the sub-scores.
+- **Cap-band:** each score band maps to an allocation ceiling; low-band scores like these land in the widest cap-bands, and the Policy's venue and cluster ceilings still bound the position regardless of score. The current threshold and cap-band tables live in the [Policy](allocator-policy.md) and its machine-readable JSON.
+- **Cadence:** the band also sets how often the position is re-scored, and material events force an immediate re-score ahead of cadence.
+
+A different allocator consuming these same scores under a more conservative policy could size this position differently — or refuse it. That's the point of the split: the measurement is universal, the decision is per-allocator.
 
 ***
 
@@ -126,7 +138,7 @@ The Hallmark score is *not static*. Specific events that would trigger a rescore
 |---|---|
 | Morpho Blue exploit or governance change | C3/C4 spike → PR up → GRS up |
 | Reservoir eUSD depeg | A2 spike → AR up → GRS up |
-| Gauntlet announces single-EOA migration | **X2 → 9 hard cap → GRS likely > 7.5 → strategy excluded** |
+| Gauntlet announces single-EOA migration | **X2 → 9 rubric cap → SSR collapses upward → GRS spikes; the Policy would then derive an EXCLUDED verdict from the new scores** |
 | MetaMorpho introduces unilateral fee change | X4 spike → SSR up |
 | New audit on Morpho Blue with critical findings | C1 spike → PR up |
 
@@ -153,6 +165,6 @@ gteUSDc Morpho was chosen for the walkthrough because it exercises every part of
 - Single-protocol dependency (Multi-Protocol Rule reduces to identity)
 - Type W rubric (X1–X5, the v4.1 addition)
 - Reputable but not perfect curator (X2 = 5, neither cap nor floor)
-- Clear eligibility outcome (well below cutoff, no edge case)
+- A clean, unambiguous score profile (low band, no edge case)
 
-For an example of a strategy at the **other end** (cascade-excluded by X2 = 9 + L1 cascade), see [ipsrBTC Ipor Fusion](https://github.com/ForgeYields/forge-hallmark/blob/main/scores/strategies/ipsrbtc-ipor-fusion-ethereum.yaml) — GRS 9.62, excluded because Reservoir Protocol's C3 = 9 (single-EOA admin) cascades down and the Ipor Atomist is also single-EOA (X2 = 9). Two independent hard-cap triggers, strategy never reaches a vault.
+For an example of a strategy at the **other end**, see [ipsrBTC Ipor Fusion](https://github.com/ForgeYields/forge-hallmark/blob/main/scores/strategies/ipsrbtc-ipor-fusion-ethereum.yaml) (illustrative snapshot — GRS 9.62): Reservoir Protocol's single-EOA admin (C3 = 9) cascades down, and the Ipor Atomist is also single-EOA (X2 = 9). Hallmark still publishes the fully-computed score — that's deliberate, so any policy can see exactly how far a strategy is from clearing — and ForgeYields' Policy derives EXCLUDED from it on two independent triggers. The strategy never reaches a vault.

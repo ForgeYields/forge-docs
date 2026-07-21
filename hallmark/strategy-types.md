@@ -4,7 +4,7 @@ Hallmark scores 6 strategy types. Each type has its own S-criteria rubric (or X-
 
 The type determines the **SSR (Strategy-Specific Risk)** component of the GRS. PR (Protocol Risk) and AR (Asset Risk) are computed the same way regardless of type.
 
-<figure><img src="../.gitbook/assets/strategy-types-reference.svg" alt="Hallmark strategy types reference — six types: Type 1 Looping (S1-S4), Type 2A LP Classic (S1-S4), Type 2B Pendle LP (S1-S4), Type 2C PT Bond-like (S1-S4), Type 3 Lending (S1-S5), Type W Wrapper Vault (X1-X5, v4.1)"><figcaption>The six Hallmark strategy types. Type W (Wrapper Vault) uses the X1–X5 rubric introduced in methodology v4.1.</figcaption></figure>
+<figure><img src="../.gitbook/assets/strategy-types-reference.svg" alt="Hallmark strategy types reference — six types: Type 1 Looping (S1-S4), Type 2A LP Classic (S1-S4), Type 2B Pendle LP (S1-S4), Type 2C PT Bond-like (S1-S4), Type 3 Lending (S1-S5), Type W Wrapper Vault (X1-X5)"><figcaption>The six Hallmark strategy types. Type W (Wrapper Vault) uses the X1–X5 rubric.</figcaption></figure>
 
 ***
 
@@ -17,7 +17,7 @@ The type determines the **SSR (Strategy-Specific Risk)** component of the GRS. P
 | **2B** | Pendle LP | S1–S4 | Pendle LP (PT + SY) | LP-sUSDe-13aug2026 |
 | **2C** | PT Bond-like | S1–S4 | Pendle PT held to maturity | PT-cUSD-23jul2026 |
 | **3** | Lending | S1–S5 | Direct supply, unleveraged | USDC supply on Morpho Blue |
-| **W** | Wrapper Vault | X1–X5 (v4.1) | Third-party permissioned vault | gteUSDc Morpho, ipsrBTC Ipor Fusion |
+| **W** | Wrapper Vault | X1–X5 | Third-party permissioned vault | gteUSDc Morpho, ipsrBTC Ipor Fusion |
 
 ***
 
@@ -132,7 +132,7 @@ The type determines the **SSR (Strategy-Specific Risk)** component of the GRS. P
 
 ***
 
-## Type W — Wrapper Vault (v4.1)
+## Type W — Wrapper Vault
 
 **What it is:** Deposit into a third-party permissioned vault (Ipor Fusion, MetaMorpho, Yearn V3, generic ERC-4626) that internally executes its own strategy. ForgeYields trusts the wrapper to deploy responsibly — but that trust is *itself* what Hallmark scores.
 
@@ -145,7 +145,7 @@ The type determines the **SSR (Strategy-Specific Risk)** component of the GRS. P
 | # | Criterion | Weight | What it measures |
 |---|---|---|---|
 | **X1** | Underlying Strategy Risk | 25% | What the wrapper does economically (looping, LP, lending) — scored as if direct. |
-| **X2** | Curator/Atomist Trust | **30%** | Who can move funds. EOA = 9 (hard cap), MPC-attested = 6–8, multisig + timelock = 3–5. |
+| **X2** | Curator/Atomist Trust | **30%** | Who can move funds. EOA = 9, MPC-attested = 6–8, multisig + timelock = 3–5. |
 | **X3** | Exit Mechanism | 20% | Atomic = 1–2, queue ≤ 1d = 3–4, queue ≤ 7d = 5–6, queue > 7d or pause history = 7–9. |
 | **X4** | Fee Structure | 15% | Transparent low = 1–3, standard = 4–5, opaque/high = 6–8, unilateral change = 8–9. |
 | **X5** | Vault Maturity | 10% | >2y + >$100M = 1–3, >1y + >$10M = 4–5, <1y or <$10M = 6–8, <3 months or recent incident = 8–10. |
@@ -153,7 +153,7 @@ The type determines the **SSR (Strategy-Specific Risk)** component of the GRS. P
 **X2 carries the highest weight because curator trust is the defining differentiator.** If the curator is a single EOA that can move all vault funds in one transaction, no other criterion can save the wrapper.
 
 **Common failure modes:**
-- Single-EOA atomist rugs (X2 = 9 hard cap usually prevents)
+- Single-EOA atomist rugs (X2 = 9 — the [Allocator Policy](allocator-policy.md)'s wrapper trigger excludes such strategies before capital flows)
 - Curator unilaterally raises fees mid-position (X4 spike)
 - Vault TVL collapses below liquidity floor (X5 spike + X3 affected)
 - Underlying strategy degrades faster than the wrapper rebalances
@@ -188,6 +188,6 @@ dependencies:
   assets: [eusd, wbtc, eth-plus, wsteth]
 ```
 
-The `strategy_type` field tells you which rubric was used. The `strategy_specific_criteria` block lets you inspect every per-criterion score the SSR was computed from.
+The `strategy_type` field tells you which rubric was used. The `strategy_specific_criteria` block lets you inspect every per-criterion score the SSR was computed from. (The values above are an illustrative snapshot — pull the live registry for current scores and the methodology version in force.)
 
 For a full worked walkthrough, see [How a score is built — gteUSDc Morpho](example-score.md).

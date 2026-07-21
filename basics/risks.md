@@ -1,6 +1,6 @@
 # ⚠️ Risks
 
-ForgeYields targets higher-yield strategies than blue-chip aggregators — which means every risk below is real, present, and the price of admission to the yield frontier. Each one is actively underwritten by **[Hallmark](../hallmark/overview.md)**, the methodology behind every allocation. Strategies that don't clear the eligibility bar (GRS ≤ 7.5) never reach a vault.
+ForgeYields targets higher-yield strategies than blue-chip aggregators — which means every risk below is real, present, and the price of admission to the yield frontier. Each one is actively measured by **[Hallmark](../hallmark/overview.md)**, the scoring methodology behind every allocation; the ForgeYields [Allocator Policy](../hallmark/allocator-policy.md) derives verdicts from those scores. Strategies without an APPROVED verdict never reach a vault.
 
 ## Smart-contract risk
 
@@ -12,7 +12,7 @@ Vulnerabilities or governance compromise in the underlying protocols a strategy 
 
 ## Asset risk
 
-Peg failure, backing degradation, or redemption-mechanism breakage in stablecoins, LSTs, LRTs, or wrapped assets. Scored under Hallmark's Layer 2 rubric, including async exit credit for assets with bounded redemption queues. See [Layer 2 →](../hallmark/methodology.md#layer-2--asset-risk).
+Peg failure, backing degradation, or redemption-mechanism breakage in stablecoins, LSTs, LRTs, or wrapped assets. Scored under Hallmark's Layer 2 rubric, including async exit credit for assets with bounded redemption queues and published labels for endogenous backing, regime-dependent yield, and RWA backing class. See [Layer 2 →](../hallmark/methodology.md#layer-2--asset-risk).
 
 ## Strategy risk
 
@@ -20,7 +20,7 @@ Execution-level risk: looping leverage ratios, LP composition shifts, oracle dep
 
 ## Wrapper-vault risk
 
-When ForgeYields deposits into a third-party permissioned vault (Ipor Fusion, MetaMorpho, Yearn V3), additional trust assumptions apply: who can move funds, how depositors exit, what fees can change. These are scored under Hallmark's [Type W rubric](../hallmark/methodology.md#type-w--wrapper-vault-v41) (v4.1).
+When ForgeYields deposits into a third-party permissioned vault (Ipor Fusion, MetaMorpho, Yearn V3), additional trust assumptions apply: who can move funds, how depositors exit, what fees can change. These are scored under Hallmark's [Type W rubric](../hallmark/methodology.md).
 
 ## Liquidity risk
 
@@ -33,6 +33,10 @@ Even though ForgeYields defaults to canonical bridges, all cross-chain operation
 ## Chain risk
 
 Layer-1 and Layer-2 networks themselves carry consensus, sequencer, and bridge risks. Hallmark scores chains separately from protocols using the **Chain Risk Score (CRS)**; per-chain protocol re-deployments inherit chain risk without being treated as new protocols.
+
+## Concentration risk
+
+Correlated exposure across venues, shared-dependency clusters, and yield regimes. Handled by the [Allocator Policy](../hallmark/allocator-policy.md)'s concentration caps — per-venue, cluster, and regime-dependent-yield aggregate limits — rather than by scoring alone.
 
 ---
 

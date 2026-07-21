@@ -12,12 +12,12 @@ Yield aggregators give you safe-list returns. Anonymous farms ask you to take th
 
 ForgeYields gives you the frontier — with the discipline of structured credit. Tracking dozens of protocols. Rebalancing across chains as incentives shift. Underwriting every position before deposit. That's a full-time job — ForgeYields runs all of it for you, continuously, on-chain.
 
-<figure><img src=".gitbook/assets/positioning-frontier.svg" alt="ForgeYields positioning in the DeFi yield landscape — Y-axis: yield ceiling. X-axis: no wrapper vs wrapper vault. Existing wrappers (Morpho-Steakhouse, Morpho-Gauntlet, Yearn V3) cluster below the wrapper-side yield ceiling. ForgeYields is the only wrapper above the ceiling, methodology-gated by Hallmark."><figcaption>Where ForgeYields sits in the landscape. Same wrapper-level discipline as Yearn / Morpho-curated, but Hallmark's published methodology lets us safely include the frontier strategies the others won't.</figcaption></figure>
+<figure><img src=".gitbook/assets/positioning-frontier.svg" alt="ForgeYields positioning in the DeFi yield landscape — Y-axis: yield ceiling. X-axis: no wrapper vs wrapper vault. Existing wrappers (Morpho-Steakhouse, Morpho-Gauntlet, Yearn V3) cluster below the wrapper-side yield ceiling. ForgeYields is the only wrapper above the ceiling — scored by Hallmark, gated by the Allocator Policy."><figcaption>Where ForgeYields sits in the landscape. Same wrapper-level discipline as Yearn / Morpho-curated, but Hallmark's published methodology lets us safely include the frontier strategies the others won't.</figcaption></figure>
 
 ## What you get
 
 * **Diversified frontier yields** — selected and rebalanced across chains.
-* **Underwritten by [Hallmark](hallmark/overview.md)** — every strategy passes a quantitative bar before deposit.
+* **Underwritten by [Hallmark](hallmark/overview.md)** — every strategy is scored before deposit, and the public [Allocator Policy](hallmark/allocator-policy.md) turns those scores into verifiable verdicts.
 * **Non-custodial** — you hold [fyTokens](basics/fytokens.md); relayers act through an [on-chain Merkle-validated allow-list](how-it-works/overall.md).
 * **Verifiable** — every score is [published](hallmark/transparency.md), every allocator action logged in the real-time [Atomic Transparency Ledger](basics/atomic-transparency-ledger.md).
 * **No lockups** — mint once, auto-compound, redeem on demand.
