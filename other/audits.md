@@ -1,6 +1,6 @@
-# Audits
+# 🔒 Audits
 
-ForgeYields stands on a four-layer assurance stack: the contracts we own (audited, with core solvency formally verified), the allocator we license (audited), the scoring methodology we publish (Hallmark, versioned and open-source), and the allocation rules we publish (the [Allocator Policy](../hallmark/allocator-policy.md), as prose and machine-readable JSON). All four are independently reviewable.
+ForgeYields stands on a three-layer assurance stack: the contracts we own (audited, with core solvency formally verified), the allocator we license (audited), and the underwriting methodology we publish (Hallmark, versioned and open-source). All three are independently reviewable.
 
 ***
 
@@ -38,25 +38,18 @@ The allocator enforces Merkle-validated allowed calls — the relayer can only i
 
 ## 3. Underwriting Methodology ([Hallmark](../hallmark/overview.md))
 
-The Hallmark methodology that scores every strategy is published, versioned, and independently verifiable.
+The Hallmark methodology that gates strategy eligibility is published, versioned, and independently verifiable.
 
 **What's public:**
-- The full [rubric](../hallmark/methodology.md) — every criterion, weight, and scoring band
-- Every [score](https://github.com/ForgeYields/forge-hallmark) — one YAML per protocol / asset / strategy / chain, with evidence
-- Every [amendment](https://github.com/ForgeYields/forge-hallmark/tree/main/methodology/amendments) — dated changes with rationale and backwards-compatibility notes
-- All [validation scripts](https://github.com/ForgeYields/forge-hallmark) — `validate-scores.js`, `check-cascade-integrity.js`, `check-drift.js`
 
-**Why this matters:** the audits of our contracts and the allocator prove the *execution* is correct. Hallmark proves the *risk measurement* is defensible. The Allocator Policy (below) proves the *strategy selection rules* are explicit. All are required.
+* The full [rubric](../hallmark/methodology.md) — every criterion, weight, and scoring band
+* Every [score](https://github.com/ForgeYields/forge-hallmark) — one YAML per protocol / asset / strategy / chain, with evidence
+* Every [amendment](https://github.com/ForgeYields/forge-hallmark/tree/main/methodology/amendments) — dated changes with rationale and backwards-compatibility notes
+* All [validation scripts](https://github.com/ForgeYields/forge-hallmark) — `validate-scores.js`, `check-cascade-integrity.js`, `check-drift.js`
+
+**Why this matters:** the audits of our contracts and the allocator prove the _execution_ is correct. Hallmark proves the _strategy selection_ is defensible. Both are required.
 
 See [Transparency & Public Scores](../hallmark/transparency.md) for how to verify any score yourself.
-
-***
-
-## 4. Allocation Rules ([Allocator Policy](../hallmark/allocator-policy.md))
-
-The rules that turn Hallmark scores into deployment verdicts, concentration caps, and exit rules are themselves public — as human-readable prose and as the machine-readable JSON the backend consumes (the reader and the allocator see the same file).
-
-**Evidence base:** a 28-incident no-hindsight backtest, adversarial full-registry reviews, an acceptance test re-run before every policy version ships, and an annual performance study. See the [Allocator Policy](../hallmark/allocator-policy.md) for the current artifacts.
 
 ***
 

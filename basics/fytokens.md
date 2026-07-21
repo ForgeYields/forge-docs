@@ -2,7 +2,7 @@
 
 **fyTokens are the ERC-4626 yield-bearing tokens you receive when you deposit into a ForgeYields vault.** One fyToken represents a proportional share of a vault's underlying assets — and of every Hallmark-underwritten strategy the vault is currently deployed across.
 
-ForgeYields currently offers three vault tokens, each directional in its underlying: **fyUSDC** (USDC), **fyETH** (ETH), **fyWBTC** (WBTC). Each vault's composition — strategies, weights, current GRS per position — is published in real time and changes as the allocator rebalances. Every strategy in the mix must have a current Hallmark score and an APPROVED verdict under the [ForgeYields Allocator Policy](../hallmark/allocator-policy.md) before the allocator can deploy to it.
+ForgeYields currently offers three vault tokens, each directional in its underlying: **fyUSDC** (USDC), **fyETH** (ETH), **fyWBTC** (WBTC). Each vault's composition — strategies, weights, current GRS per position — is published in real time and changes as the allocator rebalances. Every strategy in the mix must have a Hallmark score and clear the eligibility cutoff (GRS ≤ 7.5) before the allocator can deploy to it.
 
 ## What they do
 
@@ -16,8 +16,8 @@ ForgeYields currently offers three vault tokens, each directional in its underly
 
 Every fyToken's value depends on the strategies the underlying vault is allocated to. Those strategies are:
 
-* Scored by [Hallmark](../hallmark/overview.md) and APPROVED under the [Allocator Policy](../hallmark/allocator-policy.md)
-* Continuously monitored — a score deterioration that flips the Policy verdict to EXCLUDED triggers exit, not optimization
+* Pre-cleared by [Hallmark](../hallmark/overview.md) (GRS ≤ 7.5)
+* Continuously monitored — a score that drifts above the cutoff triggers exit, not optimization
 * Fully transparent — every score, every methodology version, every cascade dependency is [publicly verifiable](../hallmark/transparency.md)
 
 You're not holding an IOU against an unknown set of farms. You're holding a share in a vault whose entire allocation universe is published and audited.

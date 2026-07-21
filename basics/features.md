@@ -2,7 +2,7 @@
 
 #### **Underwritten by Hallmark**
 
-Every strategy ForgeYields touches is scored against a [published methodology](../hallmark/overview.md) before any capital flows. Chain, protocol, asset, and (for wrapper vaults) curator/atomist trust — all measured on a 1–10 scale across four layers. The [ForgeYields Allocator Policy](../hallmark/allocator-policy.md) — itself public, as prose and machine-readable JSON — derives verdicts, concentration caps, and exit rules from those scores. Strategies without an APPROVED verdict never reach a vault.
+Every strategy ForgeYields touches is scored against a [published methodology](../hallmark/overview.md) before any capital flows. Protocol, asset, chain, and (for wrapper vaults) curator/atomist trust — all measured on a 1–10 scale, with a hard cutoff at GRS ≤ 7.5. Strategies that don't clear the bar never reach a vault.
 
 This is the defining feature. Everything else builds on it.
 
@@ -43,7 +43,7 @@ Deposits mint instantly. Withdrawals take slightly longer because your capital i
 
 #### **Full transparency**
 
-Every Hallmark score is [public](../hallmark/transparency.md), every methodology amendment is dated and signed, the [Allocator Policy](../hallmark/allocator-policy.md) is published as prose and machine-readable JSON, and every allocator action is logged in the [Atomic Transparency Ledger](atomic-transparency-ledger.md). If a position later goes wrong, the post-mortem can attribute the failure to a specific criterion — not vague "model failure."
+Every Hallmark score is [public](../hallmark/transparency.md), every methodology amendment is dated and signed, every allocator action is logged in the [Atomic Transparency Ledger](atomic-transparency-ledger.md). If a position later goes wrong, the post-mortem can attribute the failure to a specific criterion — not vague "model failure."
 
 #### **Non-custodial control**
 
