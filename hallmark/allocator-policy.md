@@ -6,6 +6,8 @@ Hallmark is a pure scoring protocol: it publishes numerical risk scores and clas
 
 > **Where the numbers live.** Parameter values quoted on this page reflect the current published policy version. The canonical source is always the [policy document and its machine-readable mirror](https://github.com/ForgeYields/forge-hallmark/tree/main/policies) — on any divergence, those files win.
 
+
+<figure><img src="../.gitbook/assets/hallmark-methodology-diagram.svg" alt="Hallmark scoring flow — four layers scored top-down: L0 chain (CRS), L1 protocol (PRS), L2 asset (ARS), L3 strategy (GRS), each producing descriptive scores and labels only; the scores then feed the separate ForgeYields Allocator Policy, which derives verdicts, concentration caps, and exit rules. Any allocator can consume the same scores with its own policy."><figcaption>The four Hallmark layers produce scores and labels; the Allocator Policy — a separate, public document — turns them into decisions.</figcaption></figure>
 ## Verdicts are binary
 
 The policy emits exactly two verdict labels per protocol, asset, and strategy: **APPROVED** or **EXCLUDED**. There is no intermediate verdict. Elevated-but-acceptable risk is handled by allocation caps, not by a third label: a strategy in a higher score band is simply APPROVED with a tighter cap and a faster re-scoring cadence.

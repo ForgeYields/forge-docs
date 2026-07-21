@@ -4,6 +4,8 @@ Hallmark is an **open, pure-scoring risk measurement protocol**. It assigns nume
 
 > **Where the numbers live.** This page describes the structure of the methodology. Criterion weights, formulas, and scoring bands are deliberately not duplicated here — the canonical source is the versioned [methodology files](https://github.com/ForgeYields/forge-hallmark/tree/main/methodology) in the public Hallmark repository, which always state the current version. If this page and those files ever diverge, the methodology files win.
 
+
+<figure><img src="../.gitbook/assets/hallmark-methodology-diagram.svg" alt="Hallmark scoring flow — four layers scored top-down: L0 chain (CRS), L1 protocol (PRS), L2 asset (ARS), L3 strategy (GRS), each producing descriptive scores and labels only; the scores then feed the separate ForgeYields Allocator Policy, which derives verdicts, concentration caps, and exit rules. Any allocator can consume the same scores with its own policy."><figcaption>The four Hallmark layers produce scores and labels; the Allocator Policy — a separate, public document — turns them into decisions.</figcaption></figure>
 ## The four layers
 
 Hallmark scores risk in four layers, each a self-contained rubric with published sub-scores:
