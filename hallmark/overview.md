@@ -1,4 +1,4 @@
-# Hallmark
+# 🛡️ Overview
 
 **Hallmark is the underwriting framework behind every ForgeYields allocation.**
 
@@ -19,10 +19,10 @@ Every "yes" must be defensible to an institutional LP — the way a structured-c
 
 Hallmark emits three numbers per strategy, on a 1–10 scale (1 = lowest risk):
 
-| Score | Meaning | Eligibility |
-|---|---|---|
-| **Protocol Risk (PR)** | Systemic risk of the protocol | Input to GRS |
-| **Asset Risk (AR)** | Backing, peg, and liquidity risk of the asset | Input to GRS |
+| Score                       | Meaning                                         | Eligibility              |
+| --------------------------- | ----------------------------------------------- | ------------------------ |
+| **Protocol Risk (PR)**      | Systemic risk of the protocol                   | Input to GRS             |
+| **Asset Risk (AR)**         | Backing, peg, and liquidity risk of the asset   | Input to GRS             |
 | **Global Risk Score (GRS)** | Composite: `PR × 0.35 + AR × 0.25 + SSR × 0.40` | **≤ 7.5** to be eligible |
 
 Strategies scoring **> 7.5** are excluded from vaults. Strategies in the **6.0–6.5 WATCHLIST band** require manual review and capped position sizing.
@@ -33,21 +33,21 @@ Strategies scoring **> 7.5** are excluded from vaults. Strategies in the **6.0�
 Hallmark (scoring)  →  forge-backend (allocator)  →  fyUSDC / fyETH / fyWBTC vaults
 ```
 
-- Hallmark owns the canonical scores (YAML, versioned, signed off by the Risk Analyst).
-- The allocator consumes scores via a public feed and refuses to deploy capital to any strategy with no current score or a GRS > 7.5.
-- Score changes (re-scores after incidents, audit updates, governance changes) propagate to the allocator on next rebalance.
+* Hallmark owns the canonical scores (YAML, versioned, signed off by the Risk Analyst).
+* The allocator consumes scores via a public feed and refuses to deploy capital to any strategy with no current score or a GRS > 7.5.
+* Score changes (re-scores after incidents, audit updates, governance changes) propagate to the allocator on next rebalance.
 
 This means allocation decisions are **auditable**: for any historical position, you can pull the Hallmark score that authorized it.
 
 ## Cadence
 
-- **Protocol scores (L1):** re-evaluated quarterly or on material events (exploit, governance change, major upgrade).
-- **Asset scores (L2):** re-evaluated quarterly or on peg events, backing changes, or redemption mechanism changes.
-- **Strategy scores (L3):** re-evaluated on any L1 or L2 change in their dependency tree (cascade), or on strategy-specific events.
+* **Protocol scores (L1):** re-evaluated quarterly or on material events (exploit, governance change, major upgrade).
+* **Asset scores (L2):** re-evaluated quarterly or on peg events, backing changes, or redemption mechanism changes.
+* **Strategy scores (L3):** re-evaluated on any L1 or L2 change in their dependency tree (cascade), or on strategy-specific events.
 
 Re-scores are timestamped and the previous version is retained for audit.
 
 ## Where to go next
 
-- [Methodology →](methodology.md) — the three-layer framework in detail
-- [Transparency →](transparency.md) — public scores feed, validation, and audit trail
+* [Methodology →](methodology.md) — the three-layer framework in detail
+* [Transparency →](transparency.md) — public scores feed, validation, and audit trail

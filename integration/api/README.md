@@ -1,4 +1,4 @@
-# API
+# ⚡ API
 
 ForgeYields exposes a set of public read-only APIs for wallets, dashboards, integrators, and portfolio apps. All endpoints are accessible from:
 

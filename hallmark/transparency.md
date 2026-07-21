@@ -1,15 +1,15 @@
-# Transparency & Public Scores
+# 📂 Transparency & Public Scores
 
 Hallmark is designed to be **independently verifiable**. Every underwriting decision has a published artifact, every methodology change has a dated amendment, and every score-to-allocation link is auditable. Frontier yield requires frontier transparency.
 
 ## What's public
 
-| Artifact | Format | Purpose |
-|---|---|---|
-| **Methodology** | Versioned markdown | The rubric itself — every criterion, weight, and scoring band |
-| **Amendments** | Dated markdown (`v3.5_amendment.md`, `v4.1_amendment.md`, …) | Methodology changes with rationale and backwards-compatibility notes |
-| **Scores** | YAML, one file per protocol / asset / strategy / chain | The canonical machine-readable scores consumed by the allocator |
-| **Assessments** | Markdown, one per protocol / asset / strategy | The human-readable analysis behind each score |
+| Artifact        | Format                                                       | Purpose                                                              |
+| --------------- | ------------------------------------------------------------ | -------------------------------------------------------------------- |
+| **Methodology** | Versioned markdown                                           | The rubric itself — every criterion, weight, and scoring band        |
+| **Amendments**  | Dated markdown (`v3.5_amendment.md`, `v4.1_amendment.md`, …) | Methodology changes with rationale and backwards-compatibility notes |
+| **Scores**      | YAML, one file per protocol / asset / strategy / chain       | The canonical machine-readable scores consumed by the allocator      |
+| **Assessments** | Markdown, one per protocol / asset / strategy                | The human-readable analysis behind each score                        |
 
 ## Score format
 
@@ -37,9 +37,9 @@ Every score has **evidence**. A score without evidence is not a valid score.
 
 Hallmark ships a set of validation scripts that run on every score change:
 
-- **`validate-scores.js`** — schema, range, and required-field checks on every YAML
-- **`check-cascade-integrity.js`** — enforces the Recursive Strategy Collateral Rule: if you change an L1 score, every L3 strategy in its dependency tree must be re-scored
-- **`check-drift.js`** — flags scores older than the cadence threshold (quarterly for L1/L2, event-driven for L3)
+* **`validate-scores.js`** — schema, range, and required-field checks on every YAML
+* **`check-cascade-integrity.js`** — enforces the Recursive Strategy Collateral Rule: if you change an L1 score, every L3 strategy in its dependency tree must be re-scored
+* **`check-drift.js`** — flags scores older than the cadence threshold (quarterly for L1/L2, event-driven for L3)
 
 Allocator integration refuses scores that fail validation. There is no "manual override" path that bypasses these checks.
 
@@ -70,4 +70,4 @@ If you find a discrepancy, raise it — Hallmark treats criticism as a feature, 
 
 ## What's not public (and why)
 
-A subset of inputs to scoring is non-public: private security disclosures shared under NDA, team interviews, and operational due diligence notes. These influence the *evidence* fields but are never the sole basis for a score — every score must be reconstructible from public information alone. Private inputs can only tighten a score (push it higher / more conservative), never loosen it.
+A subset of inputs to scoring is non-public: private security disclosures shared under NDA, team interviews, and operational due diligence notes. These influence the _evidence_ fields but are never the sole basis for a score — every score must be reconstructible from public information alone. Private inputs can only tighten a score (push it higher / more conservative), never loosen it.

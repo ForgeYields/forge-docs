@@ -1,12 +1,12 @@
-# Integrate ForgeYields
+# 🔗 Integrate ForgeYields
 
 Whether you're building a wallet, DeFi app, or protocol, ForgeYields gives your users direct access to cross-chain DeFi yield from the frontier — strategies underwritten line by line by [Hallmark](../hallmark/overview.md), not blue-chip-only auto-compounders.
 
-<figure><img src="../.gitbook/assets/Integration.png" alt="ForgeYields integration overview"><figcaption>One integration, every chain.</figcaption></figure>
+<figure><img src="../.gitbook/assets/Integration.png" alt="ForgeYields integration overview"><figcaption><p>One integration, every chain.</p></figcaption></figure>
 
 ## Why integrate
 
-**Underwritten by [Hallmark](../hallmark/overview.md)**\
+**Underwritten by** [**Hallmark**](../hallmark/overview.md)\
 Every strategy your users hold is scored against a published methodology. Protocol, asset, chain, and (for wrapper vaults) curator/atomist trust — all measured, all auditable, all publicly verifiable. Hard cutoff at GRS ≤ 7.5. If you serve institutional or sophisticated users, this is the differentiator.
 
 **Frontier yields, professionally managed**\
