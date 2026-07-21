@@ -32,7 +32,7 @@
   <g transform="translate(80, 110)">
     <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="rgba(240,240,240,0.42)" y="0">SIX STRATEGY TYPES</text>
     <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="34" font-weight="500" letter-spacing="-0.025em" fill="#F0F0F0" y="46">Each type has its own rubric.</text>
-    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="16" fill="rgba(240,240,240,0.62)" y="84">Hallmark scores S1–S4 for Types 1 and 2; S1–S5 for Type 3; X1–X5 for Type W (methodology v4.1).</text>
+    <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="16" fill="rgba(240,240,240,0.62)" y="84">Hallmark scores S1–S4 for Types 1 and 2; S1–S5 for Type 3; X1–X5 for Type W.</text>
   </g>
 
   
@@ -188,11 +188,11 @@
         <tspan x="28" dy="0">Delegated execution through a</tspan><tspan x="28" dy="22">curator/atomist (Ipor, MetaMorpho).</tspan>
       </text>
 
-      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="#738BFF" x="28" y="348">RUBRIC · X1 — X5 · v4.1</text>
+      <text font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.18em" fill="#738BFF" x="28" y="348">RUBRIC · X1 — X5</text>
     </g>
 
   
   <text x="80" y="1068" font-family="&#34;Hanken Grotesk&#34;,&#34;Inter&#34;,system-ui,sans-serif" font-size="11" letter-spacing="0.10em" fill="rgba(240,240,240,0.42)">
-    TYPE W ADDS A 4TH-PARTY WRAPPER · ITS RUBRIC MEASURES THE CURATOR / ATOMIST TRUST · METHODOLOGY v4.1
+    TYPE W ADDS A 4TH-PARTY WRAPPER · ITS RUBRIC MEASURES THE CURATOR / ATOMIST TRUST
   </text>
 </svg>

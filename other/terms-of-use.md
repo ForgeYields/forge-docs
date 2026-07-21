@@ -1,4 +1,4 @@
-# 📜 Terms of use
+# Terms of use
 
 Please read these Terms of Use carefully. By interacting with the ForgeYields website, smart contracts, or any associated interface, you acknowledge and agree to be bound by these Terms.\
 If you do not agree, do not use ForgeYields.
@@ -48,16 +48,18 @@ Using ForgeYields involves significant risks, including but not limited to those
 
 ForgeYields targets higher-yield strategies than blue-chip aggregators. The risks below are real, present, and underwritten — they are not eliminated.
 
-* **Smart-contract risk** — even audited contracts may contain bugs.
-* **Protocol risk** — vulnerabilities or governance compromise in underlying protocols (Aave, Morpho, Curve, Pendle, lending markets, LST/LRT issuers, etc.).
-* **Asset risk** — peg failure, backing degradation, or redemption-mechanism breakage in stablecoins, LSTs, LRTs, or wrapped assets.
-* **Strategy risk** — execution-level risk including leverage ratios, LP composition, oracle dependence, unwind liquidity.
-* **Wrapper-vault risk** — when ForgeYields deposits into a third-party permissioned vault (Ipor Fusion, MetaMorpho, Yearn V3), additional trust assumptions apply.
-* **Chain risk** — Layer-1 and Layer-2 networks carry consensus, sequencer, and bridge risks.
-* **Bridge risk** — even with canonical bridges, all cross-chain operations carry technical and operational execution risk.
-* **Liquidity risk** — during high demand, redemptions may take longer until liquidity is freed during the next rebalance.
+- **Smart-contract risk** — even audited contracts may contain bugs.
+- **Protocol risk** — vulnerabilities or governance compromise in underlying protocols (Aave, Morpho, Curve, Pendle, lending markets, LST/LRT issuers, etc.).
+- **Asset risk** — peg failure, backing degradation, or redemption-mechanism breakage in stablecoins, LSTs, LRTs, or wrapped assets.
+- **Strategy risk** — execution-level risk including leverage ratios, LP composition, oracle dependence, unwind liquidity.
+- **Wrapper-vault risk** — when ForgeYields deposits into a third-party permissioned vault (Ipor Fusion, MetaMorpho, Yearn V3), additional trust assumptions apply.
+- **Chain risk** — Layer-1 and Layer-2 networks carry consensus, sequencer, and bridge risks.
+- **Bridge risk** — even with canonical bridges, all cross-chain operations carry technical and operational execution risk.
+- **Liquidity risk** — during high demand, redemptions may take longer until liquidity is freed during the next rebalance.
 
 Hallmark scores published on the [public feed](../hallmark/transparency.md) reflect a methodology — not a guarantee. Past scores do not guarantee future outcomes. Methodology updates may change historical scores; the version applicable to a deposit is the version published at the time of allocation.
+
+
 
 ***
 

@@ -1,15 +1,17 @@
-# 📂 Transparency & Public Scores
+# Transparency & Public Scores
 
 Hallmark is designed to be **independently verifiable**. Every underwriting decision has a published artifact, every methodology change has a dated amendment, and every score-to-allocation link is auditable. Frontier yield requires frontier transparency.
 
 ## What's public
 
-| Artifact        | Format                                                       | Purpose                                                              |
-| --------------- | ------------------------------------------------------------ | -------------------------------------------------------------------- |
-| **Methodology** | Versioned markdown                                           | The rubric itself — every criterion, weight, and scoring band        |
-| **Amendments**  | Dated markdown (`v3.5_amendment.md`, `v4.1_amendment.md`, …) | Methodology changes with rationale and backwards-compatibility notes |
-| **Scores**      | YAML, one file per protocol / asset / strategy / chain       | The canonical machine-readable scores consumed by the allocator      |
-| **Assessments** | Markdown, one per protocol / asset / strategy                | The human-readable analysis behind each score                        |
+| Artifact | Format | Purpose |
+|---|---|---|
+| **Methodology** | Versioned markdown | The rubric itself — every criterion, weight, and scoring band |
+| **Amendments** | Dated markdown (`v3.5_amendment.md`, `v4.1_amendment.md`, …) | Methodology changes with rationale and backwards-compatibility notes |
+| **Scores** | YAML, one file per protocol / asset / strategy / chain | The canonical machine-readable scores consumed by the allocator |
+| **Assessments** | Markdown, one per protocol / asset / strategy | The human-readable analysis behind each score |
+| **[Allocator Policy](allocator-policy.md)** | Versioned markdown | The verdict layer — how ForgeYields derives APPROVED/EXCLUDED verdicts, concentration caps, exit rules, and re-scoring cadences from Hallmark scores |
+| **Policy-as-code** | Versioned JSON (e.g. `allocator_policy_v1_2.json`) | The machine-readable policy — the backend consumes the same file the reader sees |
 
 ## Score format
 
@@ -18,7 +20,7 @@ Each scored entity has a YAML file in the public [`forge-hallmark`](https://gith
 ```yaml
 slug: morpho-blue
 layer: protocol
-methodology_version: "v4.1"
+methodology_version: "v4.1"   # pinned at scoring time — see the repo for the current version
 scored_at: "2026-05-18"
 scored_by: "Risk Analyst Agent"
 criteria:
@@ -37,9 +39,9 @@ Every score has **evidence**. A score without evidence is not a valid score.
 
 Hallmark ships a set of validation scripts that run on every score change:
 
-* **`validate-scores.js`** — schema, range, and required-field checks on every YAML
-* **`check-cascade-integrity.js`** — enforces the Recursive Strategy Collateral Rule: if you change an L1 score, every L3 strategy in its dependency tree must be re-scored
-* **`check-drift.js`** — flags scores older than the cadence threshold (quarterly for L1/L2, event-driven for L3)
+- **`validate-scores.js`** — schema, range, and required-field checks on every YAML
+- **`check-cascade-integrity.js`** — enforces the Recursive Strategy Collateral Rule: if you change an L1 score, every L3 strategy in its dependency tree must be re-scored
+- **`check-drift.js`** — flags scores older than the cadence threshold (per the reassessment cadences set in the [Allocator Policy](allocator-policy.md))
 
 Allocator integration refuses scores that fail validation. There is no "manual override" path that bypasses these checks.
 
@@ -52,7 +54,7 @@ Vault position
   ↓ which strategy?
 Strategy YAML (GRS at deployment time)
   ↓ what methodology?
-Methodology version (v4.1)
+Methodology version (as pinned at scoring time)
   ↓ what inputs?
 Protocol score YAML + Asset score YAML + Strategy assessment markdown
 ```
@@ -68,6 +70,10 @@ Every link is timestamped and version-pinned. If a position later goes bad, post
 
 If you find a discrepancy, raise it — Hallmark treats criticism as a feature, not a bug.
 
+## Evidence base
+
+The scoring/policy split is backed by published evidence, not assertion: a 28-incident no-hindsight backtest, adversarial full-registry reviews, an acceptance test re-run before every policy version ships, and an annual performance study. See the [Allocator Policy](allocator-policy.md) for the current evidence artifacts.
+
 ## What's not public (and why)
 
-A subset of inputs to scoring is non-public: private security disclosures shared under NDA, team interviews, and operational due diligence notes. These influence the _evidence_ fields but are never the sole basis for a score — every score must be reconstructible from public information alone. Private inputs can only tighten a score (push it higher / more conservative), never loosen it.
+A subset of inputs to scoring is non-public: private security disclosures shared under NDA, team interviews, and operational due diligence notes. These influence the *evidence* fields but are never the sole basis for a score — every score must be reconstructible from public information alone. Private inputs can only tighten a score (push it higher / more conservative), never loosen it.
