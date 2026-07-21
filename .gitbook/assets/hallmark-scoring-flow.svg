@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 530" font-family="system-ui, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888780"></path>
+    </marker>
+  </defs>
+
+  <!-- Layer 0 -->
+  <rect x="110" y="24" width="320" height="64" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5"></rect>
+  <text x="270" y="51" text-anchor="middle" font-size="14" font-weight="500" fill="#085041">L0 — chain</text>
+  <text x="270" y="72" text-anchor="middle" font-size="12" fill="#0F6E56">Chain risk score (CRS)</text>
+
+  <line x1="270" y1="88" x2="270" y2="110" stroke="#888780" stroke-width="1.25" marker-end="url(#arr)"></line>
+
+  <!-- Layer 1 -->
+  <rect x="110" y="116" width="320" height="64" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5"></rect>
+  <text x="270" y="143" text-anchor="middle" font-size="14" font-weight="500" fill="#085041">L1 — protocol</text>
+  <text x="270" y="164" text-anchor="middle" font-size="12" fill="#0F6E56">Protocol risk score (PRS)</text>
+
+  <line x1="270" y1="180" x2="270" y2="202" stroke="#888780" stroke-width="1.25" marker-end="url(#arr)"></line>
+
+  <!-- Layer 2 -->
+  <rect x="110" y="208" width="320" height="64" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5"></rect>
+  <text x="270" y="235" text-anchor="middle" font-size="14" font-weight="500" fill="#085041">L2 — asset</text>
+  <text x="270" y="256" text-anchor="middle" font-size="12" fill="#0F6E56">Asset risk score (ARS)</text>
+
+  <line x1="270" y1="272" x2="270" y2="294" stroke="#888780" stroke-width="1.25" marker-end="url(#arr)"></line>
+
+  <!-- Layer 3 -->
+  <rect x="110" y="300" width="320" height="64" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.5"></rect>
+  <text x="270" y="327" text-anchor="middle" font-size="14" font-weight="500" fill="#085041">L3 — strategy</text>
+  <text x="270" y="348" text-anchor="middle" font-size="12" fill="#0F6E56">Global risk score (GRS)</text>
+
+  <!-- side note: descriptive scores + labels only -->
+  <line x1="452" y1="32" x2="452" y2="356" stroke="#888780" stroke-width="1" stroke-dasharray="4 3"></line>
+  <line x1="446" y1="32" x2="452" y2="32" stroke="#888780" stroke-width="1"></line>
+  <line x1="446" y1="356" x2="452" y2="356" stroke="#888780" stroke-width="1"></line>
+  <text x="466" y="188" font-size="12" fill="#5F5E5A">Descriptive scores</text>
+  <text x="466" y="204" font-size="12" fill="#5F5E5A">+ labels only</text>
+
+  <line x1="270" y1="364" x2="270" y2="392" stroke="#888780" stroke-width="1.25" marker-end="url(#arr)"></line>
+
+  <!-- Allocator Policy -->
+  <rect x="70" y="396" width="400" height="76" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5"></rect>
+  <text x="270" y="427" text-anchor="middle" font-size="14" font-weight="500" fill="#3C3489">ForgeYields Allocator Policy</text>
+  <text x="270" y="450" text-anchor="middle" font-size="12" fill="#534AB7">Verdicts · concentration caps · exit rules</text>
+
+  <text x="270" y="504" text-anchor="middle" font-size="12" fill="#5F5E5A">Any allocator can consume the same scores with its own policy.</text>
+</svg>
